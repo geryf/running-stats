@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gery — Running Stats</title>
+  <meta name="description" content="Site personnel de Gery.">
+  <style>
+    :root {
+      --bg: #ffffff;
+      --fg: #1a1a1a;
+      --muted: #666;
+      --accent: #e05a2b;
+      --card: #f6f6f7;
+      --border: #e4e4e7;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #16171a;
+        --fg: #f2f2f3;
+        --muted: #a1a1aa;
+        --accent: #ff7a4d;
+        --card: #1f2024;
+        --border: #2c2d31;
+      }
+    }
+    * { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: var(--fg);
+      background: var(--bg);
+    }
+    .wrap {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 4rem 1.25rem 5rem;
+    }
+    header { margin-bottom: 3rem; }
+    .eyebrow {
+      color: var(--accent);
+      font-weight: 600;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+      font-size: .8rem;
+      margin: 0 0 .5rem;
+    }
+    h1 {
+      font-size: clamp(2rem, 6vw, 3rem);
+      line-height: 1.15;
+      margin: 0 0 1rem;
+    }
+    .lead {
+      font-size: 1.15rem;
+      color: var(--muted);
+      margin: 0;
+    }
+    section { margin-top: 3rem; }
+    h2 {
+      font-size: 1.25rem;
+      margin: 0 0 1rem;
+    }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.25rem;
+    }
+    .card h3 { margin: 0 0 .35rem; font-size: 1rem; }
+    .card p { margin: 0; color: var(--muted); font-size: .95rem; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .links { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 1rem; }
+    footer {
+      margin-top: 4rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: .9rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <p class="eyebrow">Site personnel</p>
+      <h1>Salut, moi c'est Gery&nbsp;👋</h1>
+      <p class="lead">Bienvenue sur mon petit coin du web. Course à pied, projets et bricolages divers.</p>
+    </header>
+
+    <section>
+      <h2>Ce que je fais</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>🏃 Course à pied</h3>
+          <p>Statistiques, courses et résultats.</p>
+        </div>
+        <div class="card">
+          <h3>💻 Projets</h3>
+          <p>Quelques trucs que je code sur mon temps libre.</p>
+        </div>
+        <div class="card">
+          <h3>✍️ Notes</h3>
+          <p>Des idées et des essais en vrac.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Me contacter</h2>
+      <div class="links">
+        <a href="mailto:gflament@gmail.com">Email</a>
+        <a href="https://github.com/geryf">GitHub</a>
+      </div>
+    </section>
+
+    <footer>
+      © <span id="year"></span> Gery — Hébergé sur GitHub Pages.
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
