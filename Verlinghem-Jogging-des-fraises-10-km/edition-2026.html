@@ -1,0 +1,1251 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="favicon.ico">
+
+    <title>Statistiques : Jogging des fraises - 10 km route</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap theme -->
+    <link href="components/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+            <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+       </head>
+    <body>
+        <div class="container theme-showcase" role="main">
+        
+<style>
+.rs-nav{position:sticky;top:0;z-index:1500;display:flex;flex-wrap:wrap;align-items:center;
+  gap:4px;background:#2c3e50;padding:8px 14px;margin:0 -15px 18px;
+  font-family:-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;box-shadow:0 2px 6px rgba(0,0,0,.2);}
+.rs-nav .rs-brand{color:#fff;font-weight:700;margin-right:18px;font-size:16px;text-decoration:none;}
+.rs-nav a,.rs-nav .rs-dropbtn{color:#cfd8e3;text-decoration:none;padding:7px 12px;border-radius:4px;
+  font-size:14px;background:none;border:0;cursor:pointer;font-family:inherit;}
+.rs-nav a:hover,.rs-nav .rs-dropbtn:hover{background:#34495e;color:#fff;}
+.rs-nav a.active,.rs-nav .rs-dropbtn.active{background:#e74c3c;color:#fff;}
+.rs-dropdown{position:relative;display:inline-block;}
+.rs-dropmenu{display:none;position:absolute;left:0;top:100%;background:#34495e;min-width:210px;
+  border-radius:0 0 6px 6px;box-shadow:0 6px 14px rgba(0,0,0,.3);overflow:hidden;padding:4px 0;}
+.rs-dropdown.open .rs-dropmenu{display:block;}
+.rs-dropmenu a{display:block;color:#cfd8e3;padding:9px 16px;border-radius:0;}
+.rs-dropmenu a:hover{background:#3d566e;color:#fff;}
+.rs-dropmenu a.active{background:#e74c3c;color:#fff;}
+</style>
+
+<nav class="rs-nav">
+  <a class="rs-brand" href="edition-2026.html">Jogging des fraises · 10 km</a>
+  <a href="edition-2026.html" class="active">Édition 2026</a>
+  <a href="comparaison-editions-2022-2023-2025-2026.html">Comparaison 2022·2023·2025·2026</a>
+  <div class="rs-dropdown" id="rsCohortes">
+    <button type="button" class="rs-dropbtn">Cohortes 2023-2025-2026 ▾</button>
+    <div class="rs-dropmenu">
+      <a href="cohorte-2023-2025-2026-hf.html">Hommes + Femmes</a>
+      <a href="cohorte-2023-2025-2026-hommes.html">Hommes</a>
+      <a href="cohorte-2023-2025-2026-femmes.html">Femmes</a>
+    </div>
+  </div>
+</nav>
+<script>
+(function(){
+  var d=document.getElementById('rsCohortes');if(!d)return;
+  var b=d.querySelector('.rs-dropbtn');
+  b.addEventListener('click',function(e){e.stopPropagation();d.classList.toggle('open');});
+  document.addEventListener('click',function(){d.classList.remove('open');});
+})();
+</script>
+
+        
+                
+        <script type="text/javascript">
+<!--
+var coureurCategorieIdsToCategories =  {"27":{"nom":"Baby Athl\u00e9","sex":"F","ageMin":0,"ageMax":5,"exaDecimalColor":""},"28":{"nom":"\u00c9cole d'Athl\u00e9tisme","sex":"F","ageMin":5,"ageMax":9,"exaDecimalColor":""},"29":{"nom":"Poussines","sex":"F","ageMin":9,"ageMax":11,"exaDecimalColor":""},"23":{"nom":"Benjamines","sex":"F","ageMin":11,"ageMax":13,"exaDecimalColor":""},"20":{"nom":"Minimes","sex":"F","ageMin":13,"ageMax":15,"exaDecimalColor":""},"9":{"nom":"Cadettes","sex":"F","ageMin":15,"ageMax":17,"exaDecimalColor":"#00FFBF"},"10":{"nom":"Juniors","sex":"F","ageMin":17,"ageMax":19,"exaDecimalColor":"#2ECCFA"},"11":{"nom":"Espoirs","sex":"F","ageMin":19,"ageMax":21,"exaDecimalColor":"#0080FF"},"12":{"nom":"Seniors","sex":"F","ageMin":21,"ageMax":34,"exaDecimalColor":"#2E2EFE"},"65":{"nom":"Master 0","sex":"F","ageMin":35,"ageMax":39,"exaDecimalColor":"#FFF176"},"13":{"nom":"V\u00e9t\u00e9rans 1","sex":"F","ageMin":39,"ageMax":49,"exaDecimalColor":"#CC2EFA"},"31":{"nom":"V\u00e9t\u00e9rans","sex":"F","ageMin":39,"ageMax":null,"exaDecimalColor":""},"66":{"nom":"Master 1","sex":"F","ageMin":40,"ageMax":44,"exaDecimalColor":"#FFD740"},"67":{"nom":"Master 2","sex":"F","ageMin":45,"ageMax":49,"exaDecimalColor":"#FFAB00"},"14":{"nom":"V\u00e9t\u00e9rans 2","sex":"F","ageMin":49,"ageMax":59,"exaDecimalColor":"#FE2EF7"},"68":{"nom":"Master 3","sex":"F","ageMin":50,"ageMax":54,"exaDecimalColor":"#FF8F00"},"69":{"nom":"Master 4","sex":"F","ageMin":55,"ageMax":59,"exaDecimalColor":"#FF6D00"},"15":{"nom":"V\u00e9t\u00e9rans 3","sex":"F","ageMin":59,"ageMax":69,"exaDecimalColor":"#DF01A5"},"70":{"nom":"Master 5","sex":"F","ageMin":60,"ageMax":64,"exaDecimalColor":"#F4511E"},"71":{"nom":"Master 6","sex":"F","ageMin":65,"ageMax":69,"exaDecimalColor":"#E53935"},"16":{"nom":"V\u00e9t\u00e9rans 4","sex":"F","ageMin":69,"ageMax":null,"exaDecimalColor":"#FE2E64"},"72":{"nom":"Master 7","sex":"F","ageMin":70,"ageMax":74,"exaDecimalColor":"#C62828"},"73":{"nom":"Master 8","sex":"F","ageMin":75,"ageMax":79,"exaDecimalColor":"#E91E63"},"74":{"nom":"Master 9","sex":"F","ageMin":80,"ageMax":84,"exaDecimalColor":"#C2185B"},"75":{"nom":"Master 10","sex":"F","ageMin":85,"ageMax":null,"exaDecimalColor":"#880E4F"},"18":{"nom":"Hommes","sex":"M","ageMin":null,"ageMax":null,"exaDecimalColor":""},"24":{"nom":"Baby Athl\u00e9","sex":"M","ageMin":0,"ageMax":5,"exaDecimalColor":""},"25":{"nom":"\u00c9cole d'Athl\u00e9tisme","sex":"M","ageMin":5,"ageMax":9,"exaDecimalColor":""},"26":{"nom":"Poussins","sex":"M","ageMin":9,"ageMax":11,"exaDecimalColor":""},"21":{"nom":"Benjamins","sex":"M","ageMin":11,"ageMax":13,"exaDecimalColor":"#173B0B"},"19":{"nom":"Minimes","sex":"M","ageMin":13,"ageMax":15,"exaDecimalColor":"#2A5839"},"1":{"nom":"Cadets","sex":"M","ageMin":15,"ageMax":17,"exaDecimalColor":"#336633"},"2":{"nom":"Juniors","sex":"M","ageMin":17,"ageMax":19,"exaDecimalColor":"#088A4B"},"3":{"nom":"Espoirs","sex":"M","ageMin":19,"ageMax":21,"exaDecimalColor":"#5b8888"},"4":{"nom":"Seniors","sex":"M","ageMin":21,"ageMax":34,"exaDecimalColor":"#6b486b"},"54":{"nom":"Master 0","sex":"M","ageMin":35,"ageMax":39,"exaDecimalColor":"#FFF176"},"30":{"nom":"V\u00e9t\u00e9rans","sex":"M","ageMin":39,"ageMax":null,"exaDecimalColor":""},"5":{"nom":"V\u00e9t\u00e9rans 1","sex":"M","ageMin":39,"ageMax":49,"exaDecimalColor":"#a05d56"},"55":{"nom":"Master 1","sex":"M","ageMin":40,"ageMax":44,"exaDecimalColor":"#FFD740"},"56":{"nom":"Master 2","sex":"M","ageMin":45,"ageMax":49,"exaDecimalColor":"#FFAB00"},"6":{"nom":"V\u00e9t\u00e9rans 2","sex":"M","ageMin":49,"ageMax":59,"exaDecimalColor":"#d0743c"},"57":{"nom":"Master 3","sex":"M","ageMin":50,"ageMax":54,"exaDecimalColor":"#FF8F00"},"58":{"nom":"Master 4","sex":"M","ageMin":55,"ageMax":59,"exaDecimalColor":"#FF6D00"},"7":{"nom":"V\u00e9t\u00e9rans 3","sex":"M","ageMin":59,"ageMax":69,"exaDecimalColor":"#FF8000"},"59":{"nom":"Master 5","sex":"M","ageMin":60,"ageMax":64,"exaDecimalColor":"#F4511E"},"60":{"nom":"Master 6","sex":"M","ageMin":65,"ageMax":69,"exaDecimalColor":"#E53935"},"8":{"nom":"V\u00e9t\u00e9rans 4","sex":"M","ageMin":69,"ageMax":79,"exaDecimalColor":"#F7BE81"},"61":{"nom":"Master 7","sex":"M","ageMin":70,"ageMax":74,"exaDecimalColor":"#C62828"},"62":{"nom":"Master 8","sex":"M","ageMin":75,"ageMax":79,"exaDecimalColor":"#E91E63"},"22":{"nom":"V\u00e9t\u00e9rans 5","sex":"M","ageMin":79,"ageMax":null,"exaDecimalColor":"#F5DA81"},"63":{"nom":"Master 9","sex":"M","ageMin":80,"ageMax":84,"exaDecimalColor":"#C2185B"},"64":{"nom":"Master 10","sex":"M","ageMin":85,"ageMax":null,"exaDecimalColor":"#880E4F"}}
+var medianes =  {"9":"01:07:48","10":"01:09:40","11":"01:08:48","12":"01:05:57","65":"01:04:19","66":"01:06:24","67":"01:07:41","68":"01:07:09","69":"01:07:47","70":"01:09:01","71":"01:13:38","72":"01:28:22","1":"00:52:14","2":"00:51:18","3":"00:54:30","4":"00:56:12","54":"00:54:50","55":"00:53:11","56":"00:55:38","57":"00:58:00","58":"00:58:55","59":"01:00:49","60":"01:04:14","61":"01:01:10","63":"01:29:59"}
+var medianeBySex =  {"M":"00:55:56","F":"01:06:31","MF":"01:01:05"}
+var nbBySex =  {"M":"1207","F":"993"}
+var nbByCategory =  {"9":20,"10":16,"11":59,"12":426,"65":145,"66":128,"67":89,"68":61,"69":30,"70":12,"71":5,"72":2,"1":34,"2":42,"3":42,"4":397,"54":130,"55":162,"56":125,"57":125,"58":70,"59":47,"60":23,"61":9,"63":1}
+</script>
+    <h1>Jogging des fraises - 10 km route - 25 mai 2026 <br><small class="text-muted">Niveau FFA : Régional</small></h1>
+    <h2>Statistiques sur 2 200  femmes et hommes classés </small></h2>
+    <p>Le nombre de résultats présentés ici peut être légèrement inférieur au nombre réel de participants, car nous n'avons repris ici que les participants dont les données statistiques étaient complètes</p>
+        <p>Résultats détaillés : <a href="https://www.athle.fr/bases/liste.aspx?frmbase=resultats&amp;frmmode=1&amp;frmespace=0&amp;frmcompetition=309657&amp;frmepreuve=10+Km+Route+%2f+10km+Route+%2f+TCX" target="_blank" rel="noopener noreferrer">voir</a></p>
+            <h2>Le parcours</h2>
+    <div id="gpxMap" style="height:400px;margin:16px 0;border:1px solid #ccc;border-radius:4px;"></div>
+        <h2>Répartitions par catégorie</h2>
+    <div class="cohort-pies">
+                <div class="cohort-pie-block">
+            <h3>Catégories hommes</h3>
+            <div class="cohort-pie-count" id="piechartcategory-M-count"></div>
+            <div id="piechartcategory-M" class="cohort-pie"></div>
+        </div>
+        <div class="cohort-pie-block">
+            <h3>Catégories femmes</h3>
+            <div class="cohort-pie-count" id="piechartcategory-F-count"></div>
+            <div id="piechartcategory-F" class="cohort-pie"></div>
+        </div>
+        <div class="cohort-pie-block">
+            <h3>Répartition par sexe</h3>
+            <div class="cohort-pie-count" id="piechartsex-count"></div>
+            <div id="piechartsex" class="cohort-pie"></div>
+        </div>
+            </div>
+    <table>
+        <h2>Nombre de coureurs par tranche de 5 minutes (temps réel)</h2>
+    <svg class="chartsvgstacked" id="chartsvgstacked"></svg>
+    <h2>Pourcentage de coureurs arrivés au fil du temps</h2>
+    <svg id="chartcumulatif"></svg>
+    <div id="output">
+    </div>
+   <h2>Statistiques</h2>
+   <table class="table table-striped table-bordered table-condensed stats-table table-nonfluid">
+    <tbody>
+        <tr class="stats-row" data-bgcolor="#00FFBF" style="background-color: #00FFBF;">
+    	<td>Cadettes F</td>
+    	<td class="text-right">20</td>
+    	<td class="text-right">1%</td>
+    	<td class="time text-right">37'20''</td>
+    	<td class="time text-right">1h 07'17''</td>
+        <td class="time text-right">09'16''</td>
+        <td class="time text-right">1h 04'35''</td>
+    	<td class="time text-right">1h 07'48''</td>
+        <td class="time text-right">1h 12'50''</td>
+    </tr>
+        <tr class="stats-row" data-bgcolor="#2ECCFA" style="background-color: #2ECCFA;">
+    	<td>Juniors F</td>
+    	<td class="text-right">16</td>
+    	<td class="text-right">1%</td>
+    	<td class="time text-right">49'41''</td>
+    	<td class="time text-right">1h 11'41''</td>
+        <td class="time text-right">12'25''</td>
+        <td class="time text-right">1h 01'50''</td>
+    	<td class="time text-right">1h 09'40''</td>
+        <td class="time text-right">1h 22'24''</td>
+    </tr>
+        <tr class="stats-row" data-bgcolor="#0080FF" style="background-color: #0080FF;">
+    	<td>Espoirs F</td>
+    	<td class="text-right">59</td>
+    	<td class="text-right">3%</td>
+    	<td class="time text-right">49'58''</td>
+    	<td class="time text-right">1h 10'33''</td>
+        <td class="time text-right">11'16''</td>
+        <td class="time text-right">1h 03'15''</td>
+    	<td class="time text-right">1h 08'48''</td>
+        <td class="time text-right">1h 20'25''</td>
+    </tr>
+        <tr class="stats-row" data-bgcolor="#2E2EFE" style="background-color: #2E2EFE;">
+    	<td>Seniors F</td>
+    	<td class="text-right">426</td>
+    	<td class="text-right">19%</td>
+    	<td class="time text-right">36'10''</td>
+    	<td class="time text-right">1h 06'22''</td>
+        <td class="time text-right">10'32''</td>
+        <td class="time text-right">59'52''</td>
+    	<td class="time text-right">1h 05'57''</td>
+        <td class="time text-right">1h 12'45''</td>
+    </tr>
+        <tr class="stats-row" data-bgcolor="#FFF176" style="background-color: #FFF176;">
+    	<td>Master 0 F</td>
+    	<td class="text-right">145</td>
+    	<td class="text-right">7%</td>
+    	<td class="time text-right">39'04''</td>
+    	<td class="time text-right">1h 04'25''</td>
+        <td class="time text-right">09'41''</td>
+        <td class="time text-right">57'55''</td>
+    	<td class="time text-right">1h 04'19''</td>
+        <td class="time text-right">1h 10'02''</td>
+    </tr>
+        <tr class="stats-row" data-bgcolor="#FFD740" style="background-color: #FFD740;">
+    	<td>Master 1 F</td>
+    	<td class="text-right">128</td>
+    	<td class="text-right">6%</td>
+    	<td class="time text-right">41'41''</td>
+    	<td class="time text-right">1h 06'46''</td>
+        <td class="time text-right">10'33''</td>
+        <td class="time text-right">1h 00'41''</td>
+    	<td class="time text-right">1h 06'24''</td>
+        <td class="time text-right">1h 12'59''</td>
+    </tr>
+        <tr class="stats-row" data-bgcolor="#FFAB00" style="background-color: #FFAB00;">
+    	<td>Master 2 F</td>
+    	<td class="text-right">89</td>
+    	<td class="text-right">4%</td>
+    	<td class="time text-right">43'43''</td>
+    	<td class="time text-right">1h 07'10''</td>
+        <td class="time text-right">09'58''</td>
+        <td class="time text-right">1h 00'26''</td>
+    	<td class="time text-right">1h 07'41''</td>
+        <td class="time text-right">1h 14'59''</td>
+    </tr>
+        <tr class="stats-row" data-bgcolor="#FF8F00" style="background-color: #FF8F00;">
+    	<td>Master 3 F</td>
+    	<td class="text-right">61</td>
+    	<td class="text-right">3%</td>
+    	<td class="time text-right">45'09''</td>
+    	<td class="time text-right">1h 09'03''</td>
+        <td class="time text-right">12'12''</td>
+        <td class="time text-right">1h 01'13''</td>
+    	<td class="time text-right">1h 07'09''</td>
+        <td class="time text-right">1h 17'41''</td>
+    </tr>
+        <tr class="stats-row" data-bgcolor="#FF6D00" style="background-color: #FF6D00;">
+    	<td>Master 4 F</td>
+    	<td class="text-right">30</td>
+    	<td class="text-right">1%</td>
+    	<td class="time text-right">49'47''</td>
+    	<td class="time text-right">1h 08'22''</td>
+        <td class="time text-right">11'52''</td>
+        <td class="time text-right">57'02''</td>
+    	<td class="time text-right">1h 07'47''</td>
+        <td class="time text-right">1h 14'28''</td>
+    </tr>
+        <tr class="stats-row" data-bgcolor="#F4511E" style="background-color: #F4511E;">
+    	<td>Master 5 F</td>
+    	<td class="text-right">12</td>
+    	<td class="text-right">1%</td>
+    	<td class="time text-right">54'11''</td>
+    	<td class="time text-right">1h 08'52''</td>
+        <td class="time text-right">08'31''</td>
+        <td class="time text-right">1h 04'50''</td>
+    	<td class="time text-right">1h 09'01''</td>
+        <td class="time text-right">1h 13'48''</td>
+    </tr>
+        <tr class="stats-row" data-bgcolor="#E53935" style="background-color: #E53935;">
+    	<td>Master 6 F</td>
+    	<td class="text-right">5</td>
+    	<td class="text-right">0%</td>
+    	<td class="time text-right">1h 08'19''</td>
+    	<td class="time text-right">1h 13'36''</td>
+        <td class="time text-right">04'13''</td>
+        <td class="time text-right">1h 11'41''</td>
+    	<td class="time text-right">1h 13'38''</td>
+        <td class="time text-right">1h 18'10''</td>
+    </tr>
+        <tr class="stats-row" data-bgcolor="#C62828" style="background-color: #C62828;">
+    	<td>Master 7 F</td>
+    	<td class="text-right">2</td>
+    	<td class="text-right">0%</td>
+    	<td class="time text-right">1h 10'04''</td>
+    	<td class="time text-right">1h 28'22''</td>
+        <td class="time text-right">18'18''</td>
+        <td class="time text-right">1h 10'04''</td>
+    	<td class="time text-right">1h 28'22''</td>
+        <td class="time text-right">1h 46'41''</td>
+    </tr>
+        <tr class="stats-row" data-bgcolor="#336633" style="background-color: #336633;">
+    	<td>Cadets M</td>
+    	<td class="text-right">34</td>
+    	<td class="text-right">2%</td>
+    	<td class="time text-right">39'34''</td>
+    	<td class="time text-right">51'48''</td>
+        <td class="time text-right">07'40''</td>
+        <td class="time text-right">45'50''</td>
+    	<td class="time text-right">52'14''</td>
+        <td class="time text-right">55'12''</td>
+    </tr>
+        <tr class="stats-row" data-bgcolor="#088A4B" style="background-color: #088A4B;">
+    	<td>Juniors M</td>
+    	<td class="text-right">42</td>
+    	<td class="text-right">2%</td>
+    	<td class="time text-right">39'51''</td>
+    	<td class="time text-right">54'03''</td>
+        <td class="time text-right">10'55''</td>
+        <td class="time text-right">48'11''</td>
+    	<td class="time text-right">51'18''</td>
+        <td class="time text-right">58'38''</td>
+    </tr>
+        <tr class="stats-row" data-bgcolor="#5b8888" style="background-color: #5b8888;">
+    	<td>Espoirs M</td>
+    	<td class="text-right">42</td>
+    	<td class="text-right">2%</td>
+    	<td class="time text-right">35'55''</td>
+    	<td class="time text-right">55'08''</td>
+        <td class="time text-right">12'01''</td>
+        <td class="time text-right">45'17''</td>
+    	<td class="time text-right">54'30''</td>
+        <td class="time text-right">1h 03'00''</td>
+    </tr>
+        <tr class="stats-row" data-bgcolor="#6b486b" style="background-color: #6b486b;">
+    	<td>Seniors M</td>
+    	<td class="text-right">397</td>
+    	<td class="text-right">18%</td>
+    	<td class="time text-right">31'30''</td>
+    	<td class="time text-right">56'33''</td>
+        <td class="time text-right">11'45''</td>
+        <td class="time text-right">48'07''</td>
+    	<td class="time text-right">56'12''</td>
+        <td class="time text-right">1h 04'25''</td>
+    </tr>
+        <tr class="stats-row" data-bgcolor="#FFF176" style="background-color: #FFF176;">
+    	<td>Master 0 M</td>
+    	<td class="text-right">130</td>
+    	<td class="text-right">6%</td>
+    	<td class="time text-right">35'52''</td>
+    	<td class="time text-right">55'40''</td>
+        <td class="time text-right">10'49''</td>
+        <td class="time text-right">46'34''</td>
+    	<td class="time text-right">54'50''</td>
+        <td class="time text-right">1h 03'05''</td>
+    </tr>
+        <tr class="stats-row" data-bgcolor="#FFD740" style="background-color: #FFD740;">
+    	<td>Master 1 M</td>
+    	<td class="text-right">162</td>
+    	<td class="text-right">7%</td>
+    	<td class="time text-right">38'58''</td>
+    	<td class="time text-right">55'17''</td>
+        <td class="time text-right">09'48''</td>
+        <td class="time text-right">48'10''</td>
+    	<td class="time text-right">53'11''</td>
+        <td class="time text-right">1h 01'04''</td>
+    </tr>
+        <tr class="stats-row" data-bgcolor="#FFAB00" style="background-color: #FFAB00;">
+    	<td>Master 2 M</td>
+    	<td class="text-right">125</td>
+    	<td class="text-right">6%</td>
+    	<td class="time text-right">36'56''</td>
+    	<td class="time text-right">57'17''</td>
+        <td class="time text-right">10'34''</td>
+        <td class="time text-right">49'48''</td>
+    	<td class="time text-right">55'38''</td>
+        <td class="time text-right">1h 04'34''</td>
+    </tr>
+        <tr class="stats-row" data-bgcolor="#FF8F00" style="background-color: #FF8F00;">
+    	<td>Master 3 M</td>
+    	<td class="text-right">125</td>
+    	<td class="text-right">6%</td>
+    	<td class="time text-right">35'32''</td>
+    	<td class="time text-right">58'40''</td>
+        <td class="time text-right">12'11''</td>
+        <td class="time text-right">51'39''</td>
+    	<td class="time text-right">58'00''</td>
+        <td class="time text-right">1h 05'45''</td>
+    </tr>
+        <tr class="stats-row" data-bgcolor="#FF6D00" style="background-color: #FF6D00;">
+    	<td>Master 4 M</td>
+    	<td class="text-right">70</td>
+    	<td class="text-right">3%</td>
+    	<td class="time text-right">35'36''</td>
+    	<td class="time text-right">59'57''</td>
+        <td class="time text-right">12'22''</td>
+        <td class="time text-right">49'37''</td>
+    	<td class="time text-right">58'55''</td>
+        <td class="time text-right">1h 07'51''</td>
+    </tr>
+        <tr class="stats-row" data-bgcolor="#F4511E" style="background-color: #F4511E;">
+    	<td>Master 5 M</td>
+    	<td class="text-right">47</td>
+    	<td class="text-right">2%</td>
+    	<td class="time text-right">43'00''</td>
+    	<td class="time text-right">1h 00'49''</td>
+        <td class="time text-right">09'25''</td>
+        <td class="time text-right">53'24''</td>
+    	<td class="time text-right">1h 00'49''</td>
+        <td class="time text-right">1h 10'02''</td>
+    </tr>
+        <tr class="stats-row" data-bgcolor="#E53935" style="background-color: #E53935;">
+    	<td>Master 6 M</td>
+    	<td class="text-right">23</td>
+    	<td class="text-right">1%</td>
+    	<td class="time text-right">46'33''</td>
+    	<td class="time text-right">1h 04'10''</td>
+        <td class="time text-right">10'23''</td>
+        <td class="time text-right">57'43''</td>
+    	<td class="time text-right">1h 04'14''</td>
+        <td class="time text-right">1h 10'20''</td>
+    </tr>
+        <tr class="stats-row" data-bgcolor="#C62828" style="background-color: #C62828;">
+    	<td>Master 7 M</td>
+    	<td class="text-right">9</td>
+    	<td class="text-right">0%</td>
+    	<td class="time text-right">48'56''</td>
+    	<td class="time text-right">1h 03'40''</td>
+        <td class="time text-right">08'59''</td>
+        <td class="time text-right">59'35''</td>
+    	<td class="time text-right">1h 01'10''</td>
+        <td class="time text-right">1h 13'25''</td>
+    </tr>
+        <tr class="stats-row" data-bgcolor="#C2185B" style="background-color: #C2185B;">
+    	<td>Master 9 M</td>
+    	<td class="text-right">1</td>
+    	<td class="text-right">0%</td>
+    	<td class="time text-right">1h 29'59''</td>
+    	<td class="time text-right">1h 29'59''</td>
+        <td class="time text-right">00'00''</td>
+        <td class="time text-right">1h 29'59''</td>
+    	<td class="time text-right">1h 29'59''</td>
+        <td class="time text-right">1h 29'59''</td>
+    </tr>
+                <tr class="stats-row-total" style="background-color: #1a237e; color:#fff; font-weight:bold;">
+    	<td>Total hommes</td>
+    	<td class="text-right">1 207</td>
+    	<td class="text-right">55%</td>
+    	<td class="time text-right">31'30''</td>
+    	<td class="time text-right">56'54''</td>
+        <td class="time text-right">11'22''</td>
+        <td class="time text-right">48'29''</td>
+    	<td class="time text-right">55'56''</td>
+        <td class="time text-right">1h 04'16''</td>
+    </tr>
+    <tr class="stats-row-total" style="background-color: #880e4f; color:#fff; font-weight:bold;">
+    	<td>Total femmes</td>
+    	<td class="text-right">993</td>
+    	<td class="text-right">45%</td>
+    	<td class="time text-right">36'10''</td>
+    	<td class="time text-right">1h 06'53''</td>
+        <td class="time text-right">10'44''</td>
+        <td class="time text-right">59'51''</td>
+    	<td class="time text-right">1h 06'31''</td>
+        <td class="time text-right">1h 13'31''</td>
+    </tr>
+        </tbody>
+    <thead class="thead-default" style="background-color: #000; color:#fff;font-size:14px">
+     	<th>Catégorie</th>
+    	<th class="text-right">Nb</th>   
+    	<th class="text-right">En %</th>
+        <th class="text-right">Temps du premier</th>
+    	<th class="text-right">Moyenne</th>
+        <th class="text-right" title="Dispersion des temps autour de la moyenne" style="cursor:help">Écart type</th>
+        <th title="Un quart des coureurs en dessous de ce temps" style="cursor:help">1er quartile</th>
+    	<th title="La moitié des coureurs en dessous de ce temps" style="cursor:help">Médiane</th>
+        <th title="Trois quarts des coureurs en dessous de ce temps" style="cursor:help">3ème quartile</th>
+    </thead>
+    <tfooter>
+     	<th>Toutes catégories</th>
+    	<th class="text-right">2 200</th>   
+    	<th class="text-right">100%</th>  
+    	<th class="text-right">31'30''</th>
+    	<th class="text-right">1h 01'25''</th>
+        <th class="text-right">12'09''</th>
+        <th class="text-right">52'57''</th>
+    	<th class="text-right">1h 01'05''</th>
+        <th class="text-right">1h 09'31''</th>
+    </tfooter>
+    </table>
+    <ul>
+        <li>
+        </li>
+    </ul>
+ 
+        </div>
+        <script src="components/invert-color/lib/invert.min.js"></script>
+<script>
+// Applique une couleur de texte contrastée sur chaque ligne du tableau de stats
+document.querySelectorAll('.stats-row').forEach(function(row) {
+    var bg = row.getAttribute('data-bgcolor');
+    if (bg) {
+        row.style.color = invert(bg, { black: '#000000', white: '#ffffff', threshold: 0.4 });
+    }
+});
+</script>
+<script src="js/d3.v4.min.js"></script>
+<script src="js/chart/utilChart.js"></script>
+<script src="js/chart/chartLegend.js"></script>
+<script src="js/chart/stackedChart.js"></script>
+<script src="js/chart/cumulativeChart.js"></script>
+<script src="components/invert-color/lib/invert.min.js"></script>
+<script src="components/plotly.js/dist/plotly-basic.js"></script>
+<style>
+.stats-table{
+   font-size:12px;
+   line-height:12px;
+}
+.key {
+	cursor:pointer;
+}
+.line-mediane {
+	stroke:#ff0000;
+}
+.table-nonfluid {
+   width: auto !important;
+}
+.hlines{
+	stroke:rgb(150,148,109);
+	shape-rendering:crispEdges;
+	stroke-width:1px;
+	stroke-opacity:0.3;
+}
+
+#chartsvgstacked .line,
+#chartcumulatif .line {
+  fill: none;
+  stroke: steelblue;
+  stroke-width: 2px;
+}
+
+.grid line {
+  stroke: lightgrey;
+  stroke-opacity: 0.7;
+  shape-rendering: crispEdges;
+}
+
+.grid path {
+  stroke-width: 0;
+}
+
+.axis path {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+  stroke-width: 3px;
+}
+
+.axis text {
+  font-size: 1.5em;
+}
+
+/* Graduations de l'axe X réduites de 10% (l'axe Y porte l'id #axeY) */
+.axis:not(#axeY) .tick text {
+  font-size: 1.35em;
+}
+
+#minLine{
+    stroke:rgb(150,150,150);
+}
+.chartsvgstacked{
+width:100%;
+}
+/* Bootstrap/normalize impose svg:not(:root){overflow:hidden}, qui matche tout
+   svg en HTML (le root du document est toujours <html>) avec une spécificité
+   supérieure à .chartsvgstacked : il faut l'id pour gagner et laisser la
+   légende déborder sous le graphe en barres, dans la zone du graphe cumulatif. */
+#chartsvgstacked{
+overflow: visible;
+}
+
+.stats-table .time{width:100px}
+.cohort-pies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 24px 0;
+}
+.cohort-pie-block {
+  text-align: center;
+}
+.cohort-pie-block h3 {
+  margin: 0 0 2px;
+  font-size: 16px;
+}
+.cohort-pie-count {
+  margin: 0 0 8px;
+  font-size: 13px;
+  color: #777;
+}
+.cohort-pie {
+  width: 260px;
+  height: 260px;
+}
+</style>
+<script>
+//SVG VERTICAL STACKED + SVG CUMULATIVE
+
+// Bornes optionnelles de l'axe X définies sur le CourseType en minutes
+var graphBegin = 30;
+var graphEnd   = 100;
+
+function compareCategories(a, b) {
+  if (a.sex < b.sex) {
+    return 1;
+  }
+  if (a.sex > b.sex) {
+    return -1;
+  }
+  return (a.ageMin > b.ageMin);
+}
+/**
+ * Return as an array coureurCategorieIdsToCategories
+ */
+function getCoureurCategorieIdsToCategoriesArray(coureurCategorieIdsToCategories){
+    let arr = [];
+    for (var key in coureurCategorieIdsToCategories){
+        let categorie = coureurCategorieIdsToCategories[key];
+        categorie.key = key;
+        arr.push(categorie);
+    }
+    return arr;
+}    
+
+function getKeysByDisplayOrder(keys, coureurCategorieIdsToCategories){
+    let categoriesArray = getCoureurCategorieIdsToCategoriesArray(coureurCategorieIdsToCategories);
+    categoriesArray.sort(compareCategories);
+    let sortedKeys = [];
+    for (var oneCat of categoriesArray){
+        if (keys.indexOf(oneCat.key) !== -1) {
+            sortedKeys.push(oneCat.key);
+        }
+    }    
+    return sortedKeys;
+}    
+var chartLegend;
+var stackedChartGlobal;
+var stackedCsvRaw = `temps,9,10,11,12,65,66,67,68,69,70,71,72,1,2,3,4,54,55,56,57,58,59,60,61,63
+30,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6,0,0,0,0,0,0,0,0,0
+35,1,0,0,3,1,0,0,0,0,0,0,0,2,1,3,23,6,2,4,6,1,0,0,0,0
+40,0,0,0,9,4,3,1,0,0,0,0,0,5,7,7,38,23,16,12,13,7,2,0,0,0
+45,0,1,1,11,2,5,0,1,1,0,0,0,5,10,7,61,17,40,18,9,11,6,2,1,0
+50,0,0,5,32,18,6,9,4,2,2,0,0,13,8,5,58,19,34,24,22,8,6,1,1,0
+55,3,2,4,56,27,16,12,10,5,0,0,0,5,6,8,67,20,27,22,27,10,9,5,1,0
+60,3,3,7,88,25,27,17,13,4,1,0,0,2,4,5,55,21,18,16,15,8,6,6,2,0
+65,5,2,16,75,31,25,15,7,8,4,2,0,2,4,1,32,11,9,13,12,9,7,4,1,0
+70,4,1,8,65,15,21,13,7,4,2,1,1,0,0,3,36,5,8,9,6,6,9,2,1,0
+75,3,3,3,41,11,13,17,11,2,2,2,0,0,0,1,12,5,5,4,7,6,2,2,2,0
+80,1,0,10,31,9,5,1,4,0,0,0,0,0,1,1,3,3,3,1,4,3,0,0,0,0
+85,0,3,2,9,2,3,2,0,2,1,0,0,0,0,1,3,0,0,2,3,0,0,0,0,1
+90,0,0,0,4,0,3,1,2,1,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0,0
+95,0,1,3,1,0,1,0,0,0,0,0,0,0,1,0,1,0,0,0,1,1,0,1,0,0
+100,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+105,0,0,0,0,0,0,1,2,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+110,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+115,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0`;
+var cumulCsvRaw = `temps,9,10,11,12,65,66,67,68,69,70,71,72,1,2,3,4,54,55,56,57,58,59,60,61,63
+31,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0
+32,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0,0
+33,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0,0
+34,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0
+35,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,2,1,0,0,1,1,0,0,0,0
+36,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,3,0,0,1,2,0,0,0,0,0
+37,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,6,1,0,0,2,0,0,0,0,0
+38,0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,4,1,1,0,1,0,0,0,0,0
+39,0,0,0,0,1,0,0,0,0,0,0,0,2,1,1,8,3,1,3,0,0,0,0,0,0
+40,0,0,0,1,0,0,0,0,0,0,0,0,2,3,1,8,2,2,1,0,1,0,0,0,0
+41,0,0,0,0,1,2,0,0,0,0,0,0,0,1,1,5,4,6,2,2,1,0,0,0,0
+42,0,0,0,3,0,0,0,0,0,0,0,0,2,0,2,9,4,3,0,5,2,0,0,0,0
+43,0,0,0,2,0,0,1,0,0,0,0,0,1,1,1,8,6,2,3,1,1,1,0,0,0
+44,0,0,0,3,3,1,0,0,0,0,0,0,0,2,2,8,7,3,6,5,2,1,0,0,0
+45,0,0,0,1,1,1,0,1,0,0,0,0,2,1,2,13,2,8,3,1,1,0,0,0,0
+46,0,0,0,3,0,2,0,0,0,0,0,0,0,0,0,10,3,4,3,2,2,1,1,0,0
+47,0,0,0,3,0,1,0,0,0,0,0,0,1,1,1,8,4,10,3,2,1,0,1,0,0
+48,0,0,0,2,0,0,0,0,0,0,0,0,1,4,3,15,3,8,4,2,4,4,0,1,0
+49,0,1,1,2,1,1,0,0,1,0,0,0,1,4,1,15,5,10,5,2,3,1,0,0,0
+50,0,0,0,4,2,1,2,0,0,0,0,0,3,3,1,14,2,6,6,3,2,3,0,0,0
+51,0,0,1,7,4,1,1,1,1,0,0,0,1,0,0,4,2,4,4,2,1,0,0,0,0
+52,0,0,1,5,4,0,0,1,0,0,0,0,3,3,0,12,4,10,2,6,1,1,0,0,0
+53,0,0,3,8,0,3,4,2,0,0,0,0,2,1,2,16,6,6,6,7,2,0,0,0,0
+54,0,0,0,8,8,1,2,0,1,2,0,0,4,1,2,12,5,8,6,4,2,2,1,1,0
+55,0,0,1,6,2,1,1,2,3,0,0,0,1,2,3,10,2,3,7,1,2,1,2,0,0
+56,0,0,0,13,4,5,2,0,1,0,0,0,2,0,1,10,7,6,2,7,1,1,1,0,0
+57,0,2,0,7,7,5,3,3,1,0,0,0,1,2,1,14,1,6,4,4,3,3,0,0,0
+58,1,0,1,16,6,3,3,2,0,0,0,0,0,2,3,20,4,8,4,12,2,0,1,1,0
+59,2,0,2,14,8,2,3,3,0,0,0,0,1,0,0,13,6,4,5,3,2,4,1,0,0
+60,0,1,1,11,1,4,4,0,0,0,0,0,0,2,0,17,1,2,4,5,1,1,2,1,0
+61,0,0,1,21,7,7,5,6,0,0,0,0,0,0,0,4,8,5,2,2,4,2,1,1,0
+62,0,0,3,19,3,3,5,2,0,0,0,0,0,1,1,11,3,6,3,0,2,1,0,0,0
+63,0,2,1,15,8,5,3,1,1,0,0,0,0,0,3,8,4,1,3,5,0,2,0,0,0
+64,3,0,1,22,6,8,0,4,3,1,0,0,2,1,1,15,5,4,4,3,1,0,3,0,0
+65,1,0,2,16,6,5,1,0,0,1,0,0,0,1,0,5,4,0,2,2,3,3,0,1,0
+66,1,0,4,16,5,5,4,2,1,0,0,0,0,1,0,7,2,3,2,3,3,2,1,0,0
+67,2,0,5,12,10,7,1,2,3,1,0,0,0,1,1,6,3,5,1,4,3,0,1,0,0
+68,0,2,5,14,4,6,7,1,0,1,1,0,1,1,0,6,1,1,4,2,0,1,1,0,0
+69,1,0,0,17,6,2,2,2,4,1,1,0,1,0,0,8,1,0,4,1,0,1,1,0,0
+70,1,1,1,18,3,5,2,3,1,0,0,1,0,0,1,8,1,1,3,2,1,2,2,1,0
+71,0,0,1,15,1,6,4,0,0,1,0,0,0,0,1,7,1,0,2,1,2,2,0,0,0
+72,2,0,1,17,3,3,2,2,1,1,0,0,0,0,0,9,1,2,1,1,1,2,0,0,0
+73,1,0,2,11,6,1,4,1,0,0,1,0,0,0,0,7,2,1,2,1,0,1,0,0,0
+74,0,0,3,4,2,6,1,1,2,0,0,0,0,0,1,5,0,4,1,1,2,2,0,0,0
+75,1,0,1,12,1,3,7,0,0,1,0,0,0,0,0,2,1,0,1,1,0,0,0,0,0
+76,0,1,1,8,4,6,3,3,1,0,1,0,0,0,1,3,1,3,2,2,2,1,1,2,0
+77,1,0,0,9,5,2,5,3,1,1,0,0,0,0,0,1,3,0,1,2,4,0,0,0,0
+78,1,0,1,7,1,1,2,3,0,0,0,0,0,0,0,3,0,2,0,1,0,0,1,0,0
+79,0,2,0,5,0,1,0,2,0,0,1,0,0,0,0,3,0,0,0,1,0,1,0,0,0
+80,0,0,3,9,3,0,0,1,0,0,0,0,0,1,0,1,1,0,0,1,1,0,0,0,0
+81,1,0,2,13,1,1,0,0,0,0,0,0,0,0,0,1,0,2,0,1,0,0,0,0,0
+82,0,0,2,2,3,2,1,1,0,0,0,0,0,0,1,0,1,1,1,1,0,0,0,0,0
+83,0,0,2,4,1,1,0,1,0,0,0,0,0,0,0,1,0,0,0,0,1,0,0,0,0
+84,0,0,1,3,1,1,0,1,0,0,0,0,0,0,0,0,1,0,0,1,1,0,0,0,0
+85,0,2,0,2,0,2,1,0,1,1,0,0,0,0,0,1,0,0,0,1,0,0,0,0,0
+86,0,1,1,1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0
+87,0,0,1,5,0,0,0,0,1,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0
+88,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0
+89,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1,0,0,1,0,0,0,0,0,1
+90,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+91,0,0,0,2,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+92,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+93,0,0,0,2,0,0,0,1,1,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0,0
+94,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+95,0,1,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,1,0,0,0,0
+96,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,0,0
+97,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+98,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+99,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0
+100,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+101,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+102,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+103,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+104,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+105,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+106,0,0,0,0,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0
+107,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+108,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+109,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+110,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+111,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+112,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+113,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+114,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+115,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0`;
+
+function renderCharts() {
+    var element = document.getElementById('chartsvgstacked');
+    var positionInfo = element.getBoundingClientRect();
+    var widthStacked = positionInfo.width;
+
+    var margin = {top: 100, right: 250, bottom: 50, left: 60};
+    // Largeur minimale pour éviter une échelle D3 invalide (NaN) sur un conteneur très étroit
+    var width = Math.max(widthStacked - margin.left - margin.right, 280);
+    var height = 600 - margin.top - margin.bottom;
+
+    // Préserve la sélection de catégories en cours lors d'un redessin (ex: redimensionnement de la fenêtre)
+    var previousKeys = chartLegend ? chartLegend.getKeysToDisplay() : null;
+
+    utilChart.clearChart('chartsvgstacked');
+    utilChart.clearChart('chartcumulatif');
+
+    function buildStackedChart() {
+        function parseRow(d, i, columns) {
+            for (i = 1, t = 0; i < columns.length; ++i) d[columns[i]] = +d[columns[i]];
+            return d;
+        }
+        var data = d3.csvParse(stackedCsvRaw, parseRow);
+
+        // Ajouter les colonnes agrégées agg_M / agg_F (total par sexe)
+        ChartLegend.addAggregatedColumns(data, coureurCategorieIdsToCategories);
+
+        // Exclure les clés agrégées de l'affichage initial
+        var keys = data.columns.slice(1).filter(function(k) { return k.indexOf('agg_') !== 0; });
+        keys = previousKeys || getKeysByDisplayOrder(keys, coureurCategorieIdsToCategories);
+
+        var layout = {
+            height: height,
+            width: width,
+            margin: margin,
+            xBegin: graphBegin,
+            xEnd: graphEnd
+        };
+
+        let z = ChartLegend.getD3ColorScale(coureurCategorieIdsToCategories);
+
+        let stackedChart = new StackedChart('chartsvgstacked', data, layout, z);
+        stackedChart.draw(keys);
+        stackedChart.drawDynamicParts(keys);
+        stackedChartGlobal = stackedChart;
+
+        chartLegend = new ChartLegend(
+            stackedChart,
+            coureurCategorieIdsToCategories,
+            keys,
+            (keys) => stackedChart.drawDynamicParts(keys)
+        );
+        chartLegend.draw(keys);
+    }
+
+    function buildCumulativeChart() {
+        function parseRow(d, i, columns) {
+            for (i = 1, t = 0; i < columns.length; ++i) {
+                d[columns[i]] = +d[columns[i]];
+            }
+            return d;
+        }
+        var data = d3.csvParse(cumulCsvRaw, parseRow);
+
+        // Ajouter les colonnes agrégées (coureurCategorieIdsToCategories déjà mis à jour par le stacked)
+        ChartLegend.addAggregatedColumns(data, coureurCategorieIdsToCategories);
+
+        var layout = {
+            height: height,
+            width: width,
+            margin: margin,
+            xBegin: graphBegin,
+            xEnd: graphEnd
+        };
+
+        // Exclure les clés agrégées de l'affichage initial
+        var keys = data.columns.slice(1).filter(function(k) { return k.indexOf('agg_') !== 0; });
+        keys = previousKeys || getKeysByDisplayOrder(keys, coureurCategorieIdsToCategories);
+
+        let cumulativeChart = new CumulativeChart('chartcumulatif', data, layout);
+        cumulativeChart.draw(keys, coureurCategorieIdsToCategories);
+
+        chartLegend.addCallback((keys) => cumulativeChart.drawDataLines(keys));
+
+        /**
+         * Interpole la minute (fractionnaire) où le cumul des effectifs atteint un seuil
+         * (Q1/Médiane/Q3), par la formule classique des données groupées : dans la minute n
+         * où le seuil est franchi, temps = n + (seuil - cumul avant n) / effectif_n.
+         *
+         * @param sums    effectifs visibles par minute (intervalle de 1 min, minutes contiguës)
+         * @param minutes minute associée à chaque ligne de sums
+         * @param target  effectif cumulé à atteindre (total/4, total/2, total*3/4)
+         */
+        function interpolatedQuantileMinute(sums, minutes, target) {
+            var cumul = 0;
+            for (var i = 0; i < sums.length; i++) {
+                var cumulBefore = cumul;
+                cumul += sums[i];
+                if (cumul >= target) {
+                    var pente = sums[i];
+                    if (pente <= 0) {
+                        return minutes[i];
+                    }
+                    return minutes[i] + (target - cumulBefore) / pente;
+                }
+            }
+            return null;
+        }
+
+        /**
+         * Calcule, à partir des données cumulatives (1 minute d'intervalle), la minute
+         * à laquelle le 1er quartile, la médiane et le 3ème quartile des coureurs des
+         * catégories visibles (keys) sont franchis.
+         */
+        function computeQuartileMarkers(keys) {
+            if (!keys || keys.length === 0) {
+                return [];
+            }
+
+            function sumForKeys(row) {
+                var sum = 0;
+                for (var i = 0; i < keys.length; i++) {
+                    sum += row[keys[i]] || 0;
+                }
+                return sum;
+            }
+
+            var total = 0;
+            for (var i = 0; i < data.length; i++) {
+                total += sumForKeys(data[i]);
+            }
+            if (total === 0) {
+                return [];
+            }
+
+            // Effectifs visibles par minute (données cumulatives à 1 min d'intervalle)
+            var sums = [];
+            var minutes = [];
+            for (var i = 0; i < data.length; i++) {
+                sums.push(sumForKeys(data[i]));
+                minutes.push(+data[i].temps);
+            }
+
+            var markers = [];
+            var q1 = interpolatedQuantileMinute(sums, minutes, total / 4);
+            var me = interpolatedQuantileMinute(sums, minutes, total / 2);
+            var q3 = interpolatedQuantileMinute(sums, minutes, total * 3 / 4);
+            if (q1 != null) markers.push({ label: 'Q1', minute: q1 });
+            if (me != null) markers.push({ label: 'Me', minute: me });
+            if (q3 != null) markers.push({ label: 'Q3', minute: q3 });
+            return markers;
+        }
+
+        function drawQuartileMarkersForKeys(visibleKeys) {
+            stackedChartGlobal.drawQuartileMarkers(computeQuartileMarkers(visibleKeys));
+        }
+
+        chartLegend.addCallback(drawQuartileMarkersForKeys);
+        drawQuartileMarkersForKeys(keys);
+    }
+
+    buildStackedChart();
+    buildCumulativeChart();
+
+    // Affichage mixte (MF) : démarrer avec seulement « Total catégories hommes »
+    // et « Total catégories femmes » cochés (au premier rendu uniquement).
+        if (!previousKeys && chartLegend) {
+        chartLegend.applyDefaultSexAggregation();
+    }
+    }
+
+renderCharts();
+window.addEventListener('resize', utilChart.debounce(renderCharts, 200));
+
+</script>
+<script>
+//SVG PIE CHART PAR CATÉGORIE
+// Dessine un camembert des catégories dans le div indiqué. Si sexFilter ('M'/'F')
+// est fourni, ne conserve que les catégories de ce sexe (camemberts séparés en MF).
+// sidePx fixe le côté du camembert : en MF, hommes et femmes sont dimensionnés pour
+// que la SURFACE soit proportionnelle à l'effectif (côté ∝ √effectif).
+function drawCategoryPie(divId, sexFilter, sidePx) {
+    var pieDiv = document.getElementById(divId);
+    if (!pieDiv) {
+        return;
+    }
+    var side = sidePx || 260;
+
+    // nbByCategory est indexé par id de catégorie ; libellés et couleurs proviennent
+    // de coureurCategorieIdsToCategories (même source que les histogrammes).
+    // On classe les parts par âge croissant (puis par sexe), et non par effectif :
+    // le tri automatique de Plotly est désactivé plus bas (sort: false).
+    var categorieIds = Object.keys(nbByCategory).filter(function(categorieId) {
+        var cat = coureurCategorieIdsToCategories[categorieId];
+        return !sexFilter || (cat && cat.sex === sexFilter);
+    }).sort(function(a, b) {
+        var catA = coureurCategorieIdsToCategories[a] || {};
+        var catB = coureurCategorieIdsToCategories[b] || {};
+        return (catA.ageMin - catB.ageMin)
+            || String(catA.sex).localeCompare(String(catB.sex))
+            || String(catA.nom).localeCompare(String(catB.nom));
+    });
+
+    var labels = [];
+    var values = [];
+    var colors = [];
+    categorieIds.forEach(function(categorieId) {
+        var cat = coureurCategorieIdsToCategories[categorieId];
+        labels.push(cat ? cat.nom : categorieId);
+        values.push(nbByCategory[categorieId]);
+        colors.push(cat ? cat.exaDecimalColor : '#999999');
+    });
+
+    // Effectif affiché sous le titre du camembert (« coureuses » pour le camembert femmes).
+    var countDiv = document.getElementById(divId + '-count');
+    if (countDiv) {
+        var total = values.reduce(function(sum, v) { return sum + v; }, 0);
+        var noun = (sexFilter === 'F') ? 'coureuses' : 'coureurs';
+        countDiv.textContent = total.toLocaleString('fr-FR') + ' ' + noun;
+    }
+
+    var data = [{
+        type: 'pie',
+        labels: labels,
+        values: values,
+        sort: false,
+        direction: 'clockwise',
+        marker: { colors: colors },
+        textinfo: 'label+value',
+        textposition: 'inside',
+        insidetextorientation: 'horizontal',
+        textfont: {
+            color: '#ffffff',
+            size: 12
+        },
+        hoverinfo: 'label+percent+value'
+    }];
+
+    // Le div est dimensionné au côté voulu ; Plotly le remplit.
+    pieDiv.style.width = side + 'px';
+    pieDiv.style.height = side + 'px';
+
+    var layout = {
+        width: side,
+        height: side,
+        showlegend: false,
+        margin: { t: 10, b: 10, l: 10, r: 10 }
+    };
+
+    var config = {
+        editable: false,
+        displayModeBar: false,
+        responsive: true
+    };
+
+    Plotly.newPlot(pieDiv, data, layout, config);
+
+    window.addEventListener('resize', utilChart.debounce(function() {
+        Plotly.relayout(pieDiv, {autosize: true});
+    }, 200));
+}
+
+// Effectif total des catégories d'un sexe (pour dimensionner les camemberts).
+function totalCategoriesForSex(sexFilter) {
+    return Object.keys(nbByCategory).reduce(function(sum, categorieId) {
+        var cat = coureurCategorieIdsToCategories[categorieId];
+        if (!sexFilter || (cat && cat.sex === sexFilter)) {
+            sum += nbByCategory[categorieId];
+        }
+        return sum;
+    }, 0);
+}
+
+// En MF : un camembert par sexe (piechartcategory-M / -F), dimensionnés pour que la
+// surface soit proportionnelle à l'effectif. Sinon : un seul camembert (piechartcategory).
+var MAX_PIE_SIDE = 260;
+var MIN_PIE_SIDE = 110;
+var totalM = totalCategoriesForSex('M');
+var totalF = totalCategoriesForSex('F');
+var maxTotal = Math.max(totalM, totalF, 1);
+function pieSideForTotal(total) {
+    return Math.max(MIN_PIE_SIDE, Math.round(MAX_PIE_SIDE * Math.sqrt(total / maxTotal)));
+}
+
+drawCategoryPie('piechartcategory', null, MAX_PIE_SIDE);
+drawCategoryPie('piechartcategory-M', 'M', pieSideForTotal(totalM));
+drawCategoryPie('piechartcategory-F', 'F', pieSideForTotal(totalF));
+
+//SVG PIE CHART HOMMES / FEMMES
+(function() {
+    var pieDiv = document.getElementById('piechartsex');
+    if (!pieDiv) {
+        return;
+    }
+
+    var countDiv = document.getElementById('piechartsex-count');
+    if (countDiv) {
+        countDiv.textContent = (Number(nbBySex.M) + Number(nbBySex.F)).toLocaleString('fr-FR') + ' coureurs';
+    }
+
+    var data = [{
+        type: 'pie',
+        labels: ['Hommes', 'Femmes'],
+        values: [nbBySex.M, nbBySex.F],
+        marker: {
+            colors: [
+                coureurCategorieIdsToCategories['agg_M'].exaDecimalColor,
+                coureurCategorieIdsToCategories['agg_F'].exaDecimalColor
+            ]
+        },
+        textinfo: 'label+percent+value',
+        textposition: 'inside',
+        textfont: {
+            color: '#ffffff',
+            size: 14
+        },
+        hoverinfo: 'label+percent+value'
+    }];
+
+    var layout = {
+        width: 260,
+        height: 260,
+        showlegend: false,
+        margin: { t: 10, b: 10, l: 10, r: 10 }
+    };
+
+    var config = {
+        editable: false,
+        displayModeBar: false,
+        responsive: true
+    };
+
+    Plotly.newPlot(pieDiv, data, layout, config);
+
+    window.addEventListener('resize', utilChart.debounce(function() {
+        Plotly.relayout(pieDiv, {autosize: true});
+    }, 200));
+})();
+</script>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-gpx/1.7.0/gpx.min.js"></script>
+<script>
+(function() {
+    var map = L.map('gpxMap');
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '© OpenStreetMap contributors',
+        maxZoom: 18
+    }).addTo(map);
+
+    L.control.scale({ metric: true, imperial: false }).addTo(map);
+
+    function calcBearing(p1, p2) {
+        var lat1 = p1.lat * Math.PI / 180, lat2 = p2.lat * Math.PI / 180;
+        var dLon = (p2.lng - p1.lng) * Math.PI / 180;
+        var y = Math.sin(dLon) * Math.cos(lat2);
+        var x = Math.cos(lat1) * Math.sin(lat2) - Math.sin(lat1) * Math.cos(lat2) * Math.cos(dLon);
+        return ((Math.atan2(y, x) * 180 / Math.PI) + 360) % 360;
+    }
+
+    function haversineKm(p1, p2) {
+        var R = 6371;
+        var dLat = (p2.lat - p1.lat) * Math.PI / 180;
+        var dLon = (p2.lng - p1.lng) * Math.PI / 180;
+        var a = Math.sin(dLat / 2) * Math.sin(dLat / 2)
+              + Math.cos(p1.lat * Math.PI / 180) * Math.cos(p2.lat * Math.PI / 180)
+              * Math.sin(dLon / 2) * Math.sin(dLon / 2);
+        return R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+    }
+
+    function emojiIcon(emoji, size, anchor) {
+        return L.divIcon({
+            html: '<span style="font-size:' + size + 'px;line-height:1;filter:drop-shadow(0 1px 2px rgba(0,0,0,.5));">' + emoji + '</span>',
+            className: '',
+            iconSize: [size, size],
+            iconAnchor: anchor
+        });
+    }
+
+    var startIcon = L.divIcon({
+        html: '<svg width="39" height="48" viewBox="0 0 26 32" xmlns="http://www.w3.org/2000/svg" style="filter:drop-shadow(0 1px 2px rgba(0,0,0,.5))">'
+            + '<line x1="3" y1="1" x2="3" y2="31" stroke="#555" stroke-width="2" stroke-linecap="round"/>'
+            + '<polygon points="3,1 24,8 3,17" fill="#22bb33" stroke="#fff" stroke-width="0.5"/>'
+            + '</svg>',
+        className: '',
+        iconSize: [39, 48],
+        iconAnchor: [5, 47]
+    });
+
+    new L.GPX("gpx/course_17_6a40823b3148d.gpx", {
+        async: true,
+        marker_options: { startIconUrl: null, endIconUrl: null, shadowUrl: null },
+        polyline_options: { color: '#e05020', weight: 3, opacity: 0.9 }
+    }).on('loaded', function(e) {
+        map.fitBounds(e.target.getBounds());
+
+        // Collect all track points from all polyline sub-layers
+        var allPoints = [];
+        e.target.getLayers().forEach(function(layer) {
+            if (!layer.getLatLngs) return;
+            var latlngs = layer.getLatLngs();
+            // Handle flat array (single segment) or array of arrays (multi-segment)
+            if (latlngs.length && Array.isArray(latlngs[0])) {
+                latlngs.forEach(function(seg) { allPoints = allPoints.concat(seg); });
+            } else {
+                allPoints = allPoints.concat(latlngs);
+            }
+        });
+
+        if (allPoints.length < 2) return;
+
+        // Départ : drapeau vert SVG — ancré en bas du mât
+        L.marker(allPoints[0], {
+            icon: startIcon,
+            zIndexOffset: 1000
+        }).bindTooltip('Départ').addTo(map);
+
+        // Arrivée : drapeau à damier — ancré en bas à gauche
+        L.marker(allPoints[allPoints.length - 1], {
+            icon: emojiIcon('🏁', 30, [4, 28]),
+            zIndexOffset: 1000
+        }).bindTooltip('Arrivée').addTo(map);
+
+        // Bornes kilométriques : interpolation exacte à chaque km entier
+        var cumDist = 0, nextKm = 1;
+        for (var i = 1; i < allPoints.length; i++) {
+            var segDist = haversineKm(allPoints[i - 1], allPoints[i]);
+            var prevDist = cumDist;
+            cumDist += segDist;
+            while (nextKm <= cumDist) {
+                var frac = segDist > 0 ? (nextKm - prevDist) / segDist : 0;
+                var lat = allPoints[i - 1].lat + frac * (allPoints[i].lat - allPoints[i - 1].lat);
+                var lng = allPoints[i - 1].lng + frac * (allPoints[i].lng - allPoints[i - 1].lng);
+                L.marker([lat, lng], {
+                    icon: L.divIcon({
+                        html: '<div style="background:#fff;border:2px solid #e05020;border-radius:50%;width:22px;height:22px;line-height:18px;text-align:center;font-size:11px;font-weight:bold;color:#333;box-shadow:0 1px 3px rgba(0,0,0,.4);">' + nextKm + '</div>',
+                        className: '',
+                        iconSize: [22, 22],
+                        iconAnchor: [11, 11]
+                    }),
+                    zIndexOffset: 200
+                }).bindTooltip(nextKm + ' km').addTo(map);
+                nextKm++;
+            }
+        }
+
+        // Flèches de sens : ~12 réparties sur le tracé
+        var arrowCount = 12;
+        var step = Math.max(1, Math.floor(allPoints.length / (arrowCount + 1)));
+        for (var i = step; i < allPoints.length - 1; i += step) {
+            // Bearing calculé sur quelques points en avance pour lisser la direction
+            var ahead = Math.min(i + Math.max(1, Math.floor(step / 3)), allPoints.length - 1);
+            var bearing = calcBearing(allPoints[i], allPoints[ahead]);
+            L.marker(allPoints[i], {
+                icon: L.divIcon({
+                    html: '<div style="transform:rotate(' + (bearing - 90) + 'deg);font-size:16px;line-height:1;color:#e05020;text-shadow:0 0 3px #fff,0 0 3px #fff;">➤</div>',
+                    className: '',
+                    iconSize: [16, 16],
+                    iconAnchor: [8, 8]
+                }),
+                interactive: false,
+                zIndexOffset: 500
+            }).addTo(map);
+        }
+    }).addTo(map);
+
+    // Indicateur de vent (si données météo disponibles pour cette édition)
+        (function() {
+                var windSpeed = 6.4;
+        var windDir   = 98;
+        var windGust  = null;
+        var dirs = ['N','NE','E','SE','S','SO','O','NO'];
+        var dirLabel  = dirs[Math.round(windDir / 45) % 8];
+        var arrowDeg  = (windDir + 180) % 360;
+        // Taille du picto proportionnelle au vent : 5 km/h -> 0.25 (mini), 50 km/h -> 0.65 (maxi), borné.
+        var windScale = 0.25 + (Math.min(Math.max(windSpeed, 5), 50) - 5) * (0.65 - 0.25) / (50 - 5);
+        var hasWind   = true;
+        
+                var temperature = 25.2;
+        var humidity    = 45;
+        var humidex     = 27.7;
+        var hasTemp     = true;
+        
+                var solarRadiation = 643;
+        var hasSolar       = true;
+        
+        var MeteoControl = L.Control.extend({
+            options: { position: 'bottomleft' },
+            onAdd: function() {
+                var c = L.DomUtil.create('div');
+                var html =
+                    '<div style="background:rgba(255,255,255,0.93);border-radius:10px;padding:8px 12px;'
+                    + 'box-shadow:0 2px 6px rgba(0,0,0,.3);text-align:center;font-family:sans-serif;min-width:100px;">'
+                    + '<div style="font-size:11px;color:#333;font-weight:bold;margin-bottom:2px;">Météo à l\'heure du départ</div>'
+                    + '<div style="font-size:11px;color:#333;margin-bottom:2px;">10h20</div>'
+                    + '<div style="font-size:9px;color:#aaa;margin-bottom:6px;">Open-Meteo (modèle ECMWF IFS)</div>';
+
+                if (hasWind) {
+                    var gustLine = windGust !== null
+                        ? '<div style="font-size:10px;color:#888;margin-top:1px;">raf. ' + windGust + ' km/h</div>'
+                        : '';
+                    html +=
+                        '<div style="position:relative;width:104px;height:104px;margin:0 auto 4px;">'
+                        +   '<svg width="104" height="104" viewBox="0 0 52 52">'
+                        +     '<g transform="rotate(' + arrowDeg + ', 26, 26)">'
+                        // Picto "vent du sud" : orientation d'origine = vent du sud (arrowDeg = 0),
+                        // recentré (bbox ~55.7,43.1 en repère 100x100) et mis à l'échelle dans le cercle.
+                        +       '<g transform="translate(26,26) scale(' + windScale + ') translate(-55.7,-43.1)" fill="none" stroke="#2196f3" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">'
+                        +         '<path d="M 53.541333,80.042711 53.279077,29.55833 c -0.101283,-2.645767 -1.136279,-5.952504 -6.211324,-5.272016 -4.186872,0.561398 -5.728803,4.882575 -5.972371,7.821598 -0.172084,2.076427 0.496798,3.983577 2.229696,4.768548 1.732897,0.784971 3.814164,0.752746 4.793595,-2.146565 0.470942,-1.394085 0.38208,-3.349049 0.38208,-3.349049"/>'
+                        +         '<path d="M 57.100578,80.20737 56.533497,11.817519 C 56.533075,7.7816794 53.006835,5.2834527 49.723382,6.0509558 45.419061,7.0570859 44.224333,11.3237 43.967833,14.138991 c -0.181217,1.989009 0.498289,3.808231 2.318863,4.525021 1.834163,0.72214 4.550631,-0.05877 4.853001,-2.330323 0.147944,-1.111417 0.01438,-2.628992 0.01438,-2.628992"/>'
+                        +         '<path d="M 57.741197,80.102182 57.603392,23.579078 c 0.09382,-2.506578 1.22894,-6.426686 6.456984,-6.44861 4.313096,-0.01808 5.835242,4.521268 6.097645,7.259144 0.185388,1.934316 -0.491994,4.717468 -2.273112,5.68367 -1.781118,0.966203 -4.253896,0.433252 -4.947827,-2.294936 -0.304397,-1.196736 -0.311663,-3.094721 -0.311663,-3.094721"/>'
+                        +       '</g>'
+                        +     '</g>'
+                        +   '</svg>'
+                        + '</div>'
+                        + '<div style="font-size:14px;font-weight:bold;color:#333;">' + windSpeed + ' km/h</div>'
+                        + '<div style="font-size:11px;color:#666;margin-bottom:4px;">' + dirLabel + '</div>'
+                        + gustLine;
+                }
+
+                if (hasTemp) {
+                    var sep = hasWind ? '<hr style="margin:6px 0;border-color:#eee;"/>' : '';
+                    var humidityLine = humidity !== null
+                        ? '<div style="font-size:10px;color:#888;margin-top:1px;">φ ' + humidity + ' %</div>'
+                        : '';
+                    var humidexLine = humidex !== null
+                        ? '<div style="font-size:10px;color:#888;margin-top:1px;">humidex ' + humidex + '</div>'
+                        : '';
+                    html += sep
+                        + '<div style="font-size:14px;font-weight:bold;color:#d62728;">🌡️ ' + temperature + ' °C</div>'
+                        + humidityLine
+                        + humidexLine;
+                }
+
+                if (hasSolar) {
+                    var sep2 = (hasWind || hasTemp) ? '<hr style="margin:6px 0;border-color:#eee;"/>' : '';
+                    html += sep2
+                        + '<div style="font-size:14px;font-weight:bold;color:#f59e0b;">☀️ ' + solarRadiation + ' W/m²</div>'
+                        + '<div style="font-size:10px;color:#888;margin-top:1px;">radiation solaire<br>moy. sur 1h après départ</div>';
+                }
+
+                html += '</div>';
+                c.innerHTML = html;
+                L.DomEvent.disableClickPropagation(c);
+                return c;
+            }
+        });
+        new MeteoControl().addTo(map);
+    })();
+    
+})();
+</script>
+    
+</body>
+</html>
