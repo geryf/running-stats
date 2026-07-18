@@ -1077,6 +1077,31 @@ h2 {
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
 }
+/* Colonne 1 figée pendant le scroll horizontal */
+.stats-table > thead > tr > th:first-child,
+.stats-table > thead > tr > td:first-child,
+.stats-table > tbody > tr > th:first-child,
+.stats-table > tbody > tr > td:first-child,
+.stats-table > tfoot > tr > th:first-child,
+.stats-table > tfoot > tr > td:first-child {
+  position: sticky;
+  left: 0;
+  z-index: 2;
+  background-color: #fff;
+}
+/* Couleurs des lignes spéciales conservées sur la colonne figée */
+.stats-table tr.meteo-row > th:first-child,
+.stats-table tr.meteo-row > td:first-child { background-color: #fff8f0; }
+.stats-table tr.subtotal-row > th:first-child,
+.stats-table tr.subtotal-row > td:first-child { background-color: #f9f9f9; }
+.stats-table tr.avg-all-row > th:first-child,
+.stats-table tr.avg-all-row > td:first-child { background-color: #f5f5f5; }
+.stats-table tr.selection-row > th:first-child,
+.stats-table tr.selection-row > td:first-child { background-color: #eef6ff; }
+.stats-table tr.premier-header-row > th:first-child,
+.stats-table tr.premier-header-row > td:first-child { background-color: #fdecea; }
+.stats-table tr.premier-row > th:first-child,
+.stats-table tr.premier-row > td:first-child { background-color: #fdecea; }
 .edition-sep {
   border-left: 3px solid #888 !important;
 }
