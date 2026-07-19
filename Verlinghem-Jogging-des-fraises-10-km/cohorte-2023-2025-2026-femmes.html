@@ -78,16 +78,21 @@ var avgBySexCohort = {"M":{"label":"Tous les hommes","nb":68,"byEdition":{"32":{
 var evolutionHistograms = {"bracketFloors":[-25,-20,-15,-10,-5,0,5,10,15,20,25,30,35,40,45],"bracketWidth":5,"yMax":12,"transitions":[{"fromLabel":"29 mai 2023","toLabel":"9 juin 2025","nb":35,"counts":[0,1,0,5,12,9,4,2,0,1,0,0,0,0,1]},{"fromLabel":"9 juin 2025","toLabel":"25 mai 2026","nb":35,"counts":[1,0,0,2,3,5,11,6,4,2,0,1,0,0,0]}]}
 var evolutionScatter = {"transitions":[{"fromLabel":"29 mai 2023","toLabel":"9 juin 2025","points":[{"x":3248,"y":3210},{"x":3609,"y":3834},{"x":3431,"y":3481},{"x":3719,"y":3703},{"x":2706,"y":3935},{"x":4010,"y":3380},{"x":2979,"y":2946},{"x":3748,"y":4150},{"x":3994,"y":4103},{"x":3271,"y":3196},{"x":2939,"y":2853},{"x":4106,"y":3875},{"x":3547,"y":3549},{"x":2977,"y":3329},{"x":3244,"y":3521},{"x":4557,"y":4195},{"x":3753,"y":3679},{"x":3597,"y":4428},{"x":3127,"y":2963},{"x":3594,"y":3440},{"x":2718,"y":2718},{"x":3963,"y":4025},{"x":3448,"y":3318},{"x":4055,"y":3821},{"x":3888,"y":4175},{"x":3958,"y":3953},{"x":3749,"y":3688},{"x":2908,"y":3004},{"x":4053,"y":4089},{"x":3818,"y":3808},{"x":4139,"y":4203},{"x":4556,"y":4119},{"x":3537,"y":3462},{"x":3616,"y":3743},{"x":3101,"y":3303}]},{"fromLabel":"9 juin 2025","toLabel":"25 mai 2026","points":[{"x":3210,"y":3483},{"x":3834,"y":3962},{"x":3481,"y":4147},{"x":3703,"y":4225},{"x":3935,"y":3034},{"x":3380,"y":3302},{"x":2946,"y":3213},{"x":4150,"y":4231},{"x":4103,"y":4345},{"x":3196,"y":3480},{"x":2853,"y":3284},{"x":3875,"y":3961},{"x":3549,"y":3754},{"x":3329,"y":4114},{"x":3521,"y":3872},{"x":4195,"y":5593},{"x":3679,"y":4106},{"x":4428,"y":4127},{"x":2963,"y":3163},{"x":3440,"y":4122},{"x":2718,"y":2889},{"x":4025,"y":3878},{"x":3318,"y":3437},{"x":3821,"y":3540},{"x":4175,"y":4630},{"x":3953,"y":4272},{"x":3688,"y":3678},{"x":3004,"y":3548},{"x":4089,"y":4474},{"x":3808,"y":4616},{"x":4203,"y":4650},{"x":4119,"y":4662},{"x":3462,"y":3866},{"x":3743,"y":4105},{"x":3303,"y":3419}]}]}
 </script>
-    <h1>Jogging des fraises - 10 km route<br /><span class="cohort-subtitle">Coureurs ayant participé à chaque édition&nbsp;: <span class="nowrap">29 mai 2023</span>, <span class="nowrap">9 juin 2025</span>, <span class="nowrap">25 mai 2026</span></span></h1>
+    <h1>Jogging des fraises - 10 km route<br />
+	<span class="cohort-subtitle">Coureuses ayant participé à chaque édition&nbsp;: <span class="nowrap">29 mai 2023</span>, <span class="nowrap">9 juin 2025</span>, <span class="nowrap">25 mai 2026</span></span> 
+	</h1>
     <p>Il n'y a pas eu d'édition en 2024, du fait d'un changement au sein des organisateurs de la course.</p>
-    <h2>103 coureurs classés (femmes)</h2>
+	<h2>35 coureuses classées (femmes)</h2>
         <div class="cohort-pies">
                 <div class="cohort-pie-block">
             <h3>Répartition par catégorie</h3>
             <div class="cohort-pie-count" id="piechartcategory-count"></div>
             <div id="piechartcategory" class="cohort-pie"></div>
         </div>
+
             </div>
+		<p>A noter que les coureuses de la cohorte sont en proportion plus agées que l'ensemble des coureuses.
+		77% de plus de 35 ans pour les femmes, contre 65% pour l'ensemble des femmes dans l'edition 2023.</p>
         <div class="cohort-graph-block">
         <h2 class="cohort-edition-title">29 mai 2023<br><small class="text-muted">Niveau FFA : National</small></h2>
         <div class="cohort-edition-row" style="display:flex;align-items:flex-start;gap:16px;">
@@ -1924,7 +1929,7 @@ function pieSideForTotal(total) {
     return Math.max(MIN_PIE_SIDE, Math.round(MAX_PIE_SIDE * Math.sqrt(total / maxTotal)));
 }
 
-drawCategoryPie('piechartcategory', null, MAX_PIE_SIDE);
+drawCategoryPie('piechartcategory', 'F', MAX_PIE_SIDE);
 drawCategoryPie('piechartcategory-M', 'M', pieSideForTotal(totalM));
 drawCategoryPie('piechartcategory-F', 'F', pieSideForTotal(totalF));
 </script>
