@@ -9,7 +9,7 @@
     <meta name="author" content="">
     <link rel="icon" href="favicon.ico">
 
-    <title>Statistiques : Jogging des fraises - 10 km route - cohorte 2023-2025-2026 (hommes et femmes)</title>
+    <title>Statistiques : Jogging des fraises - 10 km route - cohorte 2025-2026 (femmes)</title>
 
     <!-- Bootstrap core CSS -->
     <link href="components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -43,24 +43,24 @@
 .rs-dropmenu a.active{background:#e74c3c;color:#fff;}
 </style>
 
-<<nav class="rs-nav">
+<nav class="rs-nav">
   <a class="rs-brand" href="edition-2026.html">Jogging des fraises · 10 km</a>
   <a href="edition-2026.html">Édition 2026</a>
   <a href="comparaison-editions-2022-2023-2025-2026.html">Comparaison 2022·2023·2025·2026</a>
-  <div class="rs-dropdown open" id="rsCohortes">
-    <button type="button" class="rs-dropbtn active">Cohortes 2023-2025-2026 ▾</button>
+  <div class="rs-dropdown" id="rsCohortes">
+    <button type="button" class="rs-dropbtn">Cohortes 2023-2025-2026 ▾</button>
     <div class="rs-dropmenu">
-      <a href="cohorte-2023-2025-2026-hf.html" class="active">Hommes + Femmes</a>
-      <a href="cohorte-2023-2025-2026-hommes.html" >Hommes</a>
+      <a href="cohorte-2023-2025-2026-hf.html">Hommes + Femmes</a>
+      <a href="cohorte-2023-2025-2026-hommes.html">Hommes</a>
       <a href="cohorte-2023-2025-2026-femmes.html">Femmes</a>
     </div>
   </div>
   <div class="rs-dropdown" id="rsCohortes2">
-    <button type="button" class="rs-dropbtn">Cohortes 2025-2026 ▾</button>
+    <button type="button" class="rs-dropbtn active">Cohortes 2025-2026 ▾</button>
     <div class="rs-dropmenu">
       <a href="cohorte-2025-2026-hf.html">Hommes + Femmes</a>
       <a href="cohorte-2025-2026-hommes.html">Hommes</a>
-      <a href="cohorte-2025-2026-femmes.html">Femmes</a>
+      <a href="cohorte-2025-2026-femmes.html" class="active">Femmes</a>
     </div>
   </div>
 </nav>
@@ -83,59 +83,38 @@
                 
         <script type="text/javascript">
 var coureurCategorieIdsToCategories = {"27":{"nom":"Baby Athl\u00e9","sex":"F","ageMin":0,"ageMax":5,"exaDecimalColor":""},"28":{"nom":"\u00c9cole d'Athl\u00e9tisme","sex":"F","ageMin":5,"ageMax":9,"exaDecimalColor":""},"29":{"nom":"Poussines","sex":"F","ageMin":9,"ageMax":11,"exaDecimalColor":""},"23":{"nom":"Benjamines","sex":"F","ageMin":11,"ageMax":13,"exaDecimalColor":""},"20":{"nom":"Minimes","sex":"F","ageMin":13,"ageMax":15,"exaDecimalColor":""},"9":{"nom":"Cadettes","sex":"F","ageMin":15,"ageMax":17,"exaDecimalColor":"#00FFBF"},"10":{"nom":"Juniors","sex":"F","ageMin":17,"ageMax":19,"exaDecimalColor":"#2ECCFA"},"11":{"nom":"Espoirs","sex":"F","ageMin":19,"ageMax":21,"exaDecimalColor":"#0080FF"},"12":{"nom":"Seniors","sex":"F","ageMin":21,"ageMax":34,"exaDecimalColor":"#2E2EFE"},"65":{"nom":"Master 0","sex":"F","ageMin":35,"ageMax":39,"exaDecimalColor":"#FFF176"},"13":{"nom":"V\u00e9t\u00e9rans 1","sex":"F","ageMin":39,"ageMax":49,"exaDecimalColor":"#CC2EFA"},"31":{"nom":"V\u00e9t\u00e9rans","sex":"F","ageMin":39,"ageMax":null,"exaDecimalColor":""},"66":{"nom":"Master 1","sex":"F","ageMin":40,"ageMax":44,"exaDecimalColor":"#FFD740"},"67":{"nom":"Master 2","sex":"F","ageMin":45,"ageMax":49,"exaDecimalColor":"#FFAB00"},"14":{"nom":"V\u00e9t\u00e9rans 2","sex":"F","ageMin":49,"ageMax":59,"exaDecimalColor":"#FE2EF7"},"68":{"nom":"Master 3","sex":"F","ageMin":50,"ageMax":54,"exaDecimalColor":"#FF8F00"},"69":{"nom":"Master 4","sex":"F","ageMin":55,"ageMax":59,"exaDecimalColor":"#FF6D00"},"15":{"nom":"V\u00e9t\u00e9rans 3","sex":"F","ageMin":59,"ageMax":69,"exaDecimalColor":"#DF01A5"},"70":{"nom":"Master 5","sex":"F","ageMin":60,"ageMax":64,"exaDecimalColor":"#F4511E"},"71":{"nom":"Master 6","sex":"F","ageMin":65,"ageMax":69,"exaDecimalColor":"#E53935"},"16":{"nom":"V\u00e9t\u00e9rans 4","sex":"F","ageMin":69,"ageMax":null,"exaDecimalColor":"#FE2E64"},"72":{"nom":"Master 7","sex":"F","ageMin":70,"ageMax":74,"exaDecimalColor":"#C62828"},"73":{"nom":"Master 8","sex":"F","ageMin":75,"ageMax":79,"exaDecimalColor":"#E91E63"},"74":{"nom":"Master 9","sex":"F","ageMin":80,"ageMax":84,"exaDecimalColor":"#C2185B"},"75":{"nom":"Master 10","sex":"F","ageMin":85,"ageMax":null,"exaDecimalColor":"#880E4F"},"18":{"nom":"Hommes","sex":"M","ageMin":null,"ageMax":null,"exaDecimalColor":""},"24":{"nom":"Baby Athl\u00e9","sex":"M","ageMin":0,"ageMax":5,"exaDecimalColor":""},"25":{"nom":"\u00c9cole d'Athl\u00e9tisme","sex":"M","ageMin":5,"ageMax":9,"exaDecimalColor":""},"26":{"nom":"Poussins","sex":"M","ageMin":9,"ageMax":11,"exaDecimalColor":""},"21":{"nom":"Benjamins","sex":"M","ageMin":11,"ageMax":13,"exaDecimalColor":"#173B0B"},"19":{"nom":"Minimes","sex":"M","ageMin":13,"ageMax":15,"exaDecimalColor":"#2A5839"},"1":{"nom":"Cadets","sex":"M","ageMin":15,"ageMax":17,"exaDecimalColor":"#336633"},"2":{"nom":"Juniors","sex":"M","ageMin":17,"ageMax":19,"exaDecimalColor":"#088A4B"},"3":{"nom":"Espoirs","sex":"M","ageMin":19,"ageMax":21,"exaDecimalColor":"#5b8888"},"4":{"nom":"Seniors","sex":"M","ageMin":21,"ageMax":34,"exaDecimalColor":"#6b486b"},"54":{"nom":"Master 0","sex":"M","ageMin":35,"ageMax":39,"exaDecimalColor":"#FFF176"},"30":{"nom":"V\u00e9t\u00e9rans","sex":"M","ageMin":39,"ageMax":null,"exaDecimalColor":""},"5":{"nom":"V\u00e9t\u00e9rans 1","sex":"M","ageMin":39,"ageMax":49,"exaDecimalColor":"#a05d56"},"55":{"nom":"Master 1","sex":"M","ageMin":40,"ageMax":44,"exaDecimalColor":"#FFD740"},"56":{"nom":"Master 2","sex":"M","ageMin":45,"ageMax":49,"exaDecimalColor":"#FFAB00"},"6":{"nom":"V\u00e9t\u00e9rans 2","sex":"M","ageMin":49,"ageMax":59,"exaDecimalColor":"#d0743c"},"57":{"nom":"Master 3","sex":"M","ageMin":50,"ageMax":54,"exaDecimalColor":"#FF8F00"},"58":{"nom":"Master 4","sex":"M","ageMin":55,"ageMax":59,"exaDecimalColor":"#FF6D00"},"7":{"nom":"V\u00e9t\u00e9rans 3","sex":"M","ageMin":59,"ageMax":69,"exaDecimalColor":"#FF8000"},"59":{"nom":"Master 5","sex":"M","ageMin":60,"ageMax":64,"exaDecimalColor":"#F4511E"},"60":{"nom":"Master 6","sex":"M","ageMin":65,"ageMax":69,"exaDecimalColor":"#E53935"},"8":{"nom":"V\u00e9t\u00e9rans 4","sex":"M","ageMin":69,"ageMax":79,"exaDecimalColor":"#F7BE81"},"61":{"nom":"Master 7","sex":"M","ageMin":70,"ageMax":74,"exaDecimalColor":"#C62828"},"62":{"nom":"Master 8","sex":"M","ageMin":75,"ageMax":79,"exaDecimalColor":"#E91E63"},"22":{"nom":"V\u00e9t\u00e9rans 5","sex":"M","ageMin":79,"ageMax":null,"exaDecimalColor":"#F5DA81"},"63":{"nom":"Master 9","sex":"M","ageMin":80,"ageMax":84,"exaDecimalColor":"#C2185B"},"64":{"nom":"Master 10","sex":"M","ageMin":85,"ageMax":null,"exaDecimalColor":"#880E4F"}}
-var nbBySex = {"M":68,"F":35}
-var nbByCategory = {"11":2,"12":6,"65":4,"66":7,"67":8,"68":7,"69":1,"4":9,"54":9,"55":11,"56":9,"57":14,"58":6,"59":5,"60":4,"62":1}
-var editionsAxis = [{"id":35,"label":"29 mai 2023","time":"10h00","temperature":13.9,"humidity":69,"humidex":14.4,"wind":20.8,"wind_gust":null,"wind_direction":37,"solar_radiation":638,"meteo_model":"ecmwf_ifs","meteo_source":null},{"id":33,"label":"9 juin 2025","time":"09h20","temperature":13.7,"humidity":84,"humidex":15.5,"wind":8.8,"wind_gust":null,"wind_direction":229,"solar_radiation":435,"meteo_model":"ecmwf_ifs","meteo_source":null},{"id":32,"label":"25 mai 2026","time":"10h20","temperature":25.2,"humidity":45,"humidex":27.7,"wind":6.4,"wind_gust":null,"wind_direction":98,"solar_radiation":643,"meteo_model":"ecmwf_ifs","meteo_source":null}]
-var avgByBracket = {"30":{"label":"30' - 40'","nb":5,"byEdition":{"32":{"avgMinutes":36.9,"avgSeconds":2214.8,"avgLabel":"36'55","stdDevLabel":"1'21","evolutionLabel":"+0'49 (+2.3%)","evolutionDiffSeconds":48.80000000000018},"33":{"avgMinutes":36.1,"avgSeconds":2166,"avgLabel":"36'06","stdDevLabel":"1'36","evolutionLabel":"+0'15 (+0.7%)","evolutionDiffSeconds":14.800000000000182},"35":{"avgMinutes":35.9,"avgSeconds":2151.2,"avgLabel":"35'51","stdDevLabel":"1'52"}}},"40":{"label":"40' - 50'","nb":24,"byEdition":{"32":{"avgMinutes":48.5,"avgSeconds":2912.875,"avgLabel":"48'33","stdDevLabel":"4'42","evolutionLabel":"+5'11 (+12.0%)","evolutionDiffSeconds":311.4167000000002},"33":{"avgMinutes":43.4,"avgSeconds":2601.4583,"avgLabel":"43'21","stdDevLabel":"2'36","evolutionLabel":"-1'34 (-3.5%)","evolutionDiffSeconds":-93.625},"35":{"avgMinutes":44.9,"avgSeconds":2695.0833,"avgLabel":"44'55","stdDevLabel":"3'14"}}},"50":{"label":"50' - 1h00","nb":40,"byEdition":{"32":{"avgMinutes":58.7,"avgSeconds":3521.4,"avgLabel":"58'41","stdDevLabel":"5'31","evolutionLabel":"+6'05 (+11.6%)","evolutionDiffSeconds":365.4000000000001},"33":{"avgMinutes":52.6,"avgSeconds":3156,"avgLabel":"52'36","stdDevLabel":"4'24","evolutionLabel":"+0'14 (+0.4%)","evolutionDiffSeconds":13.824999999999818},"35":{"avgMinutes":52.4,"avgSeconds":3142.175,"avgLabel":"52'22","stdDevLabel":"4'05"}}},"60":{"label":"Plus d'1h00","nb":34,"byEdition":{"32":{"avgMinutes":71.6,"avgSeconds":4295.2059,"avgLabel":"1h11'35","stdDevLabel":"7'19","evolutionLabel":"+7'39 (+12.0%)","evolutionDiffSeconds":458.79410000000007},"33":{"avgMinutes":63.9,"avgSeconds":3836.4118,"avgLabel":"1h03'56","stdDevLabel":"4'55","evolutionLabel":"-0'42 (-1.1%)","evolutionDiffSeconds":-42.264700000000175},"35":{"avgMinutes":64.6,"avgSeconds":3878.6765,"avgLabel":"1h04'39","stdDevLabel":"5'34"}}}}
-var avgAll = {"label":"Total g\u00e9n\u00e9ral","nb":103,"byEdition":{"32":{"avgMinutes":59.5,"avgSeconds":3571.6117,"avgLabel":"59'32","stdDevLabel":"11'39","evolutionLabel":"+6'08 (+11.5%)","evolutionDiffSeconds":368.2815999999998},"33":{"avgMinutes":53.4,"avgSeconds":3203.3301,"avgLabel":"53'23","stdDevLabel":"9'36","evolutionLabel":"-0'30 (-0.9%)","evolutionDiffSeconds":-29.679599999999937},"35":{"avgMinutes":53.9,"avgSeconds":3233.0097,"avgLabel":"53'53","stdDevLabel":"9'38"}}}
-var avgBySexCohort = {"M":{"label":"Tous les hommes","nb":68,"byEdition":{"32":{"avgMinutes":56.5,"avgSeconds":3392.5588,"avgLabel":"56'33","stdDevLabel":"11'38","evolutionLabel":"+6'51 (+13.8%)","evolutionDiffSeconds":411.0293999999999},"33":{"avgMinutes":49.7,"avgSeconds":2981.5294,"avgLabel":"49'42","stdDevLabel":"8'30","evolutionLabel":"-1'08 (-2.2%)","evolutionDiffSeconds":-67.54410000000007},"35":{"avgMinutes":50.8,"avgSeconds":3049.0735,"avgLabel":"50'49","stdDevLabel":"9'02"}}},"F":{"label":"Toutes les femmes","nb":35,"byEdition":{"32":{"avgMinutes":65.3,"avgSeconds":3919.4857,"avgLabel":"1h05'19","stdDevLabel":"9'17","evolutionLabel":"+4'45 (+7.8%)","evolutionDiffSeconds":285.22860000000037},"33":{"avgMinutes":60.6,"avgSeconds":3634.2571,"avgLabel":"1h00'34","stdDevLabel":"7'16","evolutionLabel":"+0'44 (+1.2%)","evolutionDiffSeconds":43.885699999999815},"35":{"avgMinutes":59.8,"avgSeconds":3590.3714,"avgLabel":"59'50","stdDevLabel":"7'50"}}}}
-var evolutionHistograms = {"bracketFloors":[-30,-25,-20,-15,-10,-5,0,5,10,15,20,25,30,35,40,45],"bracketWidth":5,"yMax":35,"transitions":[{"fromLabel":"29 mai 2023","toLabel":"9 juin 2025","nb":103,"counts":[1,2,3,7,10,35,24,14,3,0,1,1,0,0,1,1]},{"fromLabel":"9 juin 2025","toLabel":"25 mai 2026","nb":103,"counts":[0,1,0,0,2,7,19,20,16,19,10,2,5,0,2,0]}]}
-var evolutionScatter = {"transitions":[{"fromLabel":"29 mai 2023","toLabel":"9 juin 2025","points":[{"x":3248,"y":3210},{"x":3609,"y":3834},{"x":3319,"y":3231},{"x":3431,"y":3481},{"x":4555,"y":3194},{"x":3719,"y":3703},{"x":3055,"y":2460},{"x":2071,"y":2143},{"x":2706,"y":3935},{"x":4010,"y":3380},{"x":2645,"y":2611},{"x":2738,"y":2657},{"x":3341,"y":3365},{"x":2979,"y":2946},{"x":4420,"y":3414},{"x":2470,"y":2418},{"x":3920,"y":3702},{"x":3748,"y":4150},{"x":3079,"y":3065},{"x":3337,"y":3808},{"x":2666,"y":2810},{"x":3994,"y":4103},{"x":2745,"y":2660},{"x":3345,"y":3180},{"x":3271,"y":3196},{"x":3847,"y":3968},{"x":2089,"y":2096},{"x":2939,"y":2853},{"x":3718,"y":3508},{"x":2093,"y":2042},{"x":2827,"y":3047},{"x":3257,"y":2711},{"x":3106,"y":2694},{"x":3395,"y":3238},{"x":4106,"y":3875},{"x":4445,"y":4215},{"x":3108,"y":2667},{"x":3547,"y":3549},{"x":3284,"y":3561},{"x":3610,"y":3811},{"x":2977,"y":3329},{"x":3278,"y":3247},{"x":3244,"y":3521},{"x":4557,"y":4195},{"x":2609,"y":2738},{"x":4139,"y":4203},{"x":3101,"y":2947},{"x":3753,"y":3679},{"x":2776,"y":2824},{"x":2464,"y":2684},{"x":3597,"y":4428},{"x":2448,"y":2362},{"x":3685,"y":3710},{"x":3040,"y":2666},{"x":3225,"y":3343},{"x":3066,"y":3072},{"x":3183,"y":3147},{"x":3401,"y":3085},{"x":3334,"y":3271},{"x":2521,"y":2662},{"x":3127,"y":2963},{"x":2132,"y":2246},{"x":2371,"y":2303},{"x":3594,"y":3440},{"x":3006,"y":2365},{"x":2718,"y":2718},{"x":3963,"y":4025},{"x":3108,"y":3126},{"x":3032,"y":2761},{"x":2978,"y":2850},{"x":3060,"y":3358},{"x":3448,"y":3318},{"x":3871,"y":4017},{"x":3085,"y":3252},{"x":4055,"y":3821},{"x":3328,"y":2987},{"x":3888,"y":4175},{"x":3958,"y":3953},{"x":2893,"y":2780},{"x":3749,"y":3688},{"x":2733,"y":2792},{"x":2908,"y":3004},{"x":4053,"y":4089},{"x":2481,"y":2432},{"x":2775,"y":2835},{"x":2675,"y":2373},{"x":3818,"y":3808},{"x":4139,"y":4203},{"x":2548,"y":3638},{"x":2376,"y":2368},{"x":2814,"y":3596},{"x":3056,"y":2994},{"x":2576,"y":2483},{"x":2687,"y":2553},{"x":2686,"y":2746},{"x":4556,"y":4119},{"x":3537,"y":3462},{"x":2684,"y":2551},{"x":3381,"y":3034},{"x":3616,"y":3743},{"x":3101,"y":3303},{"x":2917,"y":3151},{"x":3329,"y":2916}]},{"fromLabel":"9 juin 2025","toLabel":"25 mai 2026","points":[{"x":3210,"y":3483},{"x":3834,"y":3962},{"x":3231,"y":3759},{"x":3481,"y":4147},{"x":3194,"y":3867},{"x":3703,"y":4225},{"x":2460,"y":2795},{"x":2143,"y":2221},{"x":3935,"y":3034},{"x":3380,"y":3302},{"x":2611,"y":2743},{"x":2657,"y":2757},{"x":3365,"y":4473},{"x":2946,"y":3213},{"x":3414,"y":4170},{"x":2418,"y":2827},{"x":3702,"y":4577},{"x":4150,"y":4231},{"x":3065,"y":3554},{"x":3808,"y":4253},{"x":2810,"y":2818},{"x":4103,"y":4345},{"x":2660,"y":3132},{"x":3180,"y":3412},{"x":3196,"y":3480},{"x":3968,"y":4606},{"x":2096,"y":2152},{"x":2853,"y":3284},{"x":3508,"y":4114},{"x":2042,"y":2167},{"x":3047,"y":3480},{"x":2711,"y":3212},{"x":2694,"y":3533},{"x":3238,"y":3278},{"x":3875,"y":3961},{"x":4215,"y":5399},{"x":2667,"y":3171},{"x":3549,"y":3754},{"x":3561,"y":3607},{"x":3811,"y":3708},{"x":3329,"y":4114},{"x":3247,"y":3248},{"x":3521,"y":3872},{"x":4195,"y":5593},{"x":2738,"y":3519},{"x":4203,"y":4649},{"x":2947,"y":3430},{"x":3679,"y":4106},{"x":2824,"y":3231},{"x":2684,"y":3564},{"x":4428,"y":4127},{"x":2362,"y":2576},{"x":3710,"y":4578},{"x":2666,"y":2733},{"x":3343,"y":3905},{"x":3072,"y":4369},{"x":3147,"y":3442},{"x":3085,"y":3179},{"x":3271,"y":3964},{"x":2662,"y":2613},{"x":2963,"y":3163},{"x":2246,"y":2164},{"x":2303,"y":2370},{"x":3440,"y":4122},{"x":2365,"y":2809},{"x":2718,"y":2889},{"x":4025,"y":3878},{"x":3126,"y":3469},{"x":2761,"y":3413},{"x":2850,"y":3213},{"x":3358,"y":3926},{"x":3318,"y":3437},{"x":4017,"y":4699},{"x":3252,"y":3271},{"x":3821,"y":3540},{"x":2987,"y":3175},{"x":4175,"y":4630},{"x":3953,"y":4272},{"x":2780,"y":3401},{"x":3688,"y":3678},{"x":2792,"y":2863},{"x":3004,"y":3548},{"x":4089,"y":4474},{"x":2432,"y":3435},{"x":2835,"y":2936},{"x":2373,"y":2710},{"x":3808,"y":4616},{"x":4203,"y":4650},{"x":3638,"y":4489},{"x":2368,"y":2606},{"x":3596,"y":3883},{"x":2994,"y":3546},{"x":2483,"y":2547},{"x":2553,"y":2759},{"x":2746,"y":2900},{"x":4119,"y":4662},{"x":3462,"y":3866},{"x":2551,"y":2976},{"x":3034,"y":3472},{"x":3743,"y":4105},{"x":3303,"y":3419},{"x":3151,"y":3078},{"x":2916,"y":3799}]}]}
+var nbBySex = {"M":257,"F":173}
+var nbByCategory = {"10":1,"11":7,"12":58,"65":23,"66":31,"67":28,"68":16,"69":7,"70":2}
+var editionsAxis = [{"id":33,"slug":"Jogging-des-fraises-10-km-route","label":"9 juin 2025","time":"09h20","temperature":13.7,"humidity":84,"humidex":15.5,"wind":8.8,"wind_gust":null,"wind_direction":229,"solar_radiation":435,"meteo_model":"ecmwf_ifs","meteo_source":null},{"id":32,"slug":"Jogging-des-fraises-10-km-route","label":"25 mai 2026","time":"10h20","temperature":25.2,"humidity":45,"humidex":27.7,"wind":6.4,"wind_gust":null,"wind_direction":98,"solar_radiation":643,"meteo_model":"ecmwf_ifs","meteo_source":null}]
+var avgByBracket = {"40":{"label":"40' - 50'","nb":5,"byEdition":{"32":{"avgMinutes":43.5,"avgSeconds":2611.8,"avgLabel":"43'32","stdDevLabel":"3'34","evolutionLabel":"-2'58 (-6.4%)","evolutionDiffSeconds":-178},"33":{"avgMinutes":46.5,"avgSeconds":2789.8,"avgLabel":"46'30","stdDevLabel":"5'04"}}},"50":{"label":"50' - 1h00","nb":59,"byEdition":{"32":{"avgMinutes":57.1,"avgSeconds":3425.0169,"avgLabel":"57'05","stdDevLabel":"4'51","evolutionLabel":"+2'17 (+4.2%)","evolutionDiffSeconds":136.79660000000013},"33":{"avgMinutes":54.8,"avgSeconds":3288.2203,"avgLabel":"54'48","stdDevLabel":"4'21"}}},"60":{"label":"Plus d'1h00","nb":109,"byEdition":{"32":{"avgMinutes":71,"avgSeconds":4262.3578,"avgLabel":"1h11'02","stdDevLabel":"6'55","evolutionLabel":"+6'43 (+10.4%)","evolutionDiffSeconds":403.03669999999966},"33":{"avgMinutes":64.3,"avgSeconds":3859.3211,"avgLabel":"1h04'19","stdDevLabel":"5'35"}}}}
+var avgAll = {"label":"Total g\u00e9n\u00e9ral","nb":173,"byEdition":{"32":{"avgMinutes":65.6,"avgSeconds":3935.0698,"avgLabel":"1h05'35","stdDevLabel":"9'44","evolutionLabel":"+5'01 (+8.3%)","evolutionDiffSeconds":301.4282000000003},"33":{"avgMinutes":60.6,"avgSeconds":3633.6416,"avgLabel":"1h00'34","stdDevLabel":"7'16"}}}
+var avgBySexCohort = {"M":{"label":"Tous les hommes","nb":257,"byEdition":{"32":{"avgMinutes":55.5,"avgSeconds":3330.2741,"avgLabel":"55'30","stdDevLabel":"11'31","evolutionLabel":"+4'38 (+9.1%)","evolutionDiffSeconds":278.18460000000005},"33":{"avgMinutes":50.9,"avgSeconds":3052.0895,"avgLabel":"50'52","stdDevLabel":"9'01"}}},"F":{"label":"Toutes les femmes","nb":173,"byEdition":{"32":{"avgMinutes":65.6,"avgSeconds":3935.0698,"avgLabel":"1h05'35","stdDevLabel":"9'44","evolutionLabel":"+5'01 (+8.3%)","evolutionDiffSeconds":301.4282000000003},"33":{"avgMinutes":60.6,"avgSeconds":3633.6416,"avgLabel":"1h00'34","stdDevLabel":"7'16"}}}}
+var avgByCategory = {"10":{"33":{"nb":1,"avgSeconds":3549,"stdDevSeconds":0}},"11":{"32":{"nb":3,"avgSeconds":3950.3333,"stdDevSeconds":463.5632523064019},"33":{"nb":7,"avgSeconds":3792.5714,"stdDevSeconds":521.1358082230053}},"12":{"32":{"nb":58,"avgSeconds":3702.4828,"stdDevSeconds":529.1752607589345},"33":{"nb":58,"avgSeconds":3549.1379,"stdDevSeconds":417.1606177181996}},"65":{"32":{"nb":23,"avgSeconds":3974.7391,"stdDevSeconds":553.8884063867729},"33":{"nb":23,"avgSeconds":3652.2174,"stdDevSeconds":386.9687052307687}},"66":{"32":{"nb":30,"avgSeconds":3974.5,"stdDevSeconds":554.1417839025194},"33":{"nb":31,"avgSeconds":3579.9355,"stdDevSeconds":418.58147050553015}},"67":{"32":{"nb":24,"avgSeconds":4180,"stdDevSeconds":583.182647204116},"33":{"nb":28,"avgSeconds":3706.5,"stdDevSeconds":422.8506575274879}},"68":{"32":{"nb":23,"avgSeconds":4003.6522,"stdDevSeconds":578.6182648416119},"33":{"nb":16,"avgSeconds":3704.6875,"stdDevSeconds":474.5947901565608}},"69":{"32":{"nb":9,"avgSeconds":4248.7778,"stdDevSeconds":615.5725027751317},"33":{"nb":7,"avgSeconds":3774.8571,"stdDevSeconds":440.64544495917045}},"70":{"32":{"nb":2,"avgSeconds":4470,"stdDevSeconds":208},"33":{"nb":2,"avgSeconds":4106.5,"stdDevSeconds":512.5}}}
+var evolutionHistograms = {"bracketFloors":[-35,-30,-25,-20,-15,-10,-5,0,5,10,15,20,25,30,35,40,45],"bracketWidth":5,"yMax":41,"transitions":[{"fromLabel":"9 juin 2025","toLabel":"25 mai 2026","nb":172,"counts":[2,1,1,3,1,7,18,19,38,41,22,11,3,2,1,1,1]}]}
+var evolutionScatter = {"transitions":[{"fromLabel":"9 juin 2025","toLabel":"25 mai 2026","points":[{"x":3549,"y":3315},{"x":3776,"y":4408},{"x":3210,"y":3483},{"x":4011,"y":2694},{"x":3834,"y":3962},{"x":3496,"y":3833},{"x":4160,"y":3843},{"x":3518,"y":4118},{"x":4025,"y":3878},{"x":3180,"y":2886},{"x":3302,"y":4005},{"x":3345,"y":3694},{"x":3237,"y":3854},{"x":3647,"y":4446},{"x":3377,"y":3477},{"x":3481,"y":4147},{"x":3703,"y":4225},{"x":3434,"y":3539},{"x":4094,"y":4526},{"x":2935,"y":3122},{"x":3606,"y":4136},{"x":3824,"y":4070},{"x":3496,"y":3712},{"x":3935,"y":3034},{"x":3380,"y":3302},{"x":2918,"y":3672},{"x":3589,"y":3849},{"x":4603,"y":4434},{"x":3388,"y":3724},{"x":3068,"y":3611},{"x":3062,"y":4133},{"x":3752,"y":4268},{"x":4259,"y":4367},{"x":4094,"y":5028},{"x":4150,"y":4522},{"x":3526,"y":3563},{"x":4043,"y":4138},{"x":4404,"y":4637},{"x":2946,"y":3213},{"x":3767,"y":4345},{"x":4150,"y":4231},{"x":3362,"y":3707},{"x":4271,"y":4873},{"x":3449,"y":3820},{"x":4044,"y":4599},{"x":3598,"y":3882},{"x":3793,"y":4324},{"x":3589,"y":3811},{"x":4103,"y":4345},{"x":2800,"y":3367},{"x":3663,"y":4108},{"x":3777,"y":4006},{"x":3326,"y":4050},{"x":3196,"y":3480},{"x":3359,"y":3665},{"x":3699,"y":3199},{"x":4191,"y":4220},{"x":4602,"y":5156},{"x":2853,"y":3284},{"x":3256,"y":3471},{"x":3341,"y":3690},{"x":3218,"y":3200},{"x":3905,"y":4135},{"x":3510,"y":3352},{"x":4039,"y":4086},{"x":3678,"y":4427},{"x":3925,"y":4468},{"x":3932,"y":4271},{"x":2301,"y":2507},{"x":3569,"y":4153},{"x":3811,"y":3672},{"x":4077,"y":3879},{"x":3875,"y":3961},{"x":3594,"y":4064},{"x":3414,"y":3849},{"x":3549,"y":3754},{"x":3717,"y":4090},{"x":3222,"y":3295},{"x":3342,"y":3676},{"x":4314,"y":4803},{"x":3329,"y":4114},{"x":3662,"y":3895},{"x":3550,"y":4187},{"x":3770,"y":3128},{"x":3521,"y":3872},{"x":4195,"y":5593},{"x":3809,"y":4472},{"x":3679,"y":4106},{"x":3010,"y":4418},{"x":3770,"y":3596},{"x":4619,"y":4678},{"x":3293,"y":3214},{"x":4083,"y":5189},{"x":4428,"y":4127},{"x":4305,"y":4168},{"x":2703,"y":2804},{"x":2982,"y":3570},{"x":4395,"y":4575},{"x":4320,"y":4328},{"x":3743,"y":3171},{"x":3917,"y":4139},{"x":3312,"y":3862},{"x":3374,"y":3689},{"x":3318,"y":3637},{"x":4031,"y":4634},{"x":3400,"y":3252},{"x":3049,"y":3414},{"x":2930,"y":3072},{"x":3443,"y":4197},{"x":2963,"y":3163},{"x":3248,"y":3668},{"x":3330,"y":4114},{"x":3727,"y":4188},{"x":3495,"y":3958},{"x":2881,"y":3213},{"x":3440,"y":4122},{"x":2718,"y":2889},{"x":3411,"y":3683},{"x":4025,"y":3878},{"x":4153,"y":4753},{"x":3074,"y":3304},{"x":3318,"y":3437},{"x":3594,"y":4262},{"x":4414,"y":3990},{"x":3821,"y":3540},{"x":3815,"y":4803},{"x":3631,"y":3520},{"x":3458,"y":3809},{"x":4112,"y":4798},{"x":3410,"y":3683},{"x":3096,"y":2567},{"x":3057,"y":3418},{"x":4175,"y":4630},{"x":2980,"y":3313},{"x":3953,"y":4272},{"x":3671,"y":4399},{"x":3581,"y":4053},{"x":3495,"y":3957},{"x":3852,"y":3734},{"x":3688,"y":3678},{"x":3392,"y":4020},{"x":3243,"y":3324},{"x":3004,"y":3548},{"x":3758,"y":4368},{"x":4089,"y":4474},{"x":4171,"y":4625},{"x":3131,"y":2292},{"x":3808,"y":4616},{"x":4069,"y":5604},{"x":3900,"y":3771},{"x":3713,"y":4191},{"x":4203,"y":4650},{"x":3191,"y":3672},{"x":4208,"y":4999},{"x":3621,"y":4136},{"x":3376,"y":3677},{"x":4428,"y":4128},{"x":4119,"y":4661},{"x":4110,"y":3975},{"x":3191,"y":3645},{"x":3600,"y":5130},{"x":3928,"y":4141},{"x":3708,"y":2592},{"x":3642,"y":4061},{"x":4119,"y":4662},{"x":3462,"y":3866},{"x":3743,"y":4105},{"x":3303,"y":3419},{"x":3234,"y":3918},{"x":3458,"y":3747},{"x":4682,"y":5507},{"x":3425,"y":3268}]}]}
 </script>
-    <h1>Jogging des fraises - 10 km route<br /><span class="cohort-subtitle">Coureurs ayant participé à chaque édition&nbsp;: <span class="nowrap">29 mai 2023</span>, <span class="nowrap">9 juin 2025</span>, <span class="nowrap">25 mai 2026</span></span></h1>
-    <p>Il n'y a pas eu d'édition en 2024, du fait d'un changement au sein des organisateurs de la course.</p>
-    <h2>103 coureurs classés (femmes et hommes)</h2>
+    <h1>Jogging des fraises - 10 km route<br /><span class="cohort-subtitle">Coureuses ayant participé à chaque édition&nbsp;: 9 juin 2025, <a class="nowrap" href="edition-2026.html">25 mai 2026</a></span></h1>
+    <h2>173 coureuses classées (femmes)</h2>
+    <p>Ces données sont à interpréter en tenant compte de l'évolution du nombre de coureurs entre les éditions. En effet, en 2025, on a constaté une augmentation de 60&nbsp;% du nombre de coureurs par rapport à l'édition précédente de 2023 (il n'y a pas eu d'édition en 2024), ainsi qu'un rajeunissement des coureurs. Cela peut avoir l'effet suivant&nbsp;: l'entrée de coureurs débutants en 2025, qui vont peut-être nettement s'améliorer en 2026. Une partie de ces coureurs débutants est peut-être reprise dans la cohorte étudiée. Enfin, il y a encore eu 22&nbsp;% d'augmentation du nombre de coureurs entre 2025 et 2026, ce qui peut à l'inverse provoquer des effets d'embouteillage dans les premiers kilomètres et faire baisser les moyennes.</p>
         <div class="cohort-pies">
                 <div class="cohort-pie-block">
-            <h3>Catégories hommes</h3>
-            <div class="cohort-pie-count" id="piechartcategory-M-count"></div>
-            <div id="piechartcategory-M" class="cohort-pie"></div>
-        </div>
-        <div class="cohort-pie-block">
-            <h3>Catégories femmes</h3>
-            <div class="cohort-pie-count" id="piechartcategory-F-count"></div>
-            <div id="piechartcategory-F" class="cohort-pie"></div>
-        </div>
-        <div class="cohort-pie-block">
-            <h3>Répartition par sexe</h3>
-            <div class="cohort-pie-count" id="piechartsex-count"></div>
-            <div id="piechartsex" class="cohort-pie"></div>
+            <h3>Répartition par catégorie</h3>
+            <div class="cohort-pie-count" id="piechartcategory-count"></div>
+            <div id="piechartcategory" class="cohort-pie"></div>
         </div>
             </div>
-		<p>A noter que les coureurs de la cohorte sont en proportion plus agés que l'ensemble des coureurs : <br />
-		 85% de plus de 35 ans pour les hommes, contre 70% pour l'ensemble des hommes dans l'edition 2023;<br/>
-		 77% de plus de 35 ans pour les femmes, contre 65% pour l'ensemble des femmes dans l'edition 2023.
-		</p>
         <div class="cohort-graph-block">
-        <h2 class="cohort-edition-title">29 mai 2023<br><small class="text-muted">Niveau FFA : National</small></h2>
+        <h2 class="cohort-edition-title">9 juin 2025<br><small class="text-muted">Niveau FFA : Départemental</small></h2>
         <div class="cohort-edition-row" style="display:flex;align-items:flex-start;gap:16px;">
             <div class="piechartsex-spacer" style="flex:0 0 220px;width:220px;"></div>
             <svg class="chartsvgstacked-cohort" id="chartsvgstacked-0" style="flex:1 1 auto;min-width:0;overflow:visible;"></svg>
         </div>
     </div>
         <div class="cohort-graph-block">
-        <h2>2024 : La course n'a pas eu lieu</h2>
-        <h2 class="cohort-edition-title">9 juin 2025<br><small class="text-muted">Niveau FFA : Départemental</small></h2>
-        <div class="cohort-edition-row" style="display:flex;align-items:flex-start;gap:16px;">
-            <div class="piechartsex-spacer" style="flex:0 0 220px;width:220px;"></div>
-            <svg class="chartsvgstacked-cohort" id="chartsvgstacked-1" style="flex:1 1 auto;min-width:0;overflow:visible;"></svg>
-        </div>
-    </div>
-        <div class="cohort-graph-block">
         <h2 class="cohort-edition-title">25 mai 2026<br><small class="text-muted">Niveau FFA : Régional</small></h2>
         <div class="cohort-edition-row" style="display:flex;align-items:flex-start;gap:16px;">
             <div class="piechartsex-spacer" style="flex:0 0 220px;width:220px;"></div>
-            <svg class="chartsvgstacked-cohort" id="chartsvgstacked-2" style="flex:1 1 auto;min-width:0;overflow:visible;"></svg>
+            <svg class="chartsvgstacked-cohort" id="chartsvgstacked-1" style="flex:1 1 auto;min-width:0;overflow:visible;"></svg>
         </div>
     </div>
         <div id="chartMeteoEvolutionSection">
@@ -153,79 +132,15 @@ var evolutionScatter = {"transitions":[{"fromLabel":"29 mai 2023","toLabel":"9 j
         tirer de tendance générale.</small>
     </p>
     <div class="line-chart-wrap"><div class="line-chart-inner"><canvas id="chartAvgByBracket"></canvas></div></div>
-        <h2>Évolution du temps moyen par niveau établi sur l'historique <small class="text-muted">(niveau = moyenne des éditions jusqu'au départ inclus)</small></h2>
-    <p class="histo-evolution-legend text-muted">
-        Pour chaque passage d'une édition à la suivante, le niveau de chaque coureur est la moyenne de ses temps sur les
-        éditions jusqu'à celle de départ incluse (son <strong>historique</strong>), ce qui donne un niveau plus stable qu'une
-        seule course. On n'affiche donc une transition qu'à partir de la 2ᵉ (historique d'au moins deux éditions).
-        <span class="histo-swatch histo-swatch-green"></span> temps amélioré (gain)&nbsp;·
-        <span class="histo-swatch histo-swatch-red"></span> temps dégradé (perte).
-        <br><small>La colonne <strong>IC 95&nbsp;%</strong> donne l'intervalle de confiance à 95&nbsp;% de l'évolution moyenne
-        (loi de Student, écart-type des évolutions individuelles de la tranche) : un intervalle qui exclut 0 (repéré par <strong>*</strong>)
-        signale une évolution difficilement imputable au seul hasard d'échantillonnage. Il est d'autant plus large que la tranche compte peu de coureurs.</small>
-        <br><small>Réserve : l'édition de départ compte à la fois dans le niveau et comme point de départ de l'évolution ;
-        une part de régression vers la moyenne subsiste donc, d'autant plus faible que l'historique s'allonge.</small>
-    </p>
-            <div class="histo-evolution-title">9 juin 2025 → 25 mai 2026 <small class="text-muted">(niveau défini sur&nbsp;: 29 mai 2023, 9 juin 2025)</small></div>
-        <div class="chart-scroll-wrapper">
-        <table class="table table-striped table-bordered table-condensed stats-table">
-            <thead>
-                <tr>
-                    <th>Groupe de niveau par moyenne historique</th>
-                    <th class="text-right">Coureurs</th>
-                    <th class="text-right">Évolution moyenne</th>
-                    <th class="text-right">%</th>
-                    <th class="text-right">Écart-type</th>
-                    <th class="text-right">IC 95&nbsp;%</th>
-                </tr>
-            </thead>
-            <tbody>
-                            <tr>
-                    <td>30&#039; - 40&#039;</td>
-                    <td class="text-right">6</td>
-                    <td class="text-right evo-perte">+1&#039;20</td>
-                    <td class="text-right evo-perte">+3.6%</td>
-                    <td class="text-right text-muted">1&#039;44</td>
-                    <td class="text-right text-nowrap text-muted">[-0&#039;29&nbsp;; +3&#039;09]</td>
-                </tr>
-                            <tr>
-                    <td>40&#039; - 50&#039;</td>
-                    <td class="text-right">32</td>
-                    <td class="text-right evo-perte">+6&#039;11</td>
-                    <td class="text-right evo-perte">+13.9%</td>
-                    <td class="text-right text-muted">4&#039;28</td>
-                    <td class="text-right text-nowrap text-muted">[+4&#039;35&nbsp;; +7&#039;48]&nbsp;<span title="L'intervalle exclut 0 : évolution significative au seuil de 5 %">*</span></td>
-                </tr>
-                            <tr>
-                    <td>50&#039; - 1h00</td>
-                    <td class="text-right">36</td>
-                    <td class="text-right evo-perte">+6&#039;16</td>
-                    <td class="text-right evo-perte">+11.7%</td>
-                    <td class="text-right text-muted">6&#039;24</td>
-                    <td class="text-right text-nowrap text-muted">[+4&#039;07&nbsp;; +8&#039;26]&nbsp;<span title="L'intervalle exclut 0 : évolution significative au seuil de 5 %">*</span></td>
-                </tr>
-                            <tr>
-                    <td>Plus d&#039;1h00</td>
-                    <td class="text-right">29</td>
-                    <td class="text-right evo-perte">+6&#039;54</td>
-                    <td class="text-right evo-perte">+10.7%</td>
-                    <td class="text-right text-muted">6&#039;56</td>
-                    <td class="text-right text-nowrap text-muted">[+4&#039;16&nbsp;; +9&#039;32]&nbsp;<span title="L'intervalle exclut 0 : évolution significative au seuil de 5 %">*</span></td>
-                </tr>
-                        </tbody>
-        </table>
-        </div>
-                <h2>Répartition des évolutions individuelles de temps entre éditions</h2>
+            <h2>Répartition des évolutions individuelles de temps entre éditions</h2>
     <p class="histo-evolution-legend text-muted">
         Pour chaque coureur de la cohorte, évolution en % de son temps d'une édition à la suivante,
         répartie par tranche de 5 %.
         <span class="histo-swatch histo-swatch-green"></span> tranche négative (amélioration)&nbsp;·
         <span class="histo-swatch histo-swatch-red"></span> tranche positive (dégradation).
     </p>
-            <div class="histo-evolution-title">29 mai 2023 → 9 juin 2025 <small class="text-muted">(103 coureurs)</small></div>
+            <div class="histo-evolution-title">9 juin 2025 → 25 mai 2026 <small class="text-muted">(172 coureurs)</small></div>
         <div class="line-chart-wrap"><div class="line-chart-inner histo-evolution-inner"><canvas id="chartEvolutionHisto-0"></canvas></div></div>
-            <div class="histo-evolution-title">9 juin 2025 → 25 mai 2026 <small class="text-muted">(103 coureurs)</small></div>
-        <div class="line-chart-wrap"><div class="line-chart-inner histo-evolution-inner"><canvas id="chartEvolutionHisto-1"></canvas></div></div>
                 <h2>Temps d'une édition comparé à celui de la suivante</h2>
     <p class="histo-evolution-legend text-muted">
         Chaque point est un coureur de la cohorte : en abscisse son temps à l'édition de départ,
@@ -236,18 +151,15 @@ var evolutionScatter = {"transitions":[{"fromLabel":"29 mai 2023","toLabel":"9 j
         <small>À lire avec prudence : les coureurs très rapides ou très lents à une édition tendent à revenir vers leur niveau
         habituel à la suivante (régression vers la moyenne), ce qui aplatit naturellement le nuage sous la diagonale.</small>
     </p>
-            <div class="histo-evolution-title">29 mai 2023 → 9 juin 2025 <small class="text-muted">(103 coureurs)</small></div>
+            <div class="histo-evolution-title">9 juin 2025 → 25 mai 2026 <small class="text-muted">(172 coureurs)</small></div>
         <div class="line-chart-wrap"><div class="line-chart-inner scatter-evolution-inner"><canvas id="chartEvolutionScatter-0"></canvas></div></div>
-            <div class="histo-evolution-title">9 juin 2025 → 25 mai 2026 <small class="text-muted">(103 coureurs)</small></div>
-        <div class="line-chart-wrap"><div class="line-chart-inner scatter-evolution-inner"><canvas id="chartEvolutionScatter-1"></canvas></div></div>
             <h2>Évolutions météo et moyennes</h2>
     <div class="chart-scroll-wrapper">
     <table class="table table-striped table-bordered table-condensed stats-table">
         <thead>
             <tr>
                 <th colspan="2"></th>
-                                    <th class="text-center edition-sep" colspan="2">29 mai 2023</th>
-                                    <th class="text-center edition-sep" colspan="3">9 juin 2025</th>
+                                    <th class="text-center edition-sep" colspan="2">9 juin 2025</th>
                                     <th class="text-center edition-sep" colspan="3">25 mai 2026</th>
                             </tr>
             <tr class="meteo-row">
@@ -255,16 +167,10 @@ var evolutionScatter = {"transitions":[{"fromLabel":"29 mai 2023","toLabel":"9 j
                                     <th class="edition-sep" colspan="2"></th>
                                                         <th class="edition-sep" colspan="2"></th>
                                             <th class="text-right">Évolution</th>
-                                                        <th class="edition-sep" colspan="2"></th>
-                                            <th class="text-right">Évolution</th>
                                                 </tr>
             <tr class="meteo-row">
                 <th colspan="2">🌡️ Température</th>
-                                    <th class="text-center edition-sep" colspan="2">13.9 °C</th>
-                                                        <th class="text-center edition-sep" colspan="2">13.7 °C</th>
-                                            <td class="text-right">
-                                                                                            -0.2 °C
-                                                    </td>
+                                    <th class="text-center edition-sep" colspan="2">13.7 °C</th>
                                                         <th class="text-center edition-sep" colspan="2">25.2 °C</th>
                                             <td class="text-right">
                                                                                             +11.5 °C
@@ -272,11 +178,7 @@ var evolutionScatter = {"transitions":[{"fromLabel":"29 mai 2023","toLabel":"9 j
                                                 </tr>
             <tr class="meteo-row">
                 <th colspan="2">φ Humidité relative</th>
-                                    <th class="text-center edition-sep" colspan="2">69 %</th>
-                                                        <th class="text-center edition-sep" colspan="2">84 %</th>
-                                            <td class="text-right">
-                                                                                            +15 %
-                                                    </td>
+                                    <th class="text-center edition-sep" colspan="2">84 %</th>
                                                         <th class="text-center edition-sep" colspan="2">45 %</th>
                                             <td class="text-right">
                                                                                             -39 %
@@ -284,11 +186,7 @@ var evolutionScatter = {"transitions":[{"fromLabel":"29 mai 2023","toLabel":"9 j
                                                 </tr>
             <tr class="meteo-row">
                 <th colspan="2">💧 Humidex</th>
-                                    <th class="text-center edition-sep" colspan="2">14.4</th>
-                                                        <th class="text-center edition-sep" colspan="2">15.5</th>
-                                            <td class="text-right">
-                                                                                            +1.1
-                                                    </td>
+                                    <th class="text-center edition-sep" colspan="2">15.5</th>
                                                         <th class="text-center edition-sep" colspan="2">27.7</th>
                                             <td class="text-right">
                                                                                             +12.2
@@ -296,11 +194,7 @@ var evolutionScatter = {"transitions":[{"fromLabel":"29 mai 2023","toLabel":"9 j
                                                 </tr>
             <tr class="meteo-row">
                 <th colspan="2">💨 Vent</th>
-                                    <th class="text-center edition-sep" colspan="2">20.8 km/h                                                                NE</th>
-                                                        <th class="text-center edition-sep" colspan="2">8.8 km/h                                                                SO</th>
-                                            <td class="text-right">
-                                                                                            -12 km/h
-                                                    </td>
+                                    <th class="text-center edition-sep" colspan="2">8.8 km/h                                                                SO</th>
                                                         <th class="text-center edition-sep" colspan="2">6.4 km/h                                                                E</th>
                                             <td class="text-right">
                                                                                             -2.4 km/h
@@ -308,12 +202,7 @@ var evolutionScatter = {"transitions":[{"fromLabel":"29 mai 2023","toLabel":"9 j
                                                 </tr>
             <tr class="meteo-row">
                 <th colspan="2">☀️ Radiation solaire<br><small style="font-weight:normal;">Moy. sur 1h après départ</small></th>
-                                    <th class="text-center edition-sep" colspan="2">638 W/m²</th>
-                                                        <th class="text-center edition-sep" colspan="2">435 W/m²</th>
-                                            <td class="text-right">
-                                                                                                                            -203 W/m²
-                                                                                                        (-32 %)
-                                                                                    </td>
+                                    <th class="text-center edition-sep" colspan="2">435 W/m²</th>
                                                         <th class="text-center edition-sep" colspan="2">643 W/m²</th>
                                             <td class="text-right">
                                                                                                                             +208 W/m²
@@ -328,95 +217,71 @@ var evolutionScatter = {"transitions":[{"fromLabel":"29 mai 2023","toLabel":"9 j
                                                         <th class="text-right edition-sep">Moyenne</th>
                     <th class="text-right">Écart type</th>
                                             <th class="text-right">Évolution</th>
-                                                        <th class="text-right edition-sep">Moyenne</th>
-                    <th class="text-right">Écart type</th>
-                                            <th class="text-right">Évolution</th>
                                                 </tr>
         </thead>
         <tbody>
                     <tr>
-                <td>30&#039; - 40&#039;</td>
-                <td class="text-right">5</td>
-                                                            <td class="text-right edition-sep">35&#039;51</td>
-                        <td class="text-right">1&#039;52</td>
-                                                                                                    <td class="text-right edition-sep">36&#039;06</td>
-                        <td class="text-right">1&#039;36</td>
-                                                                                        <td class="text-right evo-perte">+0&#039;15 (+0.7%)</td>
-                                                                                <td class="text-right edition-sep">36&#039;55</td>
-                        <td class="text-right">1&#039;21</td>
-                                                                                        <td class="text-right evo-perte">+0&#039;49 (+2.3%)</td>
-                                                </tr>
-                    <tr>
                 <td>40&#039; - 50&#039;</td>
-                <td class="text-right">24</td>
-                                                            <td class="text-right edition-sep">44&#039;55</td>
-                        <td class="text-right">3&#039;14</td>
-                                                                                                    <td class="text-right edition-sep">43&#039;21</td>
-                        <td class="text-right">2&#039;36</td>
-                                                                                        <td class="text-right evo-gain">-1&#039;34 (-3.5%)</td>
-                                                                                <td class="text-right edition-sep">48&#039;33</td>
-                        <td class="text-right">4&#039;42</td>
-                                                                                        <td class="text-right evo-perte">+5&#039;11 (+12.0%)</td>
+                <td class="text-right">5</td>
+                                                            <td class="text-right edition-sep">46&#039;30</td>
+                        <td class="text-right">5&#039;04</td>
+                                                                                                    <td class="text-right edition-sep">43&#039;32</td>
+                        <td class="text-right">3&#039;34</td>
+                                                                                        <td class="text-right evo-gain">-2&#039;58 (-6.4%)</td>
                                                 </tr>
                     <tr>
                 <td>50&#039; - 1h00</td>
-                <td class="text-right">40</td>
-                                                            <td class="text-right edition-sep">52&#039;22</td>
-                        <td class="text-right">4&#039;05</td>
-                                                                                                    <td class="text-right edition-sep">52&#039;36</td>
-                        <td class="text-right">4&#039;24</td>
-                                                                                        <td class="text-right evo-perte">+0&#039;14 (+0.4%)</td>
-                                                                                <td class="text-right edition-sep">58&#039;41</td>
-                        <td class="text-right">5&#039;31</td>
-                                                                                        <td class="text-right evo-perte">+6&#039;05 (+11.6%)</td>
+                <td class="text-right">59</td>
+                                                            <td class="text-right edition-sep">54&#039;48</td>
+                        <td class="text-right">4&#039;21</td>
+                                                                                                    <td class="text-right edition-sep">57&#039;05</td>
+                        <td class="text-right">4&#039;51</td>
+                                                                                        <td class="text-right evo-perte">+2&#039;17 (+4.2%)</td>
                                                 </tr>
                     <tr>
                 <td>Plus d&#039;1h00</td>
-                <td class="text-right">34</td>
-                                                            <td class="text-right edition-sep">1h04&#039;39</td>
-                        <td class="text-right">5&#039;34</td>
-                                                                                                    <td class="text-right edition-sep">1h03&#039;56</td>
-                        <td class="text-right">4&#039;55</td>
-                                                                                        <td class="text-right evo-gain">-0&#039;42 (-1.1%)</td>
-                                                                                <td class="text-right edition-sep">1h11&#039;35</td>
-                        <td class="text-right">7&#039;19</td>
-                                                                                        <td class="text-right evo-perte">+7&#039;39 (+12.0%)</td>
+                <td class="text-right">109</td>
+                                                            <td class="text-right edition-sep">1h04&#039;19</td>
+                        <td class="text-right">5&#039;35</td>
+                                                                                                    <td class="text-right edition-sep">1h11&#039;02</td>
+                        <td class="text-right">6&#039;55</td>
+                                                                                        <td class="text-right evo-perte">+6&#039;43 (+10.4%)</td>
                                                 </tr>
                                                                         <tr class="avg-all-row">
                         <td><strong>Tous les hommes</strong></td>
-                        <td class="text-right"><strong>68</strong></td>
-                                                                                    <td class="text-right edition-sep"><strong>50&#039;49</strong></td>
-                                <td class="text-right"><strong>9&#039;02</strong></td>
-                                                                                                                                            <td class="text-right edition-sep"><strong>49&#039;42</strong></td>
-                                <td class="text-right"><strong>8&#039;30</strong></td>
-                                                                                                                        <td class="text-right evo-gain"><strong>-1&#039;08 (-2.2%)</strong></td>
-                                                                                                                <td class="text-right edition-sep"><strong>56&#039;33</strong></td>
-                                <td class="text-right"><strong>11&#039;38</strong></td>
-                                                                                                                        <td class="text-right evo-perte"><strong>+6&#039;51 (+13.8%)</strong></td>
+                        <td class="text-right"><strong>257</strong></td>
+                                                                                    <td class="text-right edition-sep"><strong>50&#039;52</strong></td>
+                                <td class="text-right"><strong>9&#039;01</strong></td>
+                                                                                                                                            <td class="text-right edition-sep"><strong>55&#039;30</strong></td>
+                                <td class="text-right"><strong>11&#039;31</strong></td>
+                                                                                                                        <td class="text-right evo-perte"><strong>+4&#039;38 (+9.1%)</strong></td>
                                                                         </tr>
                                                                                 <tr class="avg-all-row">
                         <td><strong>Toutes les femmes</strong></td>
-                        <td class="text-right"><strong>35</strong></td>
-                                                                                    <td class="text-right edition-sep"><strong>59&#039;50</strong></td>
-                                <td class="text-right"><strong>7&#039;50</strong></td>
-                                                                                                                                            <td class="text-right edition-sep"><strong>1h00&#039;34</strong></td>
+                        <td class="text-right"><strong>173</strong></td>
+                                                                                    <td class="text-right edition-sep"><strong>1h00&#039;34</strong></td>
                                 <td class="text-right"><strong>7&#039;16</strong></td>
-                                                                                                                        <td class="text-right evo-perte"><strong>+0&#039;44 (+1.2%)</strong></td>
-                                                                                                                <td class="text-right edition-sep"><strong>1h05&#039;19</strong></td>
-                                <td class="text-right"><strong>9&#039;17</strong></td>
-                                                                                                                        <td class="text-right evo-perte"><strong>+4&#039;45 (+7.8%)</strong></td>
+                                                                                                                                            <td class="text-right edition-sep"><strong>1h05&#039;35</strong></td>
+                                <td class="text-right"><strong>9&#039;44</strong></td>
+                                                                                                                        <td class="text-right evo-perte"><strong>+5&#039;01 (+8.3%)</strong></td>
                                                                         </tr>
                                         <tr class="avg-all-row">
                 <td><strong>Total général</strong></td>
-                <td class="text-right"><strong>103</strong></td>
-                                                            <td class="text-right edition-sep"><strong>53&#039;53</strong></td>
-                        <td class="text-right"><strong>9&#039;38</strong></td>
-                                                                                                    <td class="text-right edition-sep"><strong>53&#039;23</strong></td>
-                        <td class="text-right"><strong>9&#039;36</strong></td>
-                                                                                        <td class="text-right evo-gain"><strong>-0&#039;30 (-0.9%)</strong></td>
-                                                                                <td class="text-right edition-sep"><strong>59&#039;32</strong></td>
-                        <td class="text-right"><strong>11&#039;39</strong></td>
-                                                                                        <td class="text-right evo-perte"><strong>+6&#039;08 (+11.5%)</strong></td>
+                <td class="text-right"><strong>173</strong></td>
+                                                            <td class="text-right edition-sep"><strong>1h00&#039;34</strong></td>
+                        <td class="text-right"><strong>7&#039;16</strong></td>
+                                                                                                    <td class="text-right edition-sep"><strong>1h05&#039;35</strong></td>
+                        <td class="text-right"><strong>9&#039;44</strong></td>
+                                                                                        <td class="text-right evo-perte"><strong>+5&#039;01 (+8.3%)</strong></td>
+                                                </tr>
+            <tr class="avg-all-row avg-selected-row" id="avgSelectedRow">
+                <td><strong>Catégories sélectionnées<br><small style="font-weight:normal;" class="text-muted">cochées dans la légende ci-dessus</small></strong></td>
+                <td class="text-right"><strong data-selected-nb></strong></td>
+                                    <td class="text-right edition-sep"><strong data-selected-avg="33"></strong></td>
+                    <td class="text-right"><strong data-selected-std="33"></strong></td>
+                                                        <td class="text-right edition-sep"><strong data-selected-avg="32"></strong></td>
+                    <td class="text-right"><strong data-selected-std="32"></strong></td>
+                                            <td class="text-right" data-selected-evo="32"><strong></strong></td>
                                                 </tr>
         </tbody>
     </table>
@@ -609,6 +474,9 @@ pointer-events: auto;
 .avg-all-row td {
   background-color: #f5f5f5;
 }
+.avg-selected-row td {
+  background-color: #eef3fb;
+}
 @media (max-width: 700px) {
   .cohort-edition-row {
     flex-direction: column;
@@ -617,183 +485,129 @@ pointer-events: auto;
 </style>
 <script>
 var stackedCsvDataList = [
-`temps,9,10,11,12,65,66,67,68,69,70,71,72,1,2,3,4,54,55,56,57,58,59,60,61,62,63,73
-30,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,1,0,0,0,0,0,0,0
-35,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,0,0
-40,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,2,3,1,6,0,1,0,0,0,0,0
-45,0,0,0,2,1,1,1,1,0,0,0,0,0,0,0,1,0,3,2,1,1,1,1,0,0,0,0
-50,0,0,0,1,0,0,2,1,1,0,0,0,0,0,0,3,2,3,1,4,2,3,0,0,0,0,0
-55,0,0,2,0,1,2,0,1,0,0,0,0,0,0,0,2,2,0,2,1,2,0,1,0,0,0,0
-60,0,0,0,0,2,1,3,2,0,0,0,0,0,0,0,0,1,1,0,0,1,0,2,0,0,0,0
-65,0,0,0,3,0,3,1,1,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0
-70,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,0,0
-75,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0`,`temps,9,10,11,12,65,66,67,68,69,70,71,72,1,2,3,4,54,55,56,57,58,59,60,61,62,63,73
-30,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0
-35,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,1,0,2,2,0,0,0,0,0,0,0
-40,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,3,4,0,4,3,0,0,0,0,0,0
-45,0,0,0,2,0,0,1,1,0,0,0,0,0,0,0,1,2,2,2,1,2,1,3,0,0,0,0
-50,0,0,0,0,0,0,2,1,0,0,0,0,0,0,0,1,1,1,4,5,2,0,1,0,0,0,0
-55,0,0,0,4,1,1,1,1,1,0,0,0,0,0,0,2,0,1,1,0,1,2,0,0,0,0,0
-60,0,0,0,0,2,1,3,2,0,0,0,0,0,0,0,0,0,2,0,1,0,1,1,0,0,0,0
-65,0,0,0,1,0,2,2,2,2,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0
-70,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,1,0,0`,`temps,9,10,11,12,65,66,67,68,69,70,71,72,1,2,3,4,54,55,56,57,58,59,60,61,62,63,73
-35,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,1,2,0,0,0,0,0,0,0
-40,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,2,0,0,0,0,0,0
-45,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,1,3,1,1,2,3,0,1,1,0,0,0
-50,0,0,0,1,0,0,2,1,0,0,0,0,0,0,0,2,1,0,1,4,2,0,1,0,0,0,0
-55,0,0,0,2,2,0,0,3,0,0,0,0,0,0,0,0,1,4,3,2,2,1,1,0,0,0,0
-60,0,0,0,1,1,0,1,1,1,0,0,0,0,0,0,1,1,3,0,1,0,0,0,0,0,0,0
-65,0,0,0,2,0,2,3,1,0,0,0,0,0,0,0,1,0,0,2,0,0,2,0,0,0,0,0
-70,0,0,0,0,0,0,1,3,1,0,0,0,0,0,0,0,0,1,0,0,2,0,1,0,0,0,0
-75,0,0,0,0,0,1,2,1,0,0,0,0,0,0,0,0,0,0,0,2,0,1,1,1,0,0,0
-80,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-85,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0
-90,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0`];
+`temps,9,10,11,12,65,66,67,68,69,70,71,72,73
+35,0,0,0,0,0,1,0,0,0,0,0,0,0
+40,0,0,0,0,0,0,0,0,0,0,0,0,0
+45,0,0,1,8,1,0,1,1,0,0,0,0,0
+50,0,0,1,6,2,4,4,4,1,0,0,0,0
+55,0,1,0,21,8,10,6,2,2,1,0,0,0
+60,0,0,2,9,5,10,8,2,1,0,0,0,0
+65,0,0,0,11,6,4,6,5,2,0,0,0,0
+70,0,0,3,2,1,1,2,2,1,0,0,0,0
+75,0,0,0,1,0,1,1,0,0,1,0,0,0`,`temps,9,10,11,12,65,66,67,68,69,70,71,72,73
+35,0,0,0,1,0,0,0,0,0,0,0,0,0
+40,0,0,0,2,1,1,0,0,0,0,0,0,0
+45,0,0,0,2,0,1,0,0,0,0,0,0,0
+50,0,0,0,9,1,1,2,2,0,0,0,0,0
+55,0,0,1,8,5,2,1,4,1,0,0,0,0
+60,0,0,0,15,3,8,4,6,3,0,0,0,0
+65,0,0,1,15,5,9,7,2,1,0,0,0,0
+70,0,0,1,3,4,4,3,4,2,1,0,0,0
+75,0,0,0,1,2,2,4,4,1,1,0,0,0
+80,0,0,0,2,2,1,0,0,0,0,0,0,0
+85,0,0,0,0,0,1,2,0,0,0,0,0,0
+90,0,0,0,0,0,0,1,1,1,0,0,0,0`];
 var cumulCsvDataList = [
-`temps,9,10,11,12,65,66,67,68,69,70,71,72,1,2,3,4,54,55,56,57,58,59,60,61,62,63,73
-34,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,1,0,0,0,0,0,0,0
-35,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
-36,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-37,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-38,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-39,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0
-40,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0
-41,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,1,0,0,0,0,0,0,0
-42,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,2,0,0,0,0,0,0,0
-43,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0
-44,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,3,0,0,0,0,0,0,0
-45,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,1,0,0,0,0,0
-46,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,1,0,0,0,0
-47,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0
-48,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,1,0,0,1,0,0,0,0,0,0,0,0
-49,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0
-50,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,1,0,1,0,0,0,0,0
-51,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,2,2,1,0,0,0,0,0
-52,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-53,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,1,0,0,0,0,0
-54,0,0,0,0,0,0,2,0,1,0,0,0,0,0,0,2,0,0,0,1,0,0,0,0,0,0,0
-55,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,1,0,2,0,1,0,1,0,0,0,0
-56,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,1,0,0,0,0,0,0
-57,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-58,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-59,0,0,1,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-60,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
-61,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1,0,0,1,0,0,0,0,0,0
-62,0,0,0,0,2,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-63,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-64,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,0,0
-65,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0
-66,0,0,0,2,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-67,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-68,0,0,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0
-69,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-70,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-71,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-72,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-73,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
-74,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0
-75,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0`,`temps,9,10,11,12,65,66,67,68,69,70,71,72,1,2,3,4,54,55,56,57,58,59,60,61,62,63,73
-34,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0
-35,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0
-36,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-37,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
-38,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0
-39,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,1,1,0,0,0,0,0,0,0
-40,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0
-41,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0
-42,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,1,0,0,0,0,0,0
-43,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
-44,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,3,0,2,1,0,0,0,0,0,0
-45,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,1,0,0,0,0
-46,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,1,0,1,0,0,0,0
-47,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,1,0,0,0,0
-48,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
-49,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,1,0,1,0,0,0,1,0,0,0,0,0
-50,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0
-51,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,1,0,0,0,0,0,0
-52,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,1,0,0,0,0,0,0,0
-53,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0,0,1,1,0,2,0,0,0,0,0,0,0
-54,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,0,0,0,1,0,0,0,0
-55,0,0,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,0,0,0
-56,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,1,0,0,0,0,0,0
-57,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-58,0,0,0,1,0,0,0,0,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0
-59,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0
-60,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0
-61,0,0,0,0,1,1,0,1,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0
-62,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-63,0,0,0,0,1,0,1,1,0,0,0,0,0,0,0,0,0,1,0,0,0,0,1,0,0,0,0
-64,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-65,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-66,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0
-67,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-68,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-69,0,0,0,0,0,1,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-70,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,1,0,0
-71,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-72,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-73,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0`,`temps,9,10,11,12,65,66,67,68,69,70,71,72,1,2,3,4,54,55,56,57,58,59,60,61,62,63,73
-35,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
-36,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,1,0,0,0,0,0,0,0
-37,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0
-38,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-39,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0
-40,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-41,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-42,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0
-43,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,1,0,0,0,0,0,0
-44,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-45,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,1,0,1,1,0,0,0,0,0,0
-46,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,2,0,0,0,0,0,0
-47,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,0,0,0,0
-48,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,1,0,0,0
-49,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
-50,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-51,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0
-52,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,2,1,0,0,0,0,0,0
-53,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,1,0,0,0,0,0,0
-54,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,1,0,0,0,0
-55,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-56,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,1,0,0,0,0,0,0,0
-57,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,2,1,0,2,0,0,0,0,0,0
-58,0,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0,0,1,1,0,0,0,1,0,0,0,0
-59,0,0,0,0,1,0,0,1,0,0,0,0,0,0,0,0,0,0,1,1,0,1,0,0,0,0,0
-60,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
-61,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0
-62,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0
-63,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0
-64,0,0,0,1,0,0,0,1,1,0,0,0,0,0,0,0,0,1,0,1,0,0,0,0,0,0,0
-65,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,0,0,0,0,0
-66,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0
-67,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-68,0,0,0,1,0,2,2,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0
-69,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0
-70,0,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0
-71,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-72,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0
-73,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-74,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,0,0,1,0,0,0,0,0,0
-75,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-76,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,1,0,1,0,1,0,0,0
-77,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0
-78,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0
-79,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-80,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-81,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-82,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-83,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-84,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-85,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-86,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-87,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-88,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-89,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0
-90,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-91,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-92,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-93,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0`];
-var graphBeginList = [30,30,30];
-var graphEndList = [100,100,100];
+`temps,9,10,11,12,65,66,67,68,69,70,71,72,73
+38,0,0,0,0,0,1,0,0,0,0,0,0,0
+39,0,0,0,0,0,0,0,0,0,0,0,0,0
+40,0,0,0,0,0,0,0,0,0,0,0,0,0
+41,0,0,0,0,0,0,0,0,0,0,0,0,0
+42,0,0,0,0,0,0,0,0,0,0,0,0,0
+43,0,0,0,0,0,0,0,0,0,0,0,0,0
+44,0,0,0,0,0,0,0,0,0,0,0,0,0
+45,0,0,0,1,1,0,0,0,0,0,0,0,0
+46,0,0,0,1,0,0,0,0,0,0,0,0,0
+47,0,0,0,0,0,0,1,0,0,0,0,0,0
+48,0,0,0,4,0,0,0,0,0,0,0,0,0
+49,0,0,1,2,0,0,0,1,0,0,0,0,0
+50,0,0,0,0,1,1,1,1,0,0,0,0,0
+51,0,0,0,1,0,2,0,0,1,0,0,0,0
+52,0,0,0,1,0,0,0,0,0,0,0,0,0
+53,0,0,1,4,0,0,2,2,0,0,0,0,0
+54,0,0,0,0,1,1,1,1,0,0,0,0,0
+55,0,0,0,3,2,5,2,0,0,0,0,0,0
+56,0,0,0,4,3,0,2,1,1,0,0,0,0
+57,0,0,0,5,0,2,0,1,0,0,0,0,0
+58,0,0,0,7,0,2,0,0,1,0,0,0,0
+59,0,1,0,2,3,1,2,0,0,1,0,0,0
+60,0,0,0,1,0,3,2,0,0,0,0,0,0
+61,0,0,1,3,1,4,1,1,0,0,0,0,0
+62,0,0,1,4,1,1,2,0,1,0,0,0,0
+63,0,0,0,0,3,2,2,1,0,0,0,0,0
+64,0,0,0,1,0,0,1,0,0,0,0,0,0
+65,0,0,0,3,1,2,1,1,0,0,0,0,0
+66,0,0,0,0,1,0,0,0,0,0,0,0,0
+67,0,0,0,4,1,1,2,0,0,0,0,0,0
+68,0,0,0,2,1,0,2,3,1,0,0,0,0
+69,0,0,0,2,2,1,1,1,1,0,0,0,0
+70,0,0,1,0,1,0,1,0,0,0,0,0,0
+71,0,0,1,1,0,1,0,0,0,0,0,0,0
+72,0,0,0,1,0,0,0,0,0,0,0,0,0
+73,0,0,1,0,0,0,1,2,1,0,0,0,0
+74,0,0,0,0,0,0,0,0,0,0,0,0,0
+75,0,0,0,0,0,0,0,0,0,0,0,0,0
+76,0,0,0,1,0,1,0,0,0,1,0,0,0
+77,0,0,0,0,0,0,0,0,0,0,0,0,0
+78,0,0,0,0,0,0,1,0,0,0,0,0,0`,`temps,9,10,11,12,65,66,67,68,69,70,71,72,73
+38,0,0,0,1,0,0,0,0,0,0,0,0,0
+39,0,0,0,0,0,0,0,0,0,0,0,0,0
+40,0,0,0,0,0,0,0,0,0,0,0,0,0
+41,0,0,0,0,0,1,0,0,0,0,0,0,0
+42,0,0,0,1,0,0,0,0,0,0,0,0,0
+43,0,0,0,1,0,0,0,0,0,0,0,0,0
+44,0,0,0,0,1,0,0,0,0,0,0,0,0
+45,0,0,0,0,0,0,0,0,0,0,0,0,0
+46,0,0,0,0,0,1,0,0,0,0,0,0,0
+47,0,0,0,0,0,0,0,0,0,0,0,0,0
+48,0,0,0,2,0,0,0,0,0,0,0,0,0
+49,0,0,0,0,0,0,0,0,0,0,0,0,0
+50,0,0,0,0,0,0,1,0,0,0,0,0,0
+51,0,0,0,1,0,0,0,0,0,0,0,0,0
+52,0,0,0,3,0,0,0,1,0,0,0,0,0
+53,0,0,0,3,0,1,0,1,0,0,0,0,0
+54,0,0,0,2,1,0,1,0,0,0,0,0,0
+55,0,0,1,2,1,0,0,1,1,0,0,0,0
+56,0,0,0,2,0,1,1,0,0,0,0,0,0
+57,0,0,0,0,3,0,0,0,0,0,0,0,0
+58,0,0,0,2,0,0,0,2,0,0,0,0,0
+59,0,0,0,2,1,1,0,1,0,0,0,0,0
+60,0,0,0,1,0,1,1,0,0,0,0,0,0
+61,0,0,0,5,2,4,1,3,0,0,0,0,0
+62,0,0,0,1,1,0,2,1,0,0,0,0,0
+63,0,0,0,2,0,2,0,0,0,0,0,0,0
+64,0,0,0,6,0,1,0,2,3,0,0,0,0
+65,0,0,0,3,0,0,0,0,0,0,0,0,0
+66,0,0,0,2,0,1,1,2,0,0,0,0,0
+67,0,0,0,1,2,2,1,0,0,0,0,0,0
+68,0,0,1,5,2,5,4,0,0,0,0,0,0
+69,0,0,0,4,1,1,1,0,1,0,0,0,0
+70,0,0,0,1,0,0,0,2,0,0,0,0,0
+71,0,0,0,0,0,1,2,0,0,1,0,0,0
+72,0,0,0,1,2,1,0,2,0,0,0,0,0
+73,0,0,1,1,2,0,1,0,0,0,0,0,0
+74,0,0,0,0,0,2,0,0,2,0,0,0,0
+75,0,0,0,0,1,0,1,0,0,0,0,0,0
+76,0,0,0,0,0,0,2,1,0,0,0,0,0
+77,0,0,0,1,1,1,1,2,1,1,0,0,0
+78,0,0,0,0,0,0,0,0,0,0,0,0,0
+79,0,0,0,0,0,1,0,1,0,0,0,0,0
+80,0,0,0,1,1,0,0,0,0,0,0,0,0
+81,0,0,0,0,0,1,0,0,0,0,0,0,0
+82,0,0,0,0,0,0,0,0,0,0,0,0,0
+83,0,0,0,1,1,0,0,0,0,0,0,0,0
+84,0,0,0,0,0,0,0,0,0,0,0,0,0
+85,0,0,0,0,0,1,1,0,0,0,0,0,0
+86,0,0,0,0,0,0,1,0,0,0,0,0,0
+87,0,0,0,0,0,0,0,0,0,0,0,0,0
+88,0,0,0,0,0,0,0,0,0,0,0,0,0
+89,0,0,0,0,0,0,0,0,0,0,0,0,0
+90,0,0,0,0,0,0,0,0,0,0,0,0,0
+91,0,0,0,0,0,0,1,0,0,0,0,0,0
+92,0,0,0,0,0,0,0,0,0,0,0,0,0
+93,0,0,0,0,0,0,0,1,1,0,0,0,0`];
+var graphBeginList = [30,30];
+var graphEndList = [100,100];
 
 function compareCategories(a, b) {
   if (a.sex < b.sex) {
@@ -896,6 +710,90 @@ function computeQuartileMarkers(keys, cumulData) {
 
 var chartLegend;
 
+// Ligne « Catégories sélectionnées » du tableau « Évolutions météo et moyennes » :
+// agrège à la volée le temps moyen (et l'écart-type) de la cohorte sur les seules
+// catégories cochées dans la légende des graphiques empilés. La moyenne d'une union
+// de catégories est la moyenne pondérée par les effectifs ; l'écart-type est recomposé
+// par variance regroupée (Var = Σ nᵢ(σᵢ² + mᵢ²)/N − M²), exacte car les catégories sont
+// disjointes. Les clés agrégées agg_M / agg_F sont développées en toutes les catégories
+// de leur sexe.
+function updateSelectedAvgRow(keys) {
+    var row = document.getElementById('avgSelectedRow');
+    if (!row) return;
+
+    function fmtSec(s) {
+        s = Math.round(s);
+        var h = Math.floor(s / 3600), m = Math.floor((s % 3600) / 60), sec = s % 60;
+        function p(n) { return (n < 10 ? '0' : '') + n; }
+        return h > 0 ? (h + 'h' + p(m) + "'" + p(sec)) : (m + "'" + p(sec));
+    }
+
+    var catIds = {};
+    (keys || []).forEach(function(key) {
+        if (String(key).indexOf('agg_') === 0) {
+            var sex = String(key).substring(4);
+            Object.keys(avgByCategory).forEach(function(cid) {
+                var cat = coureurCategorieIdsToCategories[cid];
+                if (cat && cat.sex === sex) catIds[cid] = true;
+            });
+        } else if (avgByCategory[key]) {
+            catIds[key] = true;
+        }
+    });
+    var selectedIds = Object.keys(catIds);
+
+    var means = [];
+    var totalNb = 0;
+    editionsAxis.forEach(function(edition, idx) {
+        var eid = edition.id;
+        var n = 0, sum = 0, sumSq = 0;
+        selectedIds.forEach(function(cid) {
+            var d = avgByCategory[cid][eid];
+            if (!d) return;
+            n += d.nb;
+            sum += d.nb * d.avgSeconds;
+            sumSq += d.nb * (d.stdDevSeconds * d.stdDevSeconds + d.avgSeconds * d.avgSeconds);
+        });
+        var avgCell = row.querySelector('[data-selected-avg="' + eid + '"]');
+        var stdCell = row.querySelector('[data-selected-std="' + eid + '"]');
+        if (n > 0) {
+            var mean = sum / n;
+            var variance = sumSq / n - mean * mean;
+            if (variance < 0) variance = 0;
+            means.push(mean);
+            avgCell.textContent = fmtSec(mean);
+            stdCell.textContent = fmtSec(Math.sqrt(variance));
+            if (idx === 0) totalNb = n;
+        } else {
+            means.push(null);
+            avgCell.textContent = '';
+            stdCell.textContent = '';
+        }
+    });
+
+    var nbCell = row.querySelector('[data-selected-nb]');
+    if (nbCell) nbCell.textContent = totalNb > 0 ? totalNb.toLocaleString('fr-FR') : '';
+
+    editionsAxis.forEach(function(edition, idx) {
+        if (idx === 0) return;
+        var evoCell = row.querySelector('[data-selected-evo="' + edition.id + '"]');
+        if (!evoCell) return;
+        var strong = evoCell.querySelector('strong');
+        var prev = means[idx - 1], cur = means[idx];
+        evoCell.classList.remove('evo-gain', 'evo-perte');
+        if (prev != null && cur != null) {
+            var diff = cur - prev;
+            var pct = prev !== 0 ? (diff / prev * 100) : 0;
+            strong.textContent = (diff < 0 ? '-' : '+') + fmtSec(Math.abs(diff))
+                + ' (' + (pct >= 0 ? '+' : '-') + Math.abs(pct).toFixed(1) + '%)';
+            if (diff < 0) evoCell.classList.add('evo-gain');
+            else if (diff > 0) evoCell.classList.add('evo-perte');
+        } else {
+            strong.textContent = '';
+        }
+    });
+}
+
 function renderCharts() {
     var margin = {top: 50, right: 250, bottom: 50, left: 60};
     // Hauteur totale du SVG .chartsvgstacked-cohort. Portée à 280px pour que les
@@ -962,6 +860,7 @@ function renderCharts() {
         stackedCharts.forEach(function(chart, i) {
             chart.drawQuartileMarkers(computeQuartileMarkers(keys, cumulDataList[i]));
         });
+        updateSelectedAvgRow(keys);
     }
 
     redrawAllWithSharedScale(sharedKeys);
@@ -976,9 +875,6 @@ function renderCharts() {
 
     // Affichage mixte (MF) : démarrer avec seulement « Total catégories hommes »
     // et « Total catégories femmes » cochés (au premier rendu uniquement).
-        if (!previousKeys) {
-        chartLegend.applyDefaultSexAggregation();
-    }
     }
 
 renderCharts();
@@ -2018,7 +1914,7 @@ function pieSideForTotal(total) {
     return Math.max(MIN_PIE_SIDE, Math.round(MAX_PIE_SIDE * Math.sqrt(total / maxTotal)));
 }
 
-drawCategoryPie('piechartcategory', null, MAX_PIE_SIDE);
+drawCategoryPie('piechartcategory', 'F', MAX_PIE_SIDE);
 drawCategoryPie('piechartcategory-M', 'M', pieSideForTotal(totalM));
 drawCategoryPie('piechartcategory-F', 'F', pieSideForTotal(totalF));
 </script>

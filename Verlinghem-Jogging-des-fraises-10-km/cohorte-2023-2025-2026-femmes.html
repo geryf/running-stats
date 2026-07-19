@@ -47,7 +47,7 @@
   <a class="rs-brand" href="edition-2026.html">Jogging des fraises · 10 km</a>
   <a href="edition-2026.html">Édition 2026</a>
   <a href="comparaison-editions-2022-2023-2025-2026.html">Comparaison 2022·2023·2025·2026</a>
-  <div class="rs-dropdown" id="rsCohortes">
+  <div class="rs-dropdown open" id="rsCohortes">
     <button type="button" class="rs-dropbtn active">Cohortes 2023-2025-2026 ▾</button>
     <div class="rs-dropmenu">
       <a href="cohorte-2023-2025-2026-hf.html">Hommes + Femmes</a>
@@ -55,13 +55,27 @@
       <a href="cohorte-2023-2025-2026-femmes.html" class="active">Femmes</a>
     </div>
   </div>
+  <div class="rs-dropdown" id="rsCohortes2">
+    <button type="button" class="rs-dropbtn">Cohortes 2025-2026 ▾</button>
+    <div class="rs-dropmenu">
+      <a href="cohorte-2025-2026-hf.html">Hommes + Femmes</a>
+      <a href="cohorte-2025-2026-hommes.html">Hommes</a>
+      <a href="cohorte-2025-2026-femmes.html">Femmes</a>
+    </div>
+  </div>
 </nav>
 <script>
 (function(){
-  var d=document.getElementById('rsCohortes');if(!d)return;
-  var b=d.querySelector('.rs-dropbtn');
-  b.addEventListener('click',function(e){e.stopPropagation();d.classList.toggle('open');});
-  document.addEventListener('click',function(){d.classList.remove('open');});
+  ['rsCohortes','rsCohortes2'].forEach(function(id){
+    var d=document.getElementById(id);if(!d)return;
+    var b=d.querySelector('.rs-dropbtn');
+    b.addEventListener('click',function(e){e.stopPropagation();d.classList.toggle('open');});
+  });
+  document.addEventListener('click',function(){
+    ['rsCohortes','rsCohortes2'].forEach(function(id){
+      var d=document.getElementById(id);if(d)d.classList.remove('open');
+    });
+  });
 })();
 </script>
 
