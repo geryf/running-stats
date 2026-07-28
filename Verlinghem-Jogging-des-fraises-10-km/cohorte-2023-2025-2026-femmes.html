@@ -104,8 +104,9 @@ var evolutionScatter = {"transitions":[{"fromLabel":"29 mai 2023","toLabel":"9 j
         </div>
 
             </div>
-		<p>A noter que les coureuses de la cohorte sont en proportion plus agées que l'ensemble des coureuses.
-		77% de plus de 35 ans pour les femmes, contre 65% pour l'ensemble des femmes dans l'edition 2023.</p>
+    <div class="chart-comment">
+        <p>À noter que les coureuses de la cohorte sont sensiblement plus âgées que l'ensemble des participantes&nbsp;: les 35 ans et plus y représentent 77&nbsp;% de l'effectif, contre respectivement 64 et 50&nbsp;% en 2023 et 2025 pour l'ensemble des femmes.</p>
+    </div>
         <div class="cohort-graph-block">
         <h2 class="cohort-edition-title">29 mai 2023<br><small class="text-muted">Niveau FFA : National</small></h2>
         <div class="cohort-edition-row" style="display:flex;align-items:flex-start;gap:16px;">
@@ -391,10 +392,6 @@ var evolutionScatter = {"transitions":[{"fromLabel":"29 mai 2023","toLabel":"9 j
         </tbody>
     </table>
     </div>
-    <ul>
-        <li>
-        </li>
-    </ul>
  
         </div>
         <script src="js/d3.v4.min.js"></script>
@@ -549,6 +546,10 @@ pointer-events: auto;
   justify-content: center;
   align-items: flex-start;
   margin: 24px 0;
+}
+/* Commentaire sous un bloc de graphiques : centré et calé sur sa largeur. */
+.chart-comment {
+  margin: 0 auto 10px;
 }
 .cohort-pie-block {
   text-align: center;

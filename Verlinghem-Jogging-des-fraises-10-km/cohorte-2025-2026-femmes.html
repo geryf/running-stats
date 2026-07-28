@@ -103,6 +103,9 @@ var evolutionScatter = {"transitions":[{"fromLabel":"9 juin 2025","toLabel":"25 
             <div id="piechartcategory" class="cohort-pie"></div>
         </div>
             </div>
+    <div class="chart-comment">
+        <p>À noter que les coureuses de la cohorte sont plus âgées que l'ensemble des participantes&nbsp;: les 35 ans et plus y représentent 62&nbsp;% de l'effectif, contre respectivement 50 et 48&nbsp;% en 2025 et 2026 pour l'ensemble des femmes.</p>
+    </div>
         <div class="cohort-graph-block">
         <h2 class="cohort-edition-title">9 juin 2025<br><small class="text-muted">Niveau FFA : Départemental</small></h2>
         <div class="cohort-edition-row" style="display:flex;align-items:flex-start;gap:16px;">
@@ -286,10 +289,6 @@ var evolutionScatter = {"transitions":[{"fromLabel":"9 juin 2025","toLabel":"25 
         </tbody>
     </table>
     </div>
-    <ul>
-        <li>
-        </li>
-    </ul>
  
         </div>
         <script src="js/d3.v4.min.js"></script>
@@ -444,6 +443,10 @@ pointer-events: auto;
   justify-content: center;
   align-items: flex-start;
   margin: 24px 0;
+}
+/* Commentaire sous un bloc de graphiques : centré et calé sur sa largeur. */
+.chart-comment {
+  margin: 0 auto 10px;
 }
 .cohort-pie-block {
   text-align: center;

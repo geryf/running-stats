@@ -93,6 +93,16 @@ var avgAllEvolution = {"label":"Total g\u00e9n\u00e9ral","byEdition":{"32":{"nb"
         <h2>Composition des classés par catégorie et sexe</h2>
     <div id="compoLegend" class="compo-legend"></div>
     <div class="line-chart-wrap"><div class="line-chart-inner" style="height:320px;"><canvas id="chartCompoEvolution"></canvas></div></div>
+    <div class="chart-comment">
+        <p>Le nombre de classés progresse fortement entre 2023 et 2025&nbsp;: près de 700 coureurs supplémentaires, soit une hausse de 60&nbsp;%.</p>
+        <p>Cette croissance profite d'abord aux femmes, qui représentent près de 45&nbsp;% des classés à partir de 2025, contre 37&nbsp;% auparavant.</p>
+        <p>Elle s'accompagne d'un net rajeunissement du peloton&nbsp;: entre 2023 et 2025, la part des moins de 35 ans passe</p>
+        <ul>
+            <li>chez les hommes, de 30&nbsp;% à un peu plus de 40&nbsp;%&nbsp;;</li>
+            <li>chez les femmes, de 35&nbsp;% à plus de 50&nbsp;%.</li>
+        </ul>
+        <p>Entre 2025 et 2026, la progression se poursuit avec 400 classés de plus.</p>
+    </div>
         <h2 class="cohort-edition-title">6 juin 2022 — 933 coureurs femmes et hommes<br><small class="text-muted">Niveau FFA : National</small></h2>
     <div class="cohort-edition-row" style="display:flex;align-items:center;gap:16px;">
         <div class="piechartsex-wrapper" style="flex:0 0 220px;width:220px;height:220px;display:flex;align-items:center;justify-content:center;">
@@ -1018,10 +1028,6 @@ var avgAllEvolution = {"label":"Total g\u00e9n\u00e9ral","byEdition":{"32":{"nb"
     </table>
     </div>
     <p class="text-muted"><small>La ligne « Sélection (légende) » recalcule dynamiquement, pour chaque édition, la moyenne et l'écart type des catégories cochées dans la légende des histogrammes ci-dessus (moyenne pondérée par les effectifs, écart type combiné). La médiane n'est pas calculable à partir des agrégats par catégorie.</small></p>
-    <ul>
-        <li>
-        </li>
-    </ul>
  
         </div>
         <script src="js/d3.v4.min.js"></script>
@@ -1231,6 +1237,11 @@ h2 {
   position: relative;
   height: 240px;
   margin: 0 auto;
+}
+/* Commentaire sous un graphique en ligne : centré et calé sur la largeur du
+   graphique (max-width posée par resizeChartComments()). */
+.chart-comment {
+  margin: 0 auto 10px;
 }
 </style>
 <script>
@@ -1699,7 +1710,17 @@ function resizeLineCharts() {
         o.inner.style.width = w + 'px';
         o.chart.resize();
     });
+    resizeChartComments();
 }
+
+// Cale les blocs de commentaire sur la largeur courante des graphiques en ligne.
+function resizeChartComments() {
+    var w = lineCanvasWidth();
+    Array.prototype.forEach.call(document.querySelectorAll('.chart-comment'), function(el) {
+        el.style.maxWidth = w + 'px';
+    });
+}
+document.addEventListener('DOMContentLoaded', resizeChartComments);
 window.addEventListener('resize', function() {
     if (window._lineResizeT) clearTimeout(window._lineResizeT);
     window._lineResizeT = setTimeout(resizeLineCharts, 200);

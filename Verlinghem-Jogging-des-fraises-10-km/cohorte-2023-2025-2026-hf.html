@@ -112,10 +112,13 @@ var evolutionScatter = {"transitions":[{"fromLabel":"29 mai 2023","toLabel":"9 j
             <div id="piechartsex" class="cohort-pie"></div>
         </div>
             </div>
-		<p>A noter que les coureurs de la cohorte sont en proportion plus agés que l'ensemble des coureurs : <br />
-		 85% de plus de 35 ans pour les hommes, contre 70% pour l'ensemble des hommes dans l'edition 2023;<br/>
-		 77% de plus de 35 ans pour les femmes, contre 65% pour l'ensemble des femmes dans l'edition 2023.
-		</p>
+    <div class="chart-comment">
+        <p>À noter que les coureurs de la cohorte sont sensiblement plus âgés que l'ensemble des participants&nbsp;: les 35 ans et plus y représentent</p>
+        <ul>
+            <li>87&nbsp;% des hommes, contre respectivement 70 et 59&nbsp;% en 2023 et 2025 pour l'ensemble des hommes&nbsp;;</li>
+            <li>77&nbsp;% des femmes, contre respectivement 64 et 50&nbsp;% en 2023 et 2025 pour l'ensemble des femmes.</li>
+        </ul>
+    </div>
         <div class="cohort-graph-block">
         <h2 class="cohort-edition-title">29 mai 2023<br><small class="text-muted">Niveau FFA : National</small></h2>
         <div class="cohort-edition-row" style="display:flex;align-items:flex-start;gap:16px;">
@@ -421,10 +424,6 @@ var evolutionScatter = {"transitions":[{"fromLabel":"29 mai 2023","toLabel":"9 j
         </tbody>
     </table>
     </div>
-    <ul>
-        <li>
-        </li>
-    </ul>
  
         </div>
         <script src="js/d3.v4.min.js"></script>
@@ -579,6 +578,10 @@ pointer-events: auto;
   justify-content: center;
   align-items: flex-start;
   margin: 24px 0;
+}
+/* Commentaire sous un bloc de graphiques : centré et calé sur sa largeur. */
+.chart-comment {
+  margin: 0 auto 10px;
 }
 .cohort-pie-block {
   text-align: center;

@@ -113,6 +113,14 @@ var evolutionScatter = {"transitions":[{"fromLabel":"9 juin 2025","toLabel":"25 
             <div id="piechartsex" class="cohort-pie"></div>
         </div>
             </div>
+    <div class="chart-comment">
+        <p>À noter que les coureurs de la cohorte sont plus âgés que l'ensemble des participants&nbsp;: les 35 ans et plus y représentent</p>
+        <ul>
+            <li>66&nbsp;% des hommes, contre respectivement 59 et 57&nbsp;% en 2025 et 2026 pour l'ensemble des hommes&nbsp;;</li>
+            <li>62&nbsp;% des femmes, contre respectivement 50 et 48&nbsp;% en 2025 et 2026 pour l'ensemble des femmes.</li>
+        </ul>
+        <p>Les femmes ne comptent par ailleurs que pour 40&nbsp;% de la cohorte, contre environ 45&nbsp;% de l'ensemble des classés en 2025 comme en 2026.</p>
+    </div>
         <div class="cohort-graph-block">
         <h2 class="cohort-edition-title">9 juin 2025<br><small class="text-muted">Niveau FFA : Départemental</small></h2>
         <div class="cohort-edition-row" style="display:flex;align-items:flex-start;gap:16px;">
@@ -163,6 +171,9 @@ var evolutionScatter = {"transitions":[{"fromLabel":"9 juin 2025","toLabel":"25 
     </p>
             <div class="histo-evolution-title">9 juin 2025 → 25 mai 2026 <small class="text-muted">(430 coureurs)</small></div>
         <div class="line-chart-wrap"><div class="line-chart-inner scatter-evolution-inner"><canvas id="chartEvolutionScatter-0"></canvas></div></div>
+    <div class="chart-comment">
+        <p>On observe quelques évolutions aberrantes. Une dizaine peuvent s'expliquer par des coureurs et coureuses devenus meneurs ou meneuses d'allure d'une édition à l'autre, ou qui ont cessé de l'être. D'autres tiennent peut-être à des échanges ou des dons de dossards entre coureurs de niveaux différents.</p>
+    </div>
             <h2>Évolutions météo et moyennes</h2>
     <div class="chart-scroll-wrapper">
     <table class="table table-striped table-bordered table-condensed stats-table">
@@ -305,10 +316,6 @@ var evolutionScatter = {"transitions":[{"fromLabel":"9 juin 2025","toLabel":"25 
         </tbody>
     </table>
     </div>
-    <ul>
-        <li>
-        </li>
-    </ul>
  
         </div>
         <script src="js/d3.v4.min.js"></script>
@@ -463,6 +470,10 @@ pointer-events: auto;
   justify-content: center;
   align-items: flex-start;
   margin: 24px 0;
+}
+/* Commentaire sous un bloc de graphiques : centré et calé sur sa largeur. */
+.chart-comment {
+  margin: 0 auto 10px;
 }
 .cohort-pie-block {
   text-align: center;

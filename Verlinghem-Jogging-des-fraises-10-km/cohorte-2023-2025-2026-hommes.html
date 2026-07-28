@@ -94,7 +94,7 @@ var evolutionScatter = {"transitions":[{"fromLabel":"29 mai 2023","toLabel":"9 j
 </script>
     <h1>Jogging des fraises - 10 km route<br /><span class="cohort-subtitle">Coureurs ayant participé à chaque édition&nbsp;: <span class="nowrap">29 mai 2023</span>, <span class="nowrap">9 juin 2025</span>, <span class="nowrap">25 mai 2026</span></span></h1>
     <p>Il n'y a pas eu d'édition en 2024, du fait d'un changement au sein des organisateurs de la course.</p>
-    <h2>103 coureurs classés (hommes)</h2>
+    <h2>68 coureurs classés (hommes)</h2>
         <div class="cohort-pies">
                 <div class="cohort-pie-block">
             <h3>Répartition par catégorie</h3>
@@ -102,8 +102,9 @@ var evolutionScatter = {"transitions":[{"fromLabel":"29 mai 2023","toLabel":"9 j
             <div id="piechartcategory" class="cohort-pie"></div>
         </div>
             </div>
-					<p>A noter que les coureurs de la cohorte sont en proportion plus agés que l'ensemble des coureurs.
-		 85% de plus de 35 ans pour les hommes, contre 70% pour l'ensemble des hommes dans l'edition 2023.</p>
+    <div class="chart-comment">
+        <p>À noter que les coureurs de la cohorte sont sensiblement plus âgés que l'ensemble des participants&nbsp;: les 35 ans et plus y représentent 87&nbsp;% de l'effectif, contre respectivement 70 et 59&nbsp;% en 2023 et 2025 pour l'ensemble des hommes.</p>
+    </div>
         <div class="cohort-graph-block">
         <h2 class="cohort-edition-title">29 mai 2023<br><small class="text-muted">Niveau FFA : National</small></h2>
         <div class="cohort-edition-row" style="display:flex;align-items:flex-start;gap:16px;">
@@ -409,10 +410,6 @@ var evolutionScatter = {"transitions":[{"fromLabel":"29 mai 2023","toLabel":"9 j
         </tbody>
     </table>
     </div>
-    <ul>
-        <li>
-        </li>
-    </ul>
  
         </div>
         <script src="js/d3.v4.min.js"></script>
@@ -567,6 +564,10 @@ pointer-events: auto;
   justify-content: center;
   align-items: flex-start;
   margin: 24px 0;
+}
+/* Commentaire sous un bloc de graphiques : centré et calé sur sa largeur. */
+.chart-comment {
+  margin: 0 auto 10px;
 }
 .cohort-pie-block {
   text-align: center;
