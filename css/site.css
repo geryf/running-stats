@@ -1,0 +1,22 @@
+/* Styles communs à toutes les pages du site.
+   Chargé après Bootstrap pour pouvoir le surcharger. */
+
+/* Bootstrap 3 fige h1 à 36px et h2 à 30px quelle que soit la largeur d'écran,
+   ce qui est trop imposant sur mobile. On les réduit sous le breakpoint xs.
+
+   Les sélecteurs sont scopés à `.container` pour deux raisons :
+   - spécificité 0,1,1, ce qui passe devant les règles `h1`/`h2` simples (0,0,1)
+     déclarées dans les blocs <style> en fin de page, qui gagneraient sinon par
+     ordre de source ;
+   - `.container` n'existe que sur les pages Bootstrap : l'accueil, qui a son
+     propre gabarit (.wrap) et des titres déjà responsives, n'est pas touché. */
+@media (max-width: 767px) {
+  .container h1 {
+    font-size: 26px;
+    line-height: 1.25;
+  }
+  .container h2 {
+    font-size: 22px;
+    line-height: 1.3;
+  }
+}
