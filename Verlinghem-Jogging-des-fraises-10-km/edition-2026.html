@@ -103,18 +103,25 @@ var nbByCategory =  {"9":20,"10":16,"11":59,"12":426,"65":145,"66":128,"67":89,"
     .course-contexte blockquote { font-size: inherit; }
     .course-contexte table { width: 100%; margin-bottom: 16px; }
     .course-contexte table th, .course-contexte table td { padding: 6px 8px; border-top: 1px solid #ddd; }
+    /* Vidéo YouTube : pleine largeur sur mobile, ratio 16/9 porté par l'iframe elle-même. */
+    .course-contexte .video-embed { max-width: 100%; margin: 16px auto; }
+    .course-contexte .video-embed iframe { display: block; width: 100%; height: auto;
+      aspect-ratio: 16 / 9; border: 0; }
+    /* Sur desktop le container Bootstrap fait ~1140px : on plafonne la vidéo à 480px. */
+    @media (min-width: 992px) {
+      .course-contexte .video-embed { max-width: 480px; }
+    }
 </style>          
 <section class="course-contexte">
 <h2>Mon vécu de la course et commentaire en 3' sur les stats</h2>
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%;">
-  <iframe 
-    src="https://www.youtube.com/embed/nZGhVJyCu9Q" 
-    title="YouTube video player" 
-    frameborder="0" 
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-    referrerpolicy="strict-origin-when-cross-origin" 
-    allowfullscreen
-    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+<div class="video-embed">
+  <iframe
+    src="https://www.youtube.com/embed/nZGhVJyCu9Q"
+    title="Mon vécu de la course et commentaire en 3' sur les stats"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    referrerpolicy="strict-origin-when-cross-origin"
+    allowfullscreen>
   </iframe>
 </div>
 
