@@ -3,130 +3,25 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Gery — Running Stats</title>
-  <meta name="description" content="Site personnel de Gery.">
-  <!-- Styles communs du site -->
-  <link href="css/site.css" rel="stylesheet">
+  <title>Statistiques de courses</title>
   <style>
-    :root {
-      --bg: #ffffff;
-      --fg: #1a1a1a;
-      --muted: #666;
-      --accent: #e05a2b;
-      --card: #f6f6f7;
-      --border: #e4e4e7;
-    }
-    @media (prefers-color-scheme: dark) {
-      :root {
-        --bg: #16171a;
-        --fg: #f2f2f3;
-        --muted: #a1a1aa;
-        --accent: #ff7a4d;
-        --card: #1f2024;
-        --border: #2c2d31;
-      }
-    }
-    * { box-sizing: border-box; }
-    html { -webkit-text-size-adjust: 100%; }
-    body {
-      margin: 0;
-      font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      line-height: 1.6;
-      color: var(--fg);
-      background: var(--bg);
-    }
-    .wrap {
-      max-width: 720px;
-      margin: 0 auto;
-      padding: 4rem 1.25rem 5rem;
-    }
-    header { margin-bottom: 3rem; }
-    .eyebrow {
-      color: var(--accent);
-      font-weight: 600;
-      letter-spacing: .04em;
-      text-transform: uppercase;
-      font-size: .8rem;
-      margin: 0 0 .5rem;
-    }
-    h1 {
-      font-size: clamp(2rem, 6vw, 3rem);
-      line-height: 1.15;
-      margin: 0 0 1rem;
-    }
-    .lead {
-      font-size: 1.15rem;
-      color: var(--muted);
-      margin: 0;
-    }
-    section { margin-top: 3rem; }
-    h2 {
-      font-size: 1.25rem;
-      margin: 0 0 1rem;
-    }
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 1rem;
-    }
-    .card {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 1.25rem;
-    }
-    .card h3 { margin: 0 0 .35rem; font-size: 1rem; }
-    .card p { margin: 0; color: var(--muted); font-size: .95rem; }
-    a { color: var(--accent); text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    .links { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 1rem; }
-    footer {
-      margin-top: 4rem;
-      padding-top: 1.5rem;
-      border-top: 1px solid var(--border);
-      color: var(--muted);
-      font-size: .9rem;
-    }
-  </style>
-  <!-- Statistiques de fréquentation (GoatCounter, sans cookie) -->
-  <script data-goatcounter="https://runningstats.goatcounter.com/count"
-          async src="https://gc.zgo.at/count.js"></script>
+body{margin:0;background:#f4f6f8;color:#2c3e50;
+  font-family:-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;}
+header{background:#2c3e50;color:#fff;padding:22px 24px;box-shadow:0 2px 6px rgba(0,0,0,.2);}
+header h1{margin:0;font-size:22px;}
+main{max-width:820px;margin:26px auto;padding:0 16px;}
+.rs-course{display:block;background:#fff;border-radius:6px;padding:16px 18px;margin-bottom:12px;
+  text-decoration:none;color:inherit;box-shadow:0 1px 3px rgba(0,0,0,.12);}
+.rs-course:hover{box-shadow:0 3px 10px rgba(0,0,0,.18);}
+.rs-course strong{display:block;font-size:17px;}
+.rs-course span{color:#7f8c8d;font-size:14px;}
+</style>
 </head>
 <body>
-  <div class="wrap">
-    <header>
-      <p class="eyebrow">Site personnel</p>
-      <h1>Runnings stats</h1>
-    </header>
-
-    <section
-      <div class="cards">
-        <div class="card">
-          <h3>Je vous raconte mes courses à pieds 🏃 dans des vidéos Youtube sur 
-		  </br ><a href="https://www.youtube.com/@geryrunningcycling">Géry Running & Cycling</a><h3>
-	      <h3>Et ici vous trouverez des statistiques sur les courses que j'ai faites</h3>
-		  <p>Pour le moment une seule course disponible :</p>
-		  <h4><a href="Verlinghem-Jogging-des-fraises-10-km/edition-2026.html">Le jogging des Fraises 2026</a></h4>
-		  <p>Cette édition s'est tenue le 25 mai par 26°c, chaleur inhabituelle dans le Nord à cette date de l'année</p>
-		</div>
-      </div>
-    </section>
-
-    <section>
-      <h2>Me contacter</h2>
-      <div class="links">
-        <a href="mailto:gflament@gmail.com">Email</a>
-        <a href="https://github.com/geryf">GitHub</a>
-      </div>
-    </section>
-
-    <footer>
-      © <span id="year"></span> Gery — Hébergé sur GitHub Pages.
-    </footer>
-  </div>
-
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+<header><h1>Statistiques de courses</h1></header>
+<main>
+  <a class="rs-course" href="Verlinghem-Jogging-des-fraises-10-km/index.html"><strong>Jogging des fraises · 10 km</strong><span>Verlinghem, 8 pages</span></a>
+  <a class="rs-course" href="Le-Touquet-La-course-entre-mer-et-foret-Semi-marathon/index.html"><strong>La course entre mer et forêt · Semi-marathon</strong><span>Le Touquet-Paris-Plage, 5 pages</span></a>
+</main>
 </body>
 </html>
