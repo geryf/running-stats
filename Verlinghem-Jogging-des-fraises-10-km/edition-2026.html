@@ -22,33 +22,25 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
             <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-         <!-- Statistiques de fréquentation (GoatCounter, sans cookie) -->
+         <link rel="stylesheet" href="css/rs-export.css">
+  <!-- Statistiques de fréquentation (GoatCounter, sans cookie) -->
   <script data-goatcounter="https://runningstats.goatcounter.com/count"
           async src="https://gc.zgo.at/count.js"></script>
 </head>
     <body>
         <div class="container theme-showcase" role="main">
-        
-<style>
-.rs-nav{position:sticky;top:0;z-index:1500;display:flex;flex-wrap:wrap;align-items:center;
-  gap:4px;background:#2c3e50;padding:8px 14px;margin:0 -15px 18px;
-  font-family:-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;box-shadow:0 2px 6px rgba(0,0,0,.2);}
-.rs-nav .rs-brand{color:#fff;font-weight:700;margin-right:18px;font-size:16px;text-decoration:none;}
-.rs-nav a,.rs-nav .rs-dropbtn{color:#cfd8e3;text-decoration:none;padding:7px 12px;border-radius:4px;
-  font-size:14px;background:none;border:0;cursor:pointer;font-family:inherit;}
-.rs-nav a:hover,.rs-nav .rs-dropbtn:hover{background:#34495e;color:#fff;}
-.rs-nav a.active,.rs-nav .rs-dropbtn.active{background:#e74c3c;color:#fff;}
-.rs-nav .rs-racine{margin-left:auto;opacity:.8;}
-.rs-dropdown{position:relative;display:inline-block;}
-.rs-dropmenu{display:none;position:absolute;left:0;top:100%;background:#34495e;min-width:210px;
-  border-radius:0 0 6px 6px;box-shadow:0 6px 14px rgba(0,0,0,.3);overflow:hidden;padding:4px 0;}
-.rs-dropdown.open .rs-dropmenu{display:block;}
-.rs-dropmenu a{display:block;color:#cfd8e3;padding:9px 16px;border-radius:0;}
-.rs-dropmenu a:hover{background:#3d566e;color:#fff;}
-.rs-dropmenu a.active{background:#e74c3c;color:#fff;}
-</style>
+        <div class="rs-titre">
+  <div class="rs-dropdown">
+    <button type="button" class="rs-dropbtn">Courses ▾</button>
+    <div class="rs-dropmenu">
+      <a href="../Verlinghem-Jogging-des-fraises-10-km/edition-2026.html" class="active">Jogging des fraises · 10 km</a>
+      <a href="../Le-Touquet-La-course-entre-mer-et-foret-Semi-marathon/edition-2026.html">La course entre mer et forêt · Semi-marathon</a>
+    </div>
+  </div>
+  <a class="rs-nom" href="edition-2026.html">Jogging des fraises · 10 km</a>
+  <a class="rs-racine rs-droite" href="../index.html">À propos</a>
+</div>
 <nav class="rs-nav">
-  <a class="rs-brand" href="edition-2026.html">Jogging des fraises · 10 km</a>
   <a href="edition-2026.html" class="active">Édition 2026</a>
   <a href="comparaison-editions-2022-2023-2025-2026.html">Comparaison 2022·2023·2025·2026</a>
   <div class="rs-dropdown">
@@ -67,24 +59,8 @@
       <a href="cohorte-2025-2026-femmes.html">Femmes</a>
     </div>
   </div>
-  <a class="rs-racine" href="../index.html">Toutes les courses ▸</a>
 </nav>
-<script>
-(function(){
-  var menus=[].slice.call(document.querySelectorAll('.rs-nav .rs-dropdown'));
-  menus.forEach(function(d){
-    d.querySelector('.rs-dropbtn').addEventListener('click',function(e){
-      e.stopPropagation();
-      var ouvert=d.classList.contains('open');
-      menus.forEach(function(m){m.classList.remove('open');});
-      if(!ouvert)d.classList.add('open');
-    });
-  });
-  document.addEventListener('click',function(){
-    menus.forEach(function(m){m.classList.remove('open');});
-  });
-})();
-</script>
+<script src="js/rs-export.js"></script>
 
         
                 
@@ -582,6 +558,9 @@ document.querySelectorAll('.stats-row').forEach(function(row) {
 }
 .table-nonfluid {
    width: auto !important;
+   /* width:auto laisserait le tableau collé à gauche : on le recentre. */
+   margin-left: auto;
+   margin-right: auto;
 }
 .hlines{
 	stroke:rgb(150,148,109);
