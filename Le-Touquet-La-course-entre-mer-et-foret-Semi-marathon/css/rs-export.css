@@ -30,3 +30,25 @@
   background:#f4f6f8;color:#2c3e50;font-size:14px;line-height:1.5;}
 .rs-commentaire > :first-child{margin-top:0;}
 .rs-commentaire > :last-child{margin-bottom:0;}
+/* Notes réutilisables : le mot souligné ouvre une fenêtre. Le déclencheur est un
+   <button> pour rester atteignable au clavier, remis au style du texte porteur. */
+.rs-note{display:inline;padding:0;border:0;background:none;font:inherit;color:inherit;
+  cursor:help;border-bottom:1px dotted currentColor;}
+.rs-note:hover,.rs-note:focus{background:#e3e9ef;}
+.rs-note-fond{position:fixed;top:0;right:0;bottom:0;left:0;background:rgba(0,0,0,.45);
+  z-index:2000;display:flex;align-items:center;justify-content:center;padding:16px;}
+.rs-note-boite{background:#fff;color:#2c3e50;max-width:560px;max-height:80vh;overflow:auto;
+  border-radius:6px;padding:18px 22px;box-shadow:0 10px 30px rgba(0,0,0,.35);
+  font-size:14px;line-height:1.55;}
+.rs-note-boite h3{margin:0 0 12px;font-size:16px;padding-right:24px;}
+.rs-note-boite > :last-child{margin-bottom:0;}
+.rs-note-fermer{float:right;border:0;background:none;font-size:24px;line-height:1;
+  cursor:pointer;color:#7f8c8d;padding:0 0 0 12px;}
+.rs-note-fermer:hover,.rs-note-fermer:focus{color:#2c3e50;}
+/* Sélection de catégories depuis le texte : un mot du commentaire agit sur la
+   légende du graphique. Souligné en tirets pour ne pas se confondre avec les
+   notes (pointillés) ni avec un lien de navigation. */
+.rs-legende{display:inline;padding:0 1px;border:0;background:none;font:inherit;
+  color:#1a5490;cursor:pointer;text-decoration:underline;text-decoration-style:dashed;}
+.rs-legende:hover,.rs-legende:focus{background:#e3e9ef;}
+.rs-legende[aria-pressed="true"]{background:#dfe8f1;font-weight:700;text-decoration:none;}

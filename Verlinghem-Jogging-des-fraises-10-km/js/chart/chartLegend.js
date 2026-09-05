@@ -520,6 +520,37 @@ class ChartLegend {
     }
 
     /**
+     * Applique une sélection complète, comme si elle avait été composée à la main
+     * dans la légende : cases cochées mises à jour, rappels appelés, URL synchronisée.
+     * Sert aux liens des commentaires du site statique (« n'afficher que les hommes »),
+     * qui ne connaissent que des clés — `agg_M`, `agg_F` ou des ids de catégories.
+     *
+     * @param  array keys clés à cocher ; les inconnues de la page sont ignorées
+     * @return bool       false si la sélection demandée ne retient aucune clé connue,
+     *                    auquel cas rien n'est changé (un graphique vide n'apprend rien)
+     */
+    applyKeys(keys) {
+        var voulues = {};
+        (keys || []).forEach(function(key) { voulues[key] = true; });
+        var retenues = [];
+        for (var key in this.keysVisibility) {
+            if (voulues[key]) {
+                retenues.push(key);
+            }
+        }
+        if (retenues.length === 0) {
+            return false;
+        }
+        for (var key in this.keysVisibility) {
+            this.keysVisibility[key] = voulues[key] === true;
+        }
+        this.applyVisibility();
+        this.deselectAllRadios();
+        this.callAction(this.getKeysToDisplay());
+        return true;
+    }
+
+    /**
      * Aligne l'affichage de la légende sur l'état de visibilité courant. À appeler
      * après un draw() : les coches y sont toutes rendues visibles, alors qu'une
      * partie des catégories peut être décochée (sélection reprise d'un redessin).

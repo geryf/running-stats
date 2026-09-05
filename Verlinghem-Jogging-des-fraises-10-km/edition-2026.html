@@ -35,6 +35,7 @@
     <div class="rs-dropmenu">
       <a href="../Verlinghem-Jogging-des-fraises-10-km/edition-2026.html" class="active">Jogging des fraises · 10 km</a>
       <a href="../Le-Touquet-La-course-entre-mer-et-foret-Semi-marathon/edition-2026.html">La course entre mer et forêt · Semi-marathon</a>
+      <a href="../Marcq-en-Baroeul-Semi-marathon/edition-2025.html">Semi de Marcq-en-Barœul · Semi-marathon</a>
     </div>
   </div>
   <a class="rs-nom" href="edition-2026.html">Jogging des fraises · 10 km</a>
@@ -863,13 +864,13 @@ function renderCharts() {
     var positionInfo = element.getBoundingClientRect();
     var widthStacked = positionInfo.width;
 
-    // bottom et hauteur totale majorés de 16px : place réservée pour l'étagement
-    // d'une graduation sur deux (XTICK_STAGGER) et les repères Q1/Me/Q3 décalés,
-    // sans réduire la hauteur des barres.
-    var margin = {top: 100, right: 250, bottom: 66, left: 60};
+    // bottom et hauteur totale majorés : place réservée pour l'étagement d'une
+    // graduation sur deux (XTICK_STAGGER), les repères Q1/Me/Q3 décalés et le titre
+    // de l'axe X posé sous eux (XTITRE_Y), sans réduire la hauteur des barres.
+    var margin = {top: 100, right: 250, bottom: 80, left: 60};
     // Largeur minimale pour éviter une échelle D3 invalide (NaN) sur un conteneur très étroit
     var width = Math.max(widthStacked - margin.left - margin.right, 280);
-    var height = 616 - margin.top - margin.bottom;
+    var height = 630 - margin.top - margin.bottom;
 
     // Préserve la sélection de catégories en cours lors d'un redessin (ex: redimensionnement de la fenêtre)
     var previousKeys = chartLegend ? chartLegend.getKeysToDisplay() : null;

@@ -15,6 +15,13 @@ const XTICK_STAGGER_REMONTEE = 3;
 // rattacher le libellé à son axe ; un trait plein jusqu'en bas alourdissait l'axe.
 const XTICK_LINE_RALLONGE = XTICK_STAGGER / 2;
 
+// Ordonnée du titre de l'axe X, une ligne SOUS le dernier libellé des repères de
+// quartiles (45 + XTICK_STAGGER). À la même hauteur qu'eux, il recouvrait l'heure
+// de Q3 dès que ce quartile tombait près du bord droit — le titre est aligné à
+// droite et l'axe est repassé au-dessus des repères (raise()), donc c'est lui qui
+// gagnait. Les marges basses des conteneurs réservent cette ligne (cf. templates).
+const XTITRE_Y = 45 + XTICK_STAGGER + 14;
+
 class StackedChart {
 
     /**
@@ -122,7 +129,7 @@ class StackedChart {
 
         xAxisGroup.append("text")
         .attr("x", this.layout.width)
-        .attr("y", (43 + XTICK_STAGGER))
+        .attr("y", XTITRE_Y)
         /*.attr("dy", "0.32em")*/
         .attr("fill", "#000")
         .attr("font-weight", "bold")
