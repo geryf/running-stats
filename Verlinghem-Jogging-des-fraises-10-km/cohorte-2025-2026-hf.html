@@ -73,8 +73,6 @@ var editionsAxis = [{"id":33,"slug":"Jogging-des-fraises-10-km-route","label":"9
 // lisible (DefaultController::EFFECTIF_MIN_LIGNE) : les lignes recalculées côté
 // JS suivent la même règle que celles rendues par Twig.
 var effectifMinLigne = 30
-var avgByBracket = {"30":{"label":"30' - 40'","nb":17,"byEdition":{"32":{"avgMinutes":38.4,"avgSeconds":2304.1176,"avgLabel":"38'24","stdDevLabel":"1'47","evolutionLabel":"+0'59 (+2.6%)","evolutionDiffSeconds":59.35289999999986,"evolutionMargeSeconds":41.80184611244226,"evolutionSignificative":true,"medianSeconds":2310,"medianLabel":"38'30","evolutionMedianePct":2.909248805905341,"evolutionMedianeNb":17,"evolutionMedianeLabel":"+1'07 (+2.9%)"},"33":{"avgMinutes":37.4,"avgSeconds":2244.7647,"avgLabel":"37'25","stdDevLabel":"1'38","medianSeconds":2246,"medianLabel":"37'26"}},"effectifSuffisant":false},"40":{"label":"40' - 50'","nb":93,"byEdition":{"32":{"avgMinutes":46.6,"avgSeconds":2794.1935,"avgLabel":"46'34","stdDevLabel":"4'10","evolutionLabel":"+2'15 (+5.1%)","evolutionDiffSeconds":135.3762999999999,"evolutionMargeSeconds":63.20949958924784,"evolutionSignificative":true,"medianSeconds":2759,"medianLabel":"45'59","evolutionMedianePct":4.583921015514809,"evolutionMedianeNb":93,"evolutionMedianeLabel":"+2'05 (+4.6%)"},"33":{"avgMinutes":44.3,"avgSeconds":2658.8172,"avgLabel":"44'19","stdDevLabel":"3'25","medianSeconds":2663,"medianLabel":"44'23"}},"effectifSuffisant":true},"50":{"label":"50' - 1h00","nb":150,"byEdition":{"32":{"avgMinutes":56.9,"avgSeconds":3411.96,"avgLabel":"56'52","stdDevLabel":"4'43","evolutionLabel":"+3'41 (+6.9%)","evolutionDiffSeconds":221.46000000000004,"evolutionMargeSeconds":71.21921827452576,"evolutionSignificative":true,"medianSeconds":3413.5,"medianLabel":"56'54","evolutionMedianePct":8.953893584643016,"evolutionMedianeNb":150,"evolutionMedianeLabel":"+4'46 (+9.0%)"},"33":{"avgMinutes":53.2,"avgSeconds":3190.5,"avgLabel":"53'11","stdDevLabel":"4'32","medianSeconds":3186.5,"medianLabel":"53'07"}},"effectifSuffisant":true},"60":{"label":"Plus d'1h00","nb":170,"byEdition":{"32":{"avgMinutes":71,"avgSeconds":4260.5205,"avgLabel":"1h11'01","stdDevLabel":"7'24","evolutionLabel":"+7'23 (+11.6%)","evolutionDiffSeconds":442.8675999999996,"evolutionMargeSeconds":80.2014381356206,"evolutionSignificative":true,"medianSeconds":4188.5,"medianLabel":"1h09'49","evolutionMedianePct":12.093378195073111,"evolutionMedianeNb":170,"evolutionMedianeLabel":"+7'42 (+12.1%)"},"33":{"avgMinutes":63.6,"avgSeconds":3817.6529,"avgLabel":"1h03'38","stdDevLabel":"6'12","medianSeconds":3807.5,"medianLabel":"1h03'28"}},"effectifSuffisant":true}}
-var avgAll = {"label":"Total g\u00e9n\u00e9ral","nb":430,"byEdition":{"32":{"avgMinutes":59.5,"avgSeconds":3571.6311,"avgLabel":"59'32","stdDevLabel":"11'55","evolutionLabel":"+4'46 (+8.7%)","evolutionDiffSeconds":285.5682999999999,"evolutionMargeSeconds":44.06999098552722,"evolutionSignificative":true,"medianSeconds":3536,"medianLabel":"58'56","evolutionMedianePct":8.934253034431762,"evolutionMedianeNb":430,"evolutionMedianeLabel":"+4'39 (+8.9%)"},"33":{"avgMinutes":54.8,"avgSeconds":3286.0628,"avgLabel":"54'46","stdDevLabel":"9'37","medianSeconds":3272.5,"medianLabel":"54'33"}},"effectifSuffisant":true}
 var avgBySexCohort = {"M":{"label":"Tous les hommes","nb":258,"byEdition":{"32":{"avgMinutes":55.5,"avgSeconds":3330.2741,"avgLabel":"55'30","stdDevLabel":"11'31","evolutionLabel":"+4'38 (+9.1%)","evolutionDiffSeconds":278.18460000000005,"evolutionMargeSeconds":60.00063562456765,"evolutionSignificative":true,"medianSeconds":3249,"medianLabel":"54'09","evolutionMedianePct":7.981090100111235,"evolutionMedianeNb":257,"evolutionMedianeLabel":"+3'52 (+8.0%)"},"33":{"avgMinutes":50.9,"avgSeconds":3052.0895,"avgLabel":"50'52","stdDevLabel":"9'01","medianSeconds":2964,"medianLabel":"49'24"}},"effectifSuffisant":true},"F":{"label":"Toutes les femmes","nb":173,"byEdition":{"32":{"avgMinutes":65.6,"avgSeconds":3935.0698,"avgLabel":"1h05'35","stdDevLabel":"9'44","evolutionLabel":"+5'01 (+8.3%)","evolutionDiffSeconds":301.4282000000003,"evolutionMargeSeconds":63.844668904971535,"evolutionSignificative":true,"medianSeconds":3957.5,"medianLabel":"1h05'58","evolutionMedianePct":9.655487344492327,"evolutionMedianeNb":172,"evolutionMedianeLabel":"+5'37 (+9.7%)"},"33":{"avgMinutes":60.6,"avgSeconds":3633.6416,"avgLabel":"1h00'34","stdDevLabel":"7'16","medianSeconds":3600,"medianLabel":"1h00'00"}},"effectifSuffisant":true}}
 var avgByCategory = {"10":{"33":{"nb":1,"avgSeconds":3549,"stdDevSeconds":0}},"11":{"32":{"nb":3,"avgSeconds":3950.3333,"stdDevSeconds":463.5632523064019},"33":{"nb":7,"avgSeconds":3792.5714,"stdDevSeconds":521.1358082230053}},"12":{"32":{"nb":58,"avgSeconds":3702.4828,"stdDevSeconds":529.1752607589345},"33":{"nb":58,"avgSeconds":3549.1379,"stdDevSeconds":417.1606177181996}},"65":{"32":{"nb":23,"avgSeconds":3974.7391,"stdDevSeconds":553.8884063867729},"33":{"nb":23,"avgSeconds":3652.2174,"stdDevSeconds":386.9687052307687}},"66":{"32":{"nb":30,"avgSeconds":3974.5,"stdDevSeconds":554.1417839025194},"33":{"nb":31,"avgSeconds":3579.9355,"stdDevSeconds":418.58147050553015}},"67":{"32":{"nb":24,"avgSeconds":4180,"stdDevSeconds":583.182647204116},"33":{"nb":28,"avgSeconds":3706.5,"stdDevSeconds":422.8506575274879}},"68":{"32":{"nb":23,"avgSeconds":4003.6522,"stdDevSeconds":578.6182648416119},"33":{"nb":16,"avgSeconds":3704.6875,"stdDevSeconds":474.5947901565608}},"69":{"32":{"nb":9,"avgSeconds":4248.7778,"stdDevSeconds":615.5725027751317},"33":{"nb":7,"avgSeconds":3774.8571,"stdDevSeconds":440.64544495917045}},"70":{"32":{"nb":2,"avgSeconds":4470,"stdDevSeconds":208},"33":{"nb":2,"avgSeconds":4106.5,"stdDevSeconds":512.5}},"1":{"32":{"nb":3,"avgSeconds":3209.6667,"stdDevSeconds":185.3579120392641},"33":{"nb":9,"avgSeconds":2757.2222,"stdDevSeconds":353.7141902653351}},"2":{"32":{"nb":10,"avgSeconds":2818.4,"stdDevSeconds":440.08276494314117},"33":{"nb":5,"avgSeconds":2909.4,"stdDevSeconds":528.8064296129539}},"3":{"32":{"nb":3,"avgSeconds":2896.6667,"stdDevSeconds":368.25202722531697},"33":{"nb":4,"avgSeconds":2756.25,"stdDevSeconds":149.46634236509564}},"4":{"32":{"nb":66,"avgSeconds":3245.7727,"stdDevSeconds":695.0959339817897},"33":{"nb":68,"avgSeconds":3034.5588,"stdDevSeconds":619.0363807220381}},"54":{"32":{"nb":34,"avgSeconds":3123.8235,"stdDevSeconds":569.9675156165753},"33":{"nb":37,"avgSeconds":3054.2973,"stdDevSeconds":537.2745971059848}},"55":{"32":{"nb":37,"avgSeconds":3425.5405,"stdDevSeconds":628.1545942699221},"33":{"nb":35,"avgSeconds":3024.4857,"stdDevSeconds":433.7694826536705}},"56":{"32":{"nb":27,"avgSeconds":3378.6296,"stdDevSeconds":550.1182464234495},"33":{"nb":29,"avgSeconds":3046.069,"stdDevSeconds":542.0283699811728}},"57":{"32":{"nb":36,"avgSeconds":3273.8611,"stdDevSeconds":691.1948653028231},"33":{"nb":31,"avgSeconds":3015.0323,"stdDevSeconds":509.3556640578414}},"58":{"32":{"nb":20,"avgSeconds":3603.95,"stdDevSeconds":875.539917707925},"33":{"nb":18,"avgSeconds":3136.3889,"stdDevSeconds":490.0853824577565}},"59":{"32":{"nb":11,"avgSeconds":3775.5455,"stdDevSeconds":592.0347599801837},"33":{"nb":9,"avgSeconds":3334.7778,"stdDevSeconds":464.9706747689167}},"60":{"32":{"nb":6,"avgSeconds":3748.1667,"stdDevSeconds":611.1623943128556},"33":{"nb":10,"avgSeconds":3233.1,"stdDevSeconds":431.41266787149397}},"61":{"32":{"nb":5,"avgSeconds":3656.4,"stdDevSeconds":577.4168684754543},"33":{"nb":1,"avgSeconds":3968,"stdDevSeconds":0}},"62":{"33":{"nb":1,"avgSeconds":4215,"stdDevSeconds":0}},"63":{"32":{"nb":1,"avgSeconds":5399,"stdDevSeconds":0}}}
 var evolutionHistograms = {"bracketFloors":[-40,-35,-30,-25,-20,-15,-10,-5,0,5,10,15,20,25,30,35,40,45,50,55,60,65,70,75,80,85],"bracketWidth":5,"yMax":85,"transitions":[{"fromLabel":"9 juin 2025","toLabel":"25 mai 2026","nb":430,"counts":[2,3,1,2,10,5,15,48,67,85,82,51,29,9,8,3,4,2,0,0,1,0,0,1,1,1]}]}
@@ -120,16 +118,6 @@ var evolutionScatter = {"transitions":[{"fromLabel":"9 juin 2025","toLabel":"25 
         <div class="line-chart-wrap"><div class="line-chart-inner"><canvas id="chartMeteoEvolution"></canvas></div></div>
     </div>
     
-    <h2>Évolution du temps moyen par tranche de niveau habituel <small class="text-muted">(niveau = temps moyen du coureur sur toutes les éditions)</small></h2>
-    <p class="histo-evolution-legend text-muted">
-        Chaque coureur est classé dans une tranche selon son temps moyen sur l'ensemble des éditions : les groupes
-        restent donc les mêmes d'une édition à l'autre, ce qui permet de suivre l'évolution d'un même groupe.
-        <br><small>À lire avec prudence : ce temps moyen inclut chaque édition tracée, il subsiste donc un léger effet de
-        régression vers la moyenne. Les tranches les plus rapides et les plus lentes peuvent sembler se rapprocher un peu
-        du centre au fil des éditions ; une partie de ce resserrement est un artefact statistique, dont on ne peut pas
-        tirer de tendance générale.</small>
-    </p>
-    <div class="line-chart-wrap"><div class="line-chart-inner"><canvas id="chartAvgByBracket"></canvas></div></div>
             <h2>Répartition des évolutions individuelles de temps entre éditions</h2>
     <p class="histo-evolution-legend text-muted">
         Pour chaque coureur de la cohorte, évolution en % de son temps d'une édition à la suivante,
@@ -159,7 +147,16 @@ var evolutionScatter = {"transitions":[{"fromLabel":"9 juin 2025","toLabel":"25 
     </p>
             <div class="histo-evolution-title">9 juin 2025 → 25 mai 2026 <small class="text-muted" id="scatter-count-0">(430 coureurs)</small></div>
         <div class="line-chart-wrap"><div class="line-chart-inner scatter-evolution-inner"><canvas id="chartEvolutionScatter-0"></canvas></div></div><div class="rs-commentaire"><p>On observe quelques évolutions aberrantes. Une dizaine peuvent s'expliquer par des coureurs et coureuses devenus meneurs ou meneuses d'allure d'une édition à l'autre, ou qui ont cessé de l'être. D'autres tiennent peut-être à des échanges ou des dons de dossards entre coureurs de niveaux différents.</p> <p>Ces cas isolés ne sont pourtant pas ce qui fait bouger le tableau. Dans chaque tranche, la <strong>colonne Médiane suit la moyenne</strong> de très près&nbsp;: c'est le coureur ou la coureuse du milieu qui a ralenti, pas une poignée d'individus qui tire la ligne. La forme du nuage dit la même chose&nbsp;: les points ne se dispersent pas de part et d'autre de la diagonale, ils sont presque tous du même côté.</p> <p>Et le ralentissement est général&nbsp;: sur les 430&nbsp;coureur·ses de la cohorte, <strong>les quatre tranches perdent du temps</strong>, d'autant plus qu'elles sont lentes — +0'59 (+2,6&nbsp;%) pour les 30'-40', +2'15 (+5,1&nbsp;%) pour les 40'-50', +3'41 (+6,9&nbsp;%) pour les 50'-1h00 et +7'23 (+11,6&nbsp;%) au-delà d'une heure. Toutes portent la marque de significativité. L'asymétrie du nuage confirme&nbsp;: <strong>82&nbsp;coureur·ses ont perdu plus de 10&nbsp;minutes, 14&nbsp;seulement en ont gagné autant</strong>.</p> <p>La ligne météo en haut du tableau donne l'explication la plus directe&nbsp;: <strong>25,2&nbsp;°C et un humidex de 27,7 en 2026</strong>, contre 13,7&nbsp;°C et 15,5 en 2025. Onze degrés d'écart sur un 10&nbsp;km de fin mai, et un départ décalé à 10h20 au lieu de 9h20&nbsp;: les plus lent·es restent plus longtemps sur le parcours, et dans la tranche horaire la plus chaude — ce qui explique que la perte croisse avec le temps de course.</p></div>
-            <h2>Évolutions météo et moyennes</h2>
+                <div id="tableau-evolutions">
+    <h2>Évolutions météo et moyennes</h2>
+    <p class="tableau-evolutions-legende text-muted">
+        <span class="histo-swatch histo-swatch-green"></span> amélioration&nbsp;·
+        <span class="histo-swatch histo-swatch-red"></span> dégradation
+        <br><span class="effectif-faible-marque">effectif faible</span> — tranche comptant moins de 30 coureur·ses&nbsp;: sa moyenne et son écart type bougent de plusieurs minutes au gré de l'échantillon, l'évolution n'est pas interprétable (elle reste affichée, sans coloration).
+        <br><strong class="evo-signif">&#10033;</strong> — évolution dont l'intervalle de confiance à 95&nbsp;% exclut 0, donc difficilement imputable au seul hasard d'échantillonnage. <small>Le test est ici <strong>apparié</strong>&nbsp;: la cohorte étant composée des mêmes coureur·ses à chaque édition, l'intervalle se calcule sur les évolutions individuelles (loi de Student), ce qui le rend nettement plus fin que sur la page de comparaison, où les échantillons sont indépendants.</small>
+        <br><strong>Médiane des évol. indiv.</strong> — médiane des variations individuelles des coureur·ses présent·es aux deux éditions, insensible aux cas extrêmes contrairement à l'évolution des moyennes. Elle ne mesure pas la variation de la médiane affichée à côté. Ces évolutions sont visualisables à la rubrique «&nbsp;Répartition des évolutions individuelles de temps entre éditions&nbsp;» ci-dessus. C'est donc l'indicateur qui reflète le mieux l'évolution du coureur·se typique du groupe, sans être tiré par quelques variations extrêmes.
+        <br><strong>Médiane</strong> — temps du coureur·se du milieu de la tranche. La tranche étant définie sur le temps moyen d'un coureur sur toutes les éditions, les fortes variations individuelles (blessure, meneur·se d'allure, accompagnement d'un proche) atterrissent dans les tranches centrales, où quelques cas suffisent à déplacer la moyenne. Un écart marqué entre moyenne et médiane signale une tranche tirée par quelques individus plutôt qu'un déplacement d'ensemble.
+    </p>
     <div class="chart-scroll-wrapper">
     <table class="table table-striped table-bordered table-condensed stats-table colonne-figee">
         <thead>
@@ -192,27 +189,26 @@ var evolutionScatter = {"transitions":[{"fromLabel":"9 juin 2025","toLabel":"25 
                                     <th class="text-center edition-sep" colspan="5">6.4 km/h                                                                                                Est                                                        <small>(-2.4 km/h)</small>
                                             </th>
                             </tr>
-            <tr class="meteo-row">
+                                    <tr class="meteo-row">
                 <th colspan="2">☀️ Radiation solaire<br><small style="font-weight:normal;">Moy. sur 1h après départ</small></th>
                                     <th class="text-center edition-sep" colspan="3">435 W/m²                    </th>
                                     <th class="text-center edition-sep" colspan="5">643 W/m²                                                                                    <small>(+208 W/m², +48 %)</small>
                                             </th>
                             </tr>
-                                    <tr>
+                                                <tr>
                 <th rowspan="2">Tranche de performance<br><small style="font-weight:normal;">par niveau moyen sur toutes les éditions</small></th>
                 <th class="text-right" rowspan="2">Nb</th>
                                                         <th class="text-center edition-sep" colspan="1" rowspan="2">Moyenne</th>
-                    <th class="text-center" colspan="1" rowspan="2">Médiane</th>
-                    <th class="text-right" rowspan="2">Écart type</th>
+                    <th class="text-right" rowspan="2">Médiane</th>
+                                        <th class="text-right" rowspan="2">Écart type</th>
                                                         <th class="text-center edition-sep" colspan="2">Moyenne</th>
-                    <th class="text-center" colspan="2">Médiane</th>
-                    <th class="text-right" rowspan="2">Écart type</th>
+                    <th class="text-right" rowspan="2">Médiane</th>
+                                            <th class="text-right" rowspan="2" title="Médiane des variations individuelles des coureur·ses présent·es aux deux éditions : insensible aux cas extrêmes, contrairement à l'évolution des moyennes">Médiane des évol. indiv.</th>
+                                        <th class="text-right" rowspan="2">Écart type</th>
                             </tr>
             <tr>
                                                                                                 <th class="text-right edition-sep"><small style="font-weight:normal;">temps</small></th>
                         <th class="text-right"><small style="font-weight:normal;">évol. / éd. préc.</small></th>
-                        <th class="text-right"><small style="font-weight:normal;">temps</small></th>
-                        <th class="text-right" title="Médiane des variations individuelles des coureur·ses présent·es aux deux éditions : insensible aux cas extrêmes, contrairement à l'évolution des moyennes"><small style="font-weight:normal;">méd. des évol. indiv.</small></th>
                                                 </tr>
         </thead>
         <tbody>
@@ -314,11 +310,7 @@ var evolutionScatter = {"transitions":[{"fromLabel":"9 juin 2025","toLabel":"25 
         </tbody>
     </table>
     </div>
-    <p class="text-muted"><small><span class="effectif-faible-marque">effectif faible</span> — tranche comptant moins de 30 coureur·ses&nbsp;: sa moyenne et son écart type bougent de plusieurs minutes au gré de l'échantillon, l'évolution n'est pas interprétable (elle reste affichée, sans coloration).
-    <br><strong class="evo-signif">&#10033;</strong> — évolution dont l'intervalle de confiance à 95&nbsp;% exclut 0, donc difficilement imputable au seul hasard d'échantillonnage. Le test est ici <strong>apparié</strong>&nbsp;: la cohorte étant composée des mêmes coureur·ses à chaque édition, l'intervalle se calcule sur les évolutions individuelles (loi de Student), ce qui le rend nettement plus fin que sur la page de comparaison, où les échantillons sont indépendants.
-    <br><strong>méd. des évol. indiv.</strong> — médiane des variations individuelles des coureur·ses présent·es aux deux éditions, insensible aux cas extrêmes contrairement à l'évolution des moyennes. Elle ne mesure pas la variation de la médiane affichée à côté&nbsp;: les deux peuvent aller en sens contraire, et c'est elle qui porte la couleur.
-    <br><strong>Médiane</strong> — temps du coureur·se du milieu de la tranche. La tranche étant définie sur le temps moyen d'un coureur sur toutes les éditions, les fortes variations individuelles (blessure, meneur·se d'allure, accompagnement d'un proche) atterrissent dans les tranches centrales, où quelques cas suffisent à déplacer la moyenne. Un écart marqué entre moyenne et médiane signale une tranche tirée par quelques individus plutôt qu'un déplacement d'ensemble.
-    <br><small>À lire avec prudence&nbsp;: la cohorte vieillit d'une édition à l'autre. Une dégradation significative peut n'être que l'effet de l'âge, et non un changement de forme ou de conditions de course.</small></small></p>
+    </div>
  
         </div>
         <script src="js/d3.v4.min.js"></script>
@@ -431,6 +423,13 @@ pointer-events: auto;
 .histo-evolution-legend {
   margin: -4px 0 8px 0;
   font-size: 0.9em;
+}
+/* Légende du tableau « Évolutions météo et moyennes » : en taille normale, plus
+   lisible que les autres légendes (les définitions de ✱ et des deux médianes
+   conditionnent la lecture du tableau). */
+.tableau-evolutions-legende {
+  margin: -4px 0 10px 0;
+  font-size: 1.05em;
 }
 .histo-evolution-title {
   font-weight: bold;
@@ -1120,6 +1119,15 @@ function forceScaleWidth(px) {
     return function(scale) { scale.width = px; };
 }
 
+// Axes Y des nuages de points : la largeur n'est qu'un minimum. Ces graphiques
+// n'ont pas d'axe X à aligner avec un voisin, et leurs graduations (« 1h05'30 »)
+// sont plus larges que ce que LINE_LEFT_W laisse une fois le titre posé : forcée
+// à 64 px, le titre venait frôler les graduations. On garde `gap` px entre les deux,
+// quitte à rétrécir un peu la zone de tracé.
+function forceScaleMinWidth(px, gap) {
+    return function(scale) { scale.width = Math.max(px, scale.width + gap); };
+}
+
 function lineBaseOptions(opts) {
     opts = opts || {};
     var scales = {
@@ -1279,62 +1287,6 @@ window.addEventListener('resize', function() {
     if (window._lineResizeT) clearTimeout(window._lineResizeT);
     window._lineResizeT = setTimeout(resizeLineCharts, 200);
 });
-
-//GRAPHIQUE D'ÉVOLUTION DU TEMPS MOYEN PAR TRANCHE DE PERFORMANCE INITIALE
-(function() {
-    var canvas = document.getElementById('chartAvgByBracket');
-    if (!canvas) return;
-    var inner = canvas.parentElement;
-    inner.style.width = lineCanvasWidth() + 'px';
-
-    var xLabels = editionsAxis.map(function(e) { return e.label; });
-    var bracketKeys = Object.keys(avgByBracket).map(Number).sort(function(a, b) { return a - b; });
-
-    var datasets = bracketKeys.map(function(bracket, i) {
-        var bracketEntry = avgByBracket[bracket];
-        var seriesByEdition = bracketEntry.byEdition;
-        var data = editionsAxis.map(function(e) {
-            var point = seriesByEdition[e.id];
-            return point ? point.avgMinutes : null;
-        });
-        var hue = Math.round(360 * i / bracketKeys.length);
-        var color = 'hsl(' + hue + ',70%,45%)';
-        return {
-            label: bracketEntry.label + ' (' + bracketEntry.nb + ' coureurs)',
-            data: data,
-            borderColor: color, backgroundColor: color,
-            borderWidth: 2, pointRadius: 3, pointHoverRadius: 5, tension: 0, spanGaps: false
-        };
-    });
-
-    // Courbe de référence regroupant tous les coureurs de la cohorte, mise en avant
-    // (noire, plus épaisse) pour la distinguer des tranches de performance.
-    datasets.push({
-        label: avgAll.label + ' (' + avgAll.nb + ' coureurs)',
-        data: editionsAxis.map(function(e) {
-            var point = avgAll.byEdition[e.id];
-            return point ? point.avgMinutes : null;
-        }),
-        borderColor: '#000000', backgroundColor: '#000000',
-        borderWidth: 3, pointRadius: 4, pointHoverRadius: 6, tension: 0, spanGaps: false
-    });
-
-    // Graduations calées sur des durées rondes et libellées en h/min/s (cf.
-    // utilChart.tempsAxisTicks) : arrondir à la minute pouvait afficher deux fois
-    // la même valeur sur un axe resserré.
-    var options = lineBaseOptions({
-        leftTitle: 'Temps moyen',
-        yTicks: utilChart.tempsAxisTicksSeries(datasets),
-        indexMode: true
-    });
-    var chart = new Chart(canvas, {
-        type: 'line',
-        data: { labels: xLabels, datasets: datasets },
-        options: options,
-        plugins: [ChartDataLabels, legendSpacingPlugin, axisTopTitlePlugin, verticalLinePlugin, utilChart.dateTickLabelsPlugin]
-    });
-    registerLineChart(chart, inner);
-})();
 
 //HISTOGRAMMES DE RÉPARTITION DES ÉVOLUTIONS INDIVIDUELLES DE TEMPS ENTRE ÉDITIONS
 (function() {
@@ -1618,7 +1570,7 @@ window.addEventListener('resize', function() {
                 y: {
                     type: 'linear', min: axisMin, max: axisMax,
                     title: { display: true, text: 'Temps à l\'édition d\'arrivée (' + transition.toLabel + ')' },
-                    afterFit: forceScaleWidth(LINE_LEFT_W),
+                    afterFit: forceScaleMinWidth(LINE_LEFT_W, 3),
                     grid: { color: 'rgba(0,0,0,0.06)' },
                     ticks: { font: { size: 11 }, callback: function(v) { return fmtSec(v); } }
                 }
@@ -2078,7 +2030,7 @@ window.addEventListener('resize', function() {
             y: {
                 type: 'linear',
                 title: { display: true, text: 'Temps moyen' },
-                afterFit: forceScaleWidth(LINE_LEFT_W),
+                afterFit: forceScaleMinWidth(LINE_LEFT_W, 3),
                 grid: { color: 'rgba(0,0,0,0.06)' },
                 ticks: { font: { size: 11 }, callback: function(v) { return fmtSec(v); } }
             }

@@ -124,7 +124,15 @@ var avgAllEvolution = {"label":"Total g\u00e9n\u00e9ral","byEdition":{"32":{"nb"
     <div class="line-chart-wrap"><div class="line-chart-inner"><canvas id="chartAvgEvolution"></canvas></div></div>
     <h2>Évolution du temps du premier <small class="text-muted">(catégories cochées dans la légende ci-dessus)</small></h2>
     <div class="line-chart-wrap"><div class="line-chart-inner"><canvas id="chartPremierEvolution"></canvas></div></div>
+        <div id="tableau-evolutions">
     <h2>Évolutions météo et moyennes <small class="text-muted">(temps réel)</small></h2>
+    <p class="tableau-evolutions-legende text-muted">
+        <span class="histo-swatch histo-swatch-green"></span> amélioration&nbsp;·
+        <span class="histo-swatch histo-swatch-red"></span> dégradation
+        <br><span class="effectif-faible-marque">effectif faible</span> — ligne comptant moins de 30 coureur·ses sur au moins une édition&nbsp;: sa moyenne et son écart type bougent de plusieurs minutes au gré de l'échantillon, l'évolution n'est pas interprétable (elle reste affichée, sans coloration).
+        <br><strong class="evo-signif">&#10033;</strong> — évolution dont l'intervalle de confiance à 95&nbsp;% exclut 0, donc difficilement imputable au seul hasard d'échantillonnage. Sans cette marque, l'écart constaté peut n'être qu'une fluctuation. <small>Le test est ici celui de Welch, sur deux échantillons indépendants&nbsp;: ce ne sont pas les mêmes coureur·ses d'une édition à l'autre.</small>
+        <br><small>La ligne «&nbsp;Sélection (légende)&nbsp;» recalcule dynamiquement, pour chaque édition, la moyenne et l'écart type des catégories cochées dans la légende des histogrammes ci-dessus (moyenne pondérée par les effectifs, écart type combiné). La médiane n'est pas calculable à partir des agrégats par catégorie.</small>
+    </p>
     <div class="chart-scroll-wrapper">
     <table class="table table-striped table-bordered table-condensed stats-table colonne-figee">
         <thead>
@@ -175,7 +183,7 @@ var avgAllEvolution = {"label":"Total g\u00e9n\u00e9ral","byEdition":{"32":{"nb"
                                     <th class="text-center edition-sep" colspan="6">6.4 km/h                                                                                                Est                                                        <small>(-2.4 km/h)</small>
                                             </th>
                             </tr>
-            <tr class="meteo-row">
+                                    <tr class="meteo-row">
                 <th>☀️ Radiation solaire<br><small style="font-weight:normal;">Moy. sur 1h après départ</small></th>
                                     <th class="text-center edition-sep" colspan="4">536 W/m²                    </th>
                                     <th class="text-center edition-sep" colspan="6">638 W/m²                                                                                    <small>(+102 W/m², +19 %)</small>
@@ -185,7 +193,7 @@ var avgAllEvolution = {"label":"Total g\u00e9n\u00e9ral","byEdition":{"32":{"nb"
                                     <th class="text-center edition-sep" colspan="6">643 W/m²                                                                                    <small>(+208 W/m², +48 %)</small>
                                             </th>
                             </tr>
-                                    <tr>
+                                                <tr>
                 <th rowspan="2">Catégorie</th>
                                     <th class="text-right edition-sep" rowspan="2">Nb</th>
                                         <th class="text-center" colspan="1" rowspan="2">Moyenne</th>
@@ -1064,10 +1072,7 @@ var avgAllEvolution = {"label":"Total g\u00e9n\u00e9ral","byEdition":{"32":{"nb"
                 </tbody>
     </table>
     </div>
-    <p class="text-muted"><small><span class="effectif-faible-marque">effectif faible</span> — ligne comptant moins de 30 coureur·ses sur au moins une édition&nbsp;: sa moyenne et son écart type bougent de plusieurs minutes au gré de l'échantillon, l'évolution n'est pas interprétable (elle reste affichée, sans coloration).
-    <br><strong class="evo-signif">&#10033;</strong> — évolution dont l'intervalle de confiance à 95&nbsp;% exclut 0 (test de Welch sur deux échantillons indépendants&nbsp;: ce ne sont pas les mêmes coureur·ses d'une édition à l'autre), donc difficilement imputable au seul hasard d'échantillonnage. Sans cette marque, l'écart constaté peut n'être qu'une fluctuation.
-    <br><small>À lire avec prudence&nbsp;: aucun seuil d'effectif ne corrige le changement de composition du peloton. Quand une catégorie grossit et rajeunit d'une édition à l'autre, sa moyenne peut se dégrader du seul fait des nouveaux venus, sans que personne n'ait ralenti.</small></small></p>
-    <p class="text-muted"><small>La ligne « Sélection (légende) » recalcule dynamiquement, pour chaque édition, la moyenne et l'écart type des catégories cochées dans la légende des histogrammes ci-dessus (moyenne pondérée par les effectifs, écart type combiné). La médiane n'est pas calculable à partir des agrégats par catégorie.</small></p>
+    </div>
  
         </div>
         <script src="js/d3.v4.min.js"></script>
@@ -1265,6 +1270,22 @@ h2 {
 /* Coloration des cellules moyenne et médiane du tableau, d'après leur évolution par
    rapport à l'édition précédente : temps qui baisse = gain de temps (vert), temps qui
    augmente = perte de temps (rouge). */
+/* Légende du tableau « Évolutions météo et moyennes » (même présentation que sur la
+   page de cohorte) : en taille normale, pastilles aux couleurs des cellules. */
+.tableau-evolutions-legende {
+  margin: -4px 0 10px 0;
+  font-size: 1.05em;
+}
+.histo-swatch {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 2px;
+  vertical-align: middle;
+  margin: 0 2px 0 4px;
+}
+.histo-swatch-green { background-color: rgba(40,167,69,0.65); border: 1px solid #28a745; }
+.histo-swatch-red { background-color: rgba(220,53,69,0.65); border: 1px solid #dc3545; }
 .stats-table td.evo-gain  { background-color: rgba(40,167,69,0.65) !important; }
 .stats-table td.evo-perte { background-color: rgba(220,53,69,0.65) !important; }
 /* Sur les lignes de totaux (fond sombre), le vert/rouge semi-transparent virerait
