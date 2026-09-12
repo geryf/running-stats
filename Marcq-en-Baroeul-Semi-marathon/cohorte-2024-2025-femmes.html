@@ -70,9 +70,9 @@ var editionsAxis = [{"id":46,"slug":"Semi-de-Marcq-en-Baroeul-Semi-marathon","la
 // lisible (DefaultController::EFFECTIF_MIN_LIGNE) : les lignes recalculées côté
 // JS suivent la même règle que celles rendues par Twig.
 var effectifMinLigne = 30
-var avgByBracket = {"75":{"label":"1h15 - 1h30","nb":1,"byEdition":{"45":{"avgMinutes":84.6,"avgSeconds":5073,"avgLabel":"1h24'33","stdDevLabel":"0'00","evolutionLabel":"-6'28 (-7.1%)","evolutionDiffSeconds":-388,"medianSeconds":5073,"medianLabel":"1h24'33","evolutionMedianePct":-7.104925837758652,"evolutionMedianeNb":1},"46":{"avgMinutes":91,"avgSeconds":5461,"avgLabel":"1h31'01","stdDevLabel":"0'00","medianSeconds":5461,"medianLabel":"1h31'01"}},"effectifSuffisant":false},"90":{"label":"1h30 - 1h45","nb":10,"byEdition":{"45":{"avgMinutes":97.5,"avgSeconds":5847,"avgLabel":"1h37'27","stdDevLabel":"4'07","evolutionLabel":"-2'27 (-2.5%)","evolutionDiffSeconds":-147.10000000000036,"evolutionMargeSeconds":162.5797627555164,"evolutionSignificative":false,"medianSeconds":5875,"medianLabel":"1h37'55","evolutionMedianePct":-3.5341302097870595,"evolutionMedianeNb":10},"46":{"avgMinutes":99.9,"avgSeconds":5994.1,"avgLabel":"1h39'54","stdDevLabel":"3'48","medianSeconds":5988,"medianLabel":"1h39'48"}},"effectifSuffisant":false},"105":{"label":"1h45 - 2h00","nb":30,"byEdition":{"45":{"avgMinutes":110.4,"avgSeconds":6626.8667,"avgLabel":"1h50'27","stdDevLabel":"4'59","evolutionLabel":"-5'47 (-5.0%)","evolutionDiffSeconds":-347,"evolutionMargeSeconds":145.496751845681,"evolutionSignificative":true,"medianSeconds":6658,"medianLabel":"1h50'58","evolutionMedianePct":-5.5056355384818545,"evolutionMedianeNb":30},"46":{"avgMinutes":116.2,"avgSeconds":6973.8667,"avgLabel":"1h56'14","stdDevLabel":"5'41","medianSeconds":6893.5,"medianLabel":"1h54'54"}},"effectifSuffisant":true},"120":{"label":"2h00 - 2h15","nb":34,"byEdition":{"45":{"avgMinutes":124.1,"avgSeconds":7448.7647,"avgLabel":"2h04'09","stdDevLabel":"5'55","evolutionLabel":"-6'10 (-4.7%)","evolutionDiffSeconds":-369.52940000000035,"evolutionMargeSeconds":201.42410713414992,"evolutionSignificative":true,"medianSeconds":7424,"medianLabel":"2h03'44","evolutionMedianePct":-4.010012303144527,"evolutionMedianeNb":34},"46":{"avgMinutes":130.3,"avgSeconds":7818.2941,"avgLabel":"2h10'18","stdDevLabel":"6'15","medianSeconds":7767,"medianLabel":"2h09'27"}},"effectifSuffisant":true},"135":{"label":"2h15 - 2h30","nb":12,"byEdition":{"45":{"avgMinutes":140,"avgSeconds":8397.0833,"avgLabel":"2h19'57","stdDevLabel":"6'16","evolutionLabel":"-6'29 (-4.4%)","evolutionDiffSeconds":-388.66669999999976,"evolutionMargeSeconds":411.6930357119087,"evolutionSignificative":false,"medianSeconds":8315.5,"medianLabel":"2h18'36","evolutionMedianePct":-4.150186243442962,"evolutionMedianeNb":12},"46":{"avgMinutes":146.4,"avgSeconds":8785.75,"avgLabel":"2h26'26","stdDevLabel":"7'56","medianSeconds":8673.5,"medianLabel":"2h24'34"}},"effectifSuffisant":false},"150":{"label":"2h30 - 2h45","nb":2,"byEdition":{"45":{"avgMinutes":145.7,"avgSeconds":8739.5,"avgLabel":"2h25'40","stdDevLabel":"11'32","evolutionLabel":"-19'46 (-11.9%)","evolutionDiffSeconds":-1186,"evolutionMargeSeconds":13277.769999999999,"evolutionSignificative":false,"medianSeconds":8739.5,"medianLabel":"2h25'40","evolutionMedianePct":-11.588746171534211,"evolutionMedianeNb":2},"46":{"avgMinutes":165.4,"avgSeconds":9925.5,"avgLabel":"2h45'26","stdDevLabel":"5'54","medianSeconds":9925.5,"medianLabel":"2h45'26"}},"effectifSuffisant":false}}
-var avgAll = {"label":"Total g\u00e9n\u00e9ral","nb":89,"byEdition":{"45":{"avgMinutes":118.7,"avgSeconds":7121.9213,"avgLabel":"1h58'42","stdDevLabel":"14'24","evolutionLabel":"-5'58 (-4.8%)","evolutionDiffSeconds":-358.0787,"evolutionMargeSeconds":111.197327302969,"evolutionSignificative":true,"medianSeconds":7081,"medianLabel":"1h58'01","evolutionMedianePct":-4.333508956796628,"evolutionMedianeNb":89},"46":{"avgMinutes":124.7,"avgSeconds":7480,"avgLabel":"2h04'40","stdDevLabel":"15'59","medianSeconds":7492,"medianLabel":"2h04'52"}},"effectifSuffisant":true}
-var avgBySexCohort = {"M":{"label":"Tous les hommes","nb":390,"byEdition":{"45":{"avgMinutes":107.1,"avgSeconds":6427.9667,"avgLabel":"1h47'08","stdDevLabel":"15'26","evolutionLabel":"-7'55 (-6.9%)","evolutionDiffSeconds":-474.5666000000001,"evolutionMargeSeconds":69.0664727902568,"evolutionSignificative":true,"medianSeconds":6371.5,"medianLabel":"1h46'12","evolutionMedianePct":-6.001483362387462,"evolutionMedianeNb":390},"46":{"avgMinutes":115,"avgSeconds":6902.5333,"avgLabel":"1h55'03","stdDevLabel":"17'38","medianSeconds":6783,"medianLabel":"1h53'03"}},"effectifSuffisant":true},"F":{"label":"Toutes les femmes","nb":89,"byEdition":{"45":{"avgMinutes":118.7,"avgSeconds":7121.9213,"avgLabel":"1h58'42","stdDevLabel":"14'24","evolutionLabel":"-5'58 (-4.8%)","evolutionDiffSeconds":-358.0787,"evolutionMargeSeconds":111.197327302969,"evolutionSignificative":true,"medianSeconds":7081,"medianLabel":"1h58'01","evolutionMedianePct":-4.333508956796628,"evolutionMedianeNb":89},"46":{"avgMinutes":124.7,"avgSeconds":7480,"avgLabel":"2h04'40","stdDevLabel":"15'59","medianSeconds":7492,"medianLabel":"2h04'52"}},"effectifSuffisant":true}}
+var avgByBracket = {"75":{"label":"1h15 - 1h30","nb":1,"byEdition":{"45":{"avgMinutes":84.6,"avgSeconds":5073,"avgLabel":"1h24'33","stdDevLabel":"0'00","evolutionLabel":"-6'28 (-7.1%)","evolutionDiffSeconds":-388,"medianSeconds":5073,"medianLabel":"1h24'33","evolutionMedianePct":-7.104925837758652,"evolutionMedianeNb":1,"evolutionMedianeLabel":"-6'28 (-7.1%)"},"46":{"avgMinutes":91,"avgSeconds":5461,"avgLabel":"1h31'01","stdDevLabel":"0'00","medianSeconds":5461,"medianLabel":"1h31'01"}},"effectifSuffisant":false},"90":{"label":"1h30 - 1h45","nb":10,"byEdition":{"45":{"avgMinutes":97.5,"avgSeconds":5847,"avgLabel":"1h37'27","stdDevLabel":"4'07","evolutionLabel":"-2'27 (-2.5%)","evolutionDiffSeconds":-147.10000000000036,"evolutionMargeSeconds":162.5797627555164,"evolutionSignificative":false,"medianSeconds":5875,"medianLabel":"1h37'55","evolutionMedianePct":-3.5341302097870595,"evolutionMedianeNb":10,"evolutionMedianeLabel":"-3'26 (-3.5%)"},"46":{"avgMinutes":99.9,"avgSeconds":5994.1,"avgLabel":"1h39'54","stdDevLabel":"3'48","medianSeconds":5988,"medianLabel":"1h39'48"}},"effectifSuffisant":false},"105":{"label":"1h45 - 2h00","nb":30,"byEdition":{"45":{"avgMinutes":110.4,"avgSeconds":6626.8667,"avgLabel":"1h50'27","stdDevLabel":"4'59","evolutionLabel":"-5'47 (-5.0%)","evolutionDiffSeconds":-347,"evolutionMargeSeconds":145.496751845681,"evolutionSignificative":true,"medianSeconds":6658,"medianLabel":"1h50'58","evolutionMedianePct":-5.5056355384818545,"evolutionMedianeNb":30,"evolutionMedianeLabel":"-6'42 (-5.5%)"},"46":{"avgMinutes":116.2,"avgSeconds":6973.8667,"avgLabel":"1h56'14","stdDevLabel":"5'41","medianSeconds":6893.5,"medianLabel":"1h54'54"}},"effectifSuffisant":true},"120":{"label":"2h00 - 2h15","nb":34,"byEdition":{"45":{"avgMinutes":124.1,"avgSeconds":7448.7647,"avgLabel":"2h04'09","stdDevLabel":"5'55","evolutionLabel":"-6'10 (-4.7%)","evolutionDiffSeconds":-369.52940000000035,"evolutionMargeSeconds":201.42410713414992,"evolutionSignificative":true,"medianSeconds":7424,"medianLabel":"2h03'44","evolutionMedianePct":-4.010012303144527,"evolutionMedianeNb":34,"evolutionMedianeLabel":"-5'06 (-4.0%)"},"46":{"avgMinutes":130.3,"avgSeconds":7818.2941,"avgLabel":"2h10'18","stdDevLabel":"6'15","medianSeconds":7767,"medianLabel":"2h09'27"}},"effectifSuffisant":true},"135":{"label":"2h15 - 2h30","nb":12,"byEdition":{"45":{"avgMinutes":140,"avgSeconds":8397.0833,"avgLabel":"2h19'57","stdDevLabel":"6'16","evolutionLabel":"-6'29 (-4.4%)","evolutionDiffSeconds":-388.66669999999976,"evolutionMargeSeconds":411.6930357119087,"evolutionSignificative":false,"medianSeconds":8315.5,"medianLabel":"2h18'36","evolutionMedianePct":-4.150186243442962,"evolutionMedianeNb":12,"evolutionMedianeLabel":"-5'59 (-4.2%)"},"46":{"avgMinutes":146.4,"avgSeconds":8785.75,"avgLabel":"2h26'26","stdDevLabel":"7'56","medianSeconds":8673.5,"medianLabel":"2h24'34"}},"effectifSuffisant":false},"150":{"label":"2h30 - 2h45","nb":2,"byEdition":{"45":{"avgMinutes":145.7,"avgSeconds":8739.5,"avgLabel":"2h25'40","stdDevLabel":"11'32","evolutionLabel":"-19'46 (-11.9%)","evolutionDiffSeconds":-1186,"evolutionMargeSeconds":13277.769999999999,"evolutionSignificative":false,"medianSeconds":8739.5,"medianLabel":"2h25'40","evolutionMedianePct":-11.588746171534211,"evolutionMedianeNb":2,"evolutionMedianeLabel":"-19'46 (-11.6%)"},"46":{"avgMinutes":165.4,"avgSeconds":9925.5,"avgLabel":"2h45'26","stdDevLabel":"5'54","medianSeconds":9925.5,"medianLabel":"2h45'26"}},"effectifSuffisant":false}}
+var avgAll = {"label":"Total g\u00e9n\u00e9ral","nb":89,"byEdition":{"45":{"avgMinutes":118.7,"avgSeconds":7121.9213,"avgLabel":"1h58'42","stdDevLabel":"14'24","evolutionLabel":"-5'58 (-4.8%)","evolutionDiffSeconds":-358.0787,"evolutionMargeSeconds":111.197327302969,"evolutionSignificative":true,"medianSeconds":7081,"medianLabel":"1h58'01","evolutionMedianePct":-4.333508956796628,"evolutionMedianeNb":89,"evolutionMedianeLabel":"-5'29 (-4.3%)"},"46":{"avgMinutes":124.7,"avgSeconds":7480,"avgLabel":"2h04'40","stdDevLabel":"15'59","medianSeconds":7492,"medianLabel":"2h04'52"}},"effectifSuffisant":true}
+var avgBySexCohort = {"M":{"label":"Tous les hommes","nb":390,"byEdition":{"45":{"avgMinutes":107.1,"avgSeconds":6427.9667,"avgLabel":"1h47'08","stdDevLabel":"15'26","evolutionLabel":"-7'55 (-6.9%)","evolutionDiffSeconds":-474.5666000000001,"evolutionMargeSeconds":69.0664727902568,"evolutionSignificative":true,"medianSeconds":6371.5,"medianLabel":"1h46'12","evolutionMedianePct":-6.001483362387462,"evolutionMedianeNb":390,"evolutionMedianeLabel":"-6'30 (-6.0%)"},"46":{"avgMinutes":115,"avgSeconds":6902.5333,"avgLabel":"1h55'03","stdDevLabel":"17'38","medianSeconds":6783,"medianLabel":"1h53'03"}},"effectifSuffisant":true},"F":{"label":"Toutes les femmes","nb":89,"byEdition":{"45":{"avgMinutes":118.7,"avgSeconds":7121.9213,"avgLabel":"1h58'42","stdDevLabel":"14'24","evolutionLabel":"-5'58 (-4.8%)","evolutionDiffSeconds":-358.0787,"evolutionMargeSeconds":111.197327302969,"evolutionSignificative":true,"medianSeconds":7081,"medianLabel":"1h58'01","evolutionMedianePct":-4.333508956796628,"evolutionMedianeNb":89,"evolutionMedianeLabel":"-5'29 (-4.3%)"},"46":{"avgMinutes":124.7,"avgSeconds":7480,"avgLabel":"2h04'40","stdDevLabel":"15'59","medianSeconds":7492,"medianLabel":"2h04'52"}},"effectifSuffisant":true}}
 var avgByCategory = {"12":{"45":{"nb":22,"avgSeconds":7058.4545,"stdDevSeconds":922.106862633449},"46":{"nb":25,"avgSeconds":7532.84,"stdDevSeconds":1065.6701433370458}},"65":{"45":{"nb":14,"avgSeconds":7127.2143,"stdDevSeconds":793.9215667064549},"46":{"nb":13,"avgSeconds":7477.5385,"stdDevSeconds":934.3216062498635}},"66":{"45":{"nb":19,"avgSeconds":7282.6316,"stdDevSeconds":798.0593706001891},"46":{"nb":22,"avgSeconds":7540.8636,"stdDevSeconds":699.6511010661957}},"67":{"45":{"nb":15,"avgSeconds":6704.4667,"stdDevSeconds":767.4895757525887},"46":{"nb":14,"avgSeconds":7075.4286,"stdDevSeconds":957.4068932192175}},"68":{"45":{"nb":14,"avgSeconds":7320.6429,"stdDevSeconds":896.8459500735147},"46":{"nb":10,"avgSeconds":7525.5,"stdDevSeconds":1077.7496230572294}},"69":{"45":{"nb":3,"avgSeconds":7642.6667,"stdDevSeconds":825.6622930849041},"46":{"nb":3,"avgSeconds":7951,"stdDevSeconds":877.1149677588832}},"70":{"45":{"nb":2,"avgSeconds":7215,"stdDevSeconds":190},"46":{"nb":2,"avgSeconds":8064,"stdDevSeconds":648}}}
 var evolutionHistograms = {"bracketFloors":[-25,-20,-15,-10,-5,0,5,10],"bracketWidth":5,"yMax":28,"transitions":[{"fromLabel":"22 septembre 2024","toLabel":"21 septembre 2025","nb":89,"counts":[2,4,8,28,28,13,5,1]}]}
 var evolutionScatter = {"transitions":[{"fromLabel":"22 septembre 2024","toLabel":"21 septembre 2025","points":[{"x":6864,"y":7064,"cat":65},{"x":7416,"y":7025,"cat":70},{"x":7475,"y":7618,"cat":69},{"x":7944,"y":6831,"cat":12},{"x":7755,"y":7461,"cat":66},{"x":6716,"y":6253,"cat":12},{"x":6010,"y":6360,"cat":68},{"x":6764,"y":6701,"cat":67},{"x":8608,"y":7546,"cat":65},{"x":6173,"y":5785,"cat":67},{"x":6881,"y":6519,"cat":12},{"x":8663,"y":8613,"cat":66},{"x":8689,"y":8684,"cat":66},{"x":8591,"y":8096,"cat":67},{"x":7253,"y":6160,"cat":12},{"x":8684,"y":8704,"cat":65},{"x":8534,"y":6520,"cat":12},{"x":7496,"y":7179,"cat":12},{"x":9698,"y":8254,"cat":12},{"x":7492,"y":6798,"cat":66},{"x":8663,"y":7221,"cat":66},{"x":7179,"y":6555,"cat":66},{"x":8010,"y":7870,"cat":67},{"x":9295,"y":8202,"cat":68},{"x":7731,"y":7929,"cat":12},{"x":7987,"y":7304,"cat":12},{"x":6906,"y":6912,"cat":68},{"x":6860,"y":6268,"cat":12},{"x":7779,"y":7526,"cat":65},{"x":7389,"y":7008,"cat":67},{"x":6443,"y":5989,"cat":65},{"x":5948,"y":5732,"cat":68},{"x":6448,"y":6898,"cat":12},{"x":7147,"y":6938,"cat":68},{"x":7558,"y":7442,"cat":12},{"x":7592,"y":7263,"cat":66},{"x":7869,"y":7319,"cat":66},{"x":6852,"y":6899,"cat":66},{"x":8563,"y":9176,"cat":67},{"x":8287,"y":8064,"cat":65},{"x":6010,"y":5977,"cat":67},{"x":7644,"y":7054,"cat":65},{"x":7464,"y":6886,"cat":12},{"x":7872,"y":8377,"cat":66},{"x":6511,"y":6435,"cat":66},{"x":7870,"y":8010,"cat":66},{"x":6794,"y":6978,"cat":12},{"x":7722,"y":7656,"cat":67},{"x":5736,"y":5675,"cat":67},{"x":7861,"y":7708,"cat":67},{"x":7780,"y":7239,"cat":68},{"x":9572,"y":9431,"cat":12},{"x":6603,"y":6165,"cat":67},{"x":6519,"y":6424,"cat":67},{"x":7566,"y":7087,"cat":68},{"x":7396,"y":6818,"cat":67},{"x":9275,"y":8246,"cat":68},{"x":7644,"y":6437,"cat":66},{"x":7985,"y":7586,"cat":65},{"x":5966,"y":5965,"cat":66},{"x":7057,"y":6405,"cat":12},{"x":6805,"y":7081,"cat":12},{"x":7511,"y":8096,"cat":66},{"x":7368,"y":6672,"cat":12},{"x":6768,"y":6016,"cat":66},{"x":7424,"y":7542,"cat":66},{"x":5461,"y":5073,"cat":12},{"x":7356,"y":6933,"cat":66},{"x":7894,"y":7761,"cat":12},{"x":9181,"y":8666,"cat":69},{"x":5703,"y":5507,"cat":65},{"x":7607,"y":7406,"cat":68},{"x":7166,"y":8105,"cat":12},{"x":6636,"y":6299,"cat":65},{"x":6233,"y":5976,"cat":12},{"x":8631,"y":7683,"cat":66},{"x":10279,"y":8048,"cat":12},{"x":7197,"y":6644,"cat":69},{"x":7243,"y":7257,"cat":12},{"x":7560,"y":7094,"cat":66},{"x":7879,"y":7947,"cat":12},{"x":8712,"y":7405,"cat":70},{"x":7934,"y":7336,"cat":65},{"x":5719,"y":5504,"cat":67},{"x":8326,"y":7279,"cat":65},{"x":7098,"y":6761,"cat":66},{"x":6934,"y":6504,"cat":66},{"x":6315,"y":6375,"cat":65},{"x":7721,"y":7636,"cat":68}]}]}
@@ -129,7 +129,8 @@ var evolutionScatter = {"transitions":[{"fromLabel":"22 septembre 2024","toLabel
     <p class="histo-evolution-legend text-muted">
         Chaque point est un coureur de la cohorte : en abscisse son temps à l'édition de départ,
         en ordonnée son temps à l'édition d'arrivée. La diagonale <span class="scatter-diag-swatch"></span> marque l'égalité des deux temps.
-        Un point <strong>sous</strong> la diagonale a amélioré son temps, <strong>au-dessus</strong> il l'a dégradé.
+        Un point <strong>sous</strong> la diagonale, sur fond vert <span class="scatter-zone-swatch scatter-zone-green"></span>,
+        a amélioré son temps&nbsp;; <strong>au-dessus</strong>, sur fond rouge <span class="scatter-zone-swatch scatter-zone-red"></span>, il l'a dégradé.
         <span id="scatter-legende-categories">Chaque point porte la <strong>couleur de sa catégorie d'âge</strong> — celle de la première édition
         de la cohorte, comme les camemberts et la légende ci-dessus.</span><span id="scatter-legende-groupes" style="display: none;">Une catégorie Masters porte ici la même couleur chez les hommes et chez
         les femmes : au-delà de 35 ans, elle ne distinguerait pas les deux sexes sur cette page mixte. Chaque point y porte donc la couleur de son groupe — <span class="histo-swatch" data-groupe="M-"></span> hommes de moins de 35 ans,
@@ -151,189 +152,186 @@ var evolutionScatter = {"transitions":[{"fromLabel":"22 septembre 2024","toLabel
             <tr>
                 <th colspan="2"></th>
                                     <th class="text-center edition-sep" colspan="3">22 septembre 2024</th>
-                                    <th class="text-center edition-sep" colspan="4">21 septembre 2025</th>
+                                    <th class="text-center edition-sep" colspan="5">21 septembre 2025</th>
                             </tr>
             <tr class="meteo-row">
-                <th colspan="2"></th>
-                                    <th class="edition-sep" colspan="3"></th>
-                                                        <th class="edition-sep" colspan="3"></th>
-                                            <th class="text-right">Évolution<br><small style="font-weight:normal;">par rapport édition préc.</small></th>
-                                                </tr>
-            <tr class="meteo-row">
                 <th colspan="2">🌡️ Température</th>
-                                    <th class="text-center edition-sep" colspan="3">18.7 °C</th>
-                                                        <th class="text-center edition-sep" colspan="3">13.3 °C</th>
-                                            <td class="text-right">
-                                                                                            -5.4 °C
-                                                    </td>
-                                                </tr>
+                                    <th class="text-center edition-sep" colspan="3">18.7 °C                    </th>
+                                    <th class="text-center edition-sep" colspan="5">13.3 °C                                                        <small>(-5.4 °C)</small>
+                                            </th>
+                            </tr>
             <tr class="meteo-row">
                 <th colspan="2">φ Humidité relative</th>
-                                    <th class="text-center edition-sep" colspan="3">79 %</th>
-                                                        <th class="text-center edition-sep" colspan="3">73 %</th>
-                                            <td class="text-right">
-                                                                                            -6 %
-                                                    </td>
-                                                </tr>
+                                    <th class="text-center edition-sep" colspan="3">79 %                    </th>
+                                    <th class="text-center edition-sep" colspan="5">73 %                                                        <small>(-6 %)</small>
+                                            </th>
+                            </tr>
             <tr class="meteo-row">
                 <th colspan="2">💧 Humidex</th>
-                                    <th class="text-center edition-sep" colspan="3">22.7</th>
-                                                        <th class="text-center edition-sep" colspan="3">13.9</th>
-                                            <td class="text-right">
-                                                                                            -8.8
-                                                    </td>
-                                                </tr>
+                                    <th class="text-center edition-sep" colspan="3">22.7                    </th>
+                                    <th class="text-center edition-sep" colspan="5">13.9                                                        <small>(-8.8)</small>
+                                            </th>
+                            </tr>
             <tr class="meteo-row">
                 <th colspan="2">💨 Vent</th>
-                                    <th class="text-center edition-sep" colspan="3">10.8 km/h                                                                                                SE<br><small>raf. 19.4 km/h</small></th>
-                                                        <th class="text-center edition-sep" colspan="3">14.4 km/h                                                                                                Ouest<br><small>raf. 23 km/h</small></th>
-                                            <td class="text-right">
-                                                                                            +3.6 km/h
-                                                    </td>
-                                                </tr>
+                                    <th class="text-center edition-sep" colspan="3">10.8 km/h                                                                                                SE<br><small>raf. 19.4 km/h</small>                    </th>
+                                    <th class="text-center edition-sep" colspan="5">14.4 km/h                                                                                                Ouest<br><small>raf. 23 km/h</small>                                                        <small>(+3.6 km/h)</small>
+                                            </th>
+                            </tr>
             <tr class="meteo-row">
                 <th colspan="2">☀️ Radiation solaire<br><small style="font-weight:normal;">Moy. sur 1h après départ</small></th>
-                                    <th class="text-center edition-sep" colspan="3">—</th>
-                                                        <th class="text-center edition-sep" colspan="3">—</th>
-                                            <td class="text-right">
-                                                    </td>
-                                                </tr>
+                                    <th class="text-center edition-sep" colspan="3">—                    </th>
+                                    <th class="text-center edition-sep" colspan="5">—                    </th>
+                            </tr>
                                     <tr class="meteo-row">
                 <th colspan="2">☁️ Nébulosité<br><small style="font-weight:normal;">Couche la plus basse, au départ</small></th>
-                                    <th class="text-center edition-sep" colspan="3">                                                        7/8<br><small>très nuageux</small></th>
-                                                        <th class="text-center edition-sep" colspan="3">                                                        1/8<br><small>peu nuageux</small></th>
-                                            <td class="text-right">
-                                                                                                                        -6 octas
-                                                    </td>
-                                                </tr>
+                                    <th class="text-center edition-sep" colspan="3">                                                        7/8<br><small>très nuageux</small>                                            </th>
+                                    <th class="text-center edition-sep" colspan="5">                                                        1/8<br><small>peu nuageux</small>                                                                                <small>(-6 octas)</small>
+                                            </th>
+                            </tr>
                         <tr>
-                <th>Tranche de performance<br><small style="font-weight:normal;">par niveau moyen sur toutes les éditions</small></th>
-                <th class="text-right">Nb</th>
-                                    <th class="text-right edition-sep">Moyenne</th>
-                    <th class="text-right">Médiane</th>
-                    <th class="text-right">Écart type</th>
-                                                        <th class="text-right edition-sep">Moyenne</th>
-                    <th class="text-right">Médiane</th>
-                    <th class="text-right">Écart type</th>
-                                            <th class="text-right">Évolution<br><small style="font-weight:normal;">de la moyenne, puis médiane des variations individuelles</small></th>
+                <th rowspan="2">Tranche de performance<br><small style="font-weight:normal;">par niveau moyen sur toutes les éditions</small></th>
+                <th class="text-right" rowspan="2">Nb</th>
+                                                        <th class="text-center edition-sep" colspan="1" rowspan="2">Moyenne</th>
+                    <th class="text-center" colspan="1" rowspan="2">Médiane</th>
+                    <th class="text-right" rowspan="2">Écart type</th>
+                                                        <th class="text-center edition-sep" colspan="2">Moyenne</th>
+                    <th class="text-center" colspan="2">Médiane</th>
+                    <th class="text-right" rowspan="2">Écart type</th>
+                            </tr>
+            <tr>
+                                                                                                <th class="text-right edition-sep"><small style="font-weight:normal;">temps</small></th>
+                        <th class="text-right"><small style="font-weight:normal;">évol. / éd. préc.</small></th>
+                        <th class="text-right"><small style="font-weight:normal;">temps</small></th>
+                        <th class="text-right" title="Médiane des variations individuelles des coureur·ses présent·es aux deux éditions : insensible aux cas extrêmes, contrairement à l'évolution des moyennes"><small style="font-weight:normal;">méd. des évol. indiv.</small></th>
                                                 </tr>
         </thead>
         <tbody>
                     <tr class="categorie-row effectif-faible">
                 <td>1h15 - 1h30 <span class="effectif-faible-marque" title="Moins de 30 coureur·ses dans la tranche : évolution non interprétable">effectif faible</span></td>
                 <td class="text-right">1</td>
-                                                            <td class="text-right edition-sep">1h31&#039;01</td>
-                        <td class="text-right">1h31&#039;01</td>
-                        <td class="text-right">0&#039;00</td>
-                                                                                                    <td class="text-right edition-sep">1h24&#039;33</td>
-                        <td class="text-right">1h24&#039;33</td>
-                        <td class="text-right">0&#039;00</td>
-                                                                                                                                        <td class="text-right">-6&#039;28 (-7.1%)<br><small class="evo-mediane" title="Mediane des variations individuelles des 1 coureur·ses présent·es aux deux éditions : insensible aux cas extrêmes, contrairement à l'évolution des moyennes ci-dessus">méd. -7.1%</small></td>
-                                                </tr>
+                                                                                                                                                                                                    <td class="text-right edition-sep">1h31&#039;01</td>
+                                        <td class="text-right">1h31&#039;01</td>
+                                        <td class="text-right">0&#039;00</td>
+                                                                                                                                                                                                    <td class="text-right edition-sep">1h24&#039;33</td>
+                                            <td class="text-right">-6&#039;28 (-7.1%)</td>
+                                        <td class="text-right">1h24&#039;33</td>
+                                            <td class="text-right" title="Médiane des variations individuelles des 1 coureur·ses présent·es aux deux éditions : insensible aux cas extrêmes, contrairement à l'évolution des moyennes">-6&#039;28 (-7.1%)</td>
+                                        <td class="text-right">0&#039;00</td>
+                            </tr>
                     <tr class="categorie-row effectif-faible">
                 <td>1h30 - 1h45 <span class="effectif-faible-marque" title="Moins de 30 coureur·ses dans la tranche : évolution non interprétable">effectif faible</span></td>
                 <td class="text-right">10</td>
-                                                            <td class="text-right edition-sep">1h39&#039;54</td>
-                        <td class="text-right">1h39&#039;48</td>
-                        <td class="text-right">3&#039;48</td>
-                                                                                                    <td class="text-right edition-sep">1h37&#039;27</td>
-                        <td class="text-right">1h37&#039;55</td>
-                        <td class="text-right">4&#039;07</td>
-                                                                                                                                        <td class="text-right">-2&#039;27 (-2.5%)<br><small class="evo-mediane" title="Mediane des variations individuelles des 10 coureur·ses présent·es aux deux éditions : insensible aux cas extrêmes, contrairement à l'évolution des moyennes ci-dessus">méd. -3.5%</small></td>
-                                                </tr>
+                                                                                                                                                                                                    <td class="text-right edition-sep">1h39&#039;54</td>
+                                        <td class="text-right">1h39&#039;48</td>
+                                        <td class="text-right">3&#039;48</td>
+                                                                                                                                                                                                    <td class="text-right edition-sep">1h37&#039;27</td>
+                                            <td class="text-right">-2&#039;27 (-2.5%)</td>
+                                        <td class="text-right">1h37&#039;55</td>
+                                            <td class="text-right" title="Médiane des variations individuelles des 10 coureur·ses présent·es aux deux éditions : insensible aux cas extrêmes, contrairement à l'évolution des moyennes">-3&#039;26 (-3.5%)</td>
+                                        <td class="text-right">4&#039;07</td>
+                            </tr>
                     <tr class="categorie-row">
                 <td>1h45 - 2h00</td>
                 <td class="text-right">30</td>
-                                                            <td class="text-right edition-sep">1h56&#039;14</td>
-                        <td class="text-right">1h54&#039;54</td>
-                        <td class="text-right">5&#039;41</td>
-                                                                                                    <td class="text-right edition-sep">1h50&#039;27</td>
-                        <td class="text-right">1h50&#039;58</td>
-                        <td class="text-right">4&#039;59</td>
-                                                                                                                                        <td class="text-right evo-gain">-5&#039;47 (-5.0%)<span class="evo-signif" title="Évolution hors de son intervalle de confiance à 95 %">&#10033;</span><br><small class="evo-mediane" title="Mediane des variations individuelles des 30 coureur·ses présent·es aux deux éditions : insensible aux cas extrêmes, contrairement à l'évolution des moyennes ci-dessus">méd. -5.5%</small></td>
-                                                </tr>
+                                                                                                                                                                                                    <td class="text-right edition-sep">1h56&#039;14</td>
+                                        <td class="text-right">1h54&#039;54</td>
+                                        <td class="text-right">5&#039;41</td>
+                                                                                                                                                                                                    <td class="text-right edition-sep evo-gain">1h50&#039;27</td>
+                                            <td class="text-right evo-gain">-5&#039;47 (-5.0%)<span class="evo-signif" title="Évolution hors de son intervalle de confiance à 95 %">&#10033;</span></td>
+                                        <td class="text-right">1h50&#039;58</td>
+                                            <td class="text-right evo-gain" title="Médiane des variations individuelles des 30 coureur·ses présent·es aux deux éditions : insensible aux cas extrêmes, contrairement à l'évolution des moyennes">-6&#039;42 (-5.5%)</td>
+                                        <td class="text-right">4&#039;59</td>
+                            </tr>
                     <tr class="categorie-row">
                 <td>2h00 - 2h15</td>
                 <td class="text-right">34</td>
-                                                            <td class="text-right edition-sep">2h10&#039;18</td>
-                        <td class="text-right">2h09&#039;27</td>
-                        <td class="text-right">6&#039;15</td>
-                                                                                                    <td class="text-right edition-sep">2h04&#039;09</td>
-                        <td class="text-right">2h03&#039;44</td>
-                        <td class="text-right">5&#039;55</td>
-                                                                                                                                        <td class="text-right evo-gain">-6&#039;10 (-4.7%)<span class="evo-signif" title="Évolution hors de son intervalle de confiance à 95 %">&#10033;</span><br><small class="evo-mediane" title="Mediane des variations individuelles des 34 coureur·ses présent·es aux deux éditions : insensible aux cas extrêmes, contrairement à l'évolution des moyennes ci-dessus">méd. -4.0%</small></td>
-                                                </tr>
+                                                                                                                                                                                                    <td class="text-right edition-sep">2h10&#039;18</td>
+                                        <td class="text-right">2h09&#039;27</td>
+                                        <td class="text-right">6&#039;15</td>
+                                                                                                                                                                                                    <td class="text-right edition-sep evo-gain">2h04&#039;09</td>
+                                            <td class="text-right evo-gain">-6&#039;10 (-4.7%)<span class="evo-signif" title="Évolution hors de son intervalle de confiance à 95 %">&#10033;</span></td>
+                                        <td class="text-right">2h03&#039;44</td>
+                                            <td class="text-right evo-gain" title="Médiane des variations individuelles des 34 coureur·ses présent·es aux deux éditions : insensible aux cas extrêmes, contrairement à l'évolution des moyennes">-5&#039;06 (-4.0%)</td>
+                                        <td class="text-right">5&#039;55</td>
+                            </tr>
                     <tr class="categorie-row effectif-faible">
                 <td>2h15 - 2h30 <span class="effectif-faible-marque" title="Moins de 30 coureur·ses dans la tranche : évolution non interprétable">effectif faible</span></td>
                 <td class="text-right">12</td>
-                                                            <td class="text-right edition-sep">2h26&#039;26</td>
-                        <td class="text-right">2h24&#039;34</td>
-                        <td class="text-right">7&#039;56</td>
-                                                                                                    <td class="text-right edition-sep">2h19&#039;57</td>
-                        <td class="text-right">2h18&#039;36</td>
-                        <td class="text-right">6&#039;16</td>
-                                                                                                                                        <td class="text-right">-6&#039;29 (-4.4%)<br><small class="evo-mediane" title="Mediane des variations individuelles des 12 coureur·ses présent·es aux deux éditions : insensible aux cas extrêmes, contrairement à l'évolution des moyennes ci-dessus">méd. -4.2%</small></td>
-                                                </tr>
+                                                                                                                                                                                                    <td class="text-right edition-sep">2h26&#039;26</td>
+                                        <td class="text-right">2h24&#039;34</td>
+                                        <td class="text-right">7&#039;56</td>
+                                                                                                                                                                                                    <td class="text-right edition-sep">2h19&#039;57</td>
+                                            <td class="text-right">-6&#039;29 (-4.4%)</td>
+                                        <td class="text-right">2h18&#039;36</td>
+                                            <td class="text-right" title="Médiane des variations individuelles des 12 coureur·ses présent·es aux deux éditions : insensible aux cas extrêmes, contrairement à l'évolution des moyennes">-5&#039;59 (-4.2%)</td>
+                                        <td class="text-right">6&#039;16</td>
+                            </tr>
                     <tr class="categorie-row effectif-faible">
                 <td>2h30 - 2h45 <span class="effectif-faible-marque" title="Moins de 30 coureur·ses dans la tranche : évolution non interprétable">effectif faible</span></td>
                 <td class="text-right">2</td>
-                                                            <td class="text-right edition-sep">2h45&#039;26</td>
-                        <td class="text-right">2h45&#039;26</td>
-                        <td class="text-right">5&#039;54</td>
-                                                                                                    <td class="text-right edition-sep">2h25&#039;40</td>
-                        <td class="text-right">2h25&#039;40</td>
-                        <td class="text-right">11&#039;32</td>
-                                                                                                                                        <td class="text-right">-19&#039;46 (-11.9%)<br><small class="evo-mediane" title="Mediane des variations individuelles des 2 coureur·ses présent·es aux deux éditions : insensible aux cas extrêmes, contrairement à l'évolution des moyennes ci-dessus">méd. -11.6%</small></td>
-                                                </tr>
+                                                                                                                                                                                                    <td class="text-right edition-sep">2h45&#039;26</td>
+                                        <td class="text-right">2h45&#039;26</td>
+                                        <td class="text-right">5&#039;54</td>
+                                                                                                                                                                                                    <td class="text-right edition-sep">2h25&#039;40</td>
+                                            <td class="text-right">-19&#039;46 (-11.9%)</td>
+                                        <td class="text-right">2h25&#039;40</td>
+                                            <td class="text-right" title="Médiane des variations individuelles des 2 coureur·ses présent·es aux deux éditions : insensible aux cas extrêmes, contrairement à l'évolution des moyennes">-19&#039;46 (-11.6%)</td>
+                                        <td class="text-right">11&#039;32</td>
+                            </tr>
                                                                         <tr class="subtotal-row subtotal-row-M">
                         <td><strong>Tous les hommes</strong></td>
                         <td class="text-right"><strong>390</strong></td>
-                                                                                    <td class="text-right edition-sep"><strong>1h55&#039;03</strong></td>
-                                <td class="text-right"><strong>1h53&#039;03</strong></td>
-                                <td class="text-right"><strong>17&#039;38</strong></td>
-                                                                                                                                            <td class="text-right edition-sep"><strong>1h47&#039;08</strong></td>
-                                <td class="text-right"><strong>1h46&#039;12</strong></td>
-                                <td class="text-right"><strong>15&#039;26</strong></td>
-                                                                                                                                                        <td class="text-right evo-gain"><strong>-7&#039;55 (-6.9%)<span class="evo-signif" title="Évolution hors de son intervalle de confiance à 95 %">&#10033;</span><br><small class="evo-mediane" title="Mediane des variations individuelles des 390 coureur·ses présent·es aux deux éditions : insensible aux cas extrêmes, contrairement à l'évolution des moyennes ci-dessus">méd. -6.0%</small></strong></td>
-                                                                        </tr>
+                                                                                                                                                                                                                            <td class="text-right edition-sep"><strong>1h55&#039;03</strong></td>
+                                                        <td class="text-right"><strong>1h53&#039;03</strong></td>
+                                                        <td class="text-right"><strong>17&#039;38</strong></td>
+                                                                                                                                                                                                                            <td class="text-right edition-sep evo-gain"><strong>1h47&#039;08</strong></td>
+                                                            <td class="text-right evo-gain"><strong>-7&#039;55 (-6.9%)<span class="evo-signif" title="Évolution hors de son intervalle de confiance à 95 %">&#10033;</span></strong></td>
+                                                        <td class="text-right"><strong>1h46&#039;12</strong></td>
+                                                            <td class="text-right evo-gain" title="Médiane des variations individuelles des 390 coureur·ses présent·es aux deux éditions : insensible aux cas extrêmes, contrairement à l'évolution des moyennes"><strong>-6&#039;30 (-6.0%)</strong></td>
+                                                        <td class="text-right"><strong>15&#039;26</strong></td>
+                                            </tr>
                                                                                 <tr class="subtotal-row subtotal-row-F">
                         <td><strong>Toutes les femmes</strong></td>
                         <td class="text-right"><strong>89</strong></td>
-                                                                                    <td class="text-right edition-sep"><strong>2h04&#039;40</strong></td>
-                                <td class="text-right"><strong>2h04&#039;52</strong></td>
-                                <td class="text-right"><strong>15&#039;59</strong></td>
-                                                                                                                                            <td class="text-right edition-sep"><strong>1h58&#039;42</strong></td>
-                                <td class="text-right"><strong>1h58&#039;01</strong></td>
-                                <td class="text-right"><strong>14&#039;24</strong></td>
-                                                                                                                                                        <td class="text-right evo-gain"><strong>-5&#039;58 (-4.8%)<span class="evo-signif" title="Évolution hors de son intervalle de confiance à 95 %">&#10033;</span><br><small class="evo-mediane" title="Mediane des variations individuelles des 89 coureur·ses présent·es aux deux éditions : insensible aux cas extrêmes, contrairement à l'évolution des moyennes ci-dessus">méd. -4.3%</small></strong></td>
-                                                                        </tr>
+                                                                                                                                                                                                                            <td class="text-right edition-sep"><strong>2h04&#039;40</strong></td>
+                                                        <td class="text-right"><strong>2h04&#039;52</strong></td>
+                                                        <td class="text-right"><strong>15&#039;59</strong></td>
+                                                                                                                                                                                                                            <td class="text-right edition-sep evo-gain"><strong>1h58&#039;42</strong></td>
+                                                            <td class="text-right evo-gain"><strong>-5&#039;58 (-4.8%)<span class="evo-signif" title="Évolution hors de son intervalle de confiance à 95 %">&#10033;</span></strong></td>
+                                                        <td class="text-right"><strong>1h58&#039;01</strong></td>
+                                                            <td class="text-right evo-gain" title="Médiane des variations individuelles des 89 coureur·ses présent·es aux deux éditions : insensible aux cas extrêmes, contrairement à l'évolution des moyennes"><strong>-5&#039;29 (-4.3%)</strong></td>
+                                                        <td class="text-right"><strong>14&#039;24</strong></td>
+                                            </tr>
                                         <tr class="avg-all-row">
                 <td><strong>Total général</strong></td>
                 <td class="text-right"><strong>89</strong></td>
-                                                            <td class="text-right edition-sep"><strong>2h04&#039;40</strong></td>
-                        <td class="text-right"><strong>2h04&#039;52</strong></td>
-                        <td class="text-right"><strong>15&#039;59</strong></td>
-                                                                                                    <td class="text-right edition-sep"><strong>1h58&#039;42</strong></td>
-                        <td class="text-right"><strong>1h58&#039;01</strong></td>
-                        <td class="text-right"><strong>14&#039;24</strong></td>
-                                                                                                                <td class="text-right evo-gain"><strong>-5&#039;58 (-4.8%)<span class="evo-signif" title="Évolution hors de son intervalle de confiance à 95 %">&#10033;</span><br><small class="evo-mediane" title="Mediane des variations individuelles des 89 coureur·ses présent·es aux deux éditions : insensible aux cas extrêmes, contrairement à l'évolution des moyennes ci-dessus">méd. -4.3%</small></strong></td>
-                                                </tr>
+                                                                                                                                                            <td class="text-right edition-sep"><strong>2h04&#039;40</strong></td>
+                                        <td class="text-right"><strong>2h04&#039;52</strong></td>
+                                        <td class="text-right"><strong>15&#039;59</strong></td>
+                                                                                                                                                            <td class="text-right edition-sep evo-gain"><strong>1h58&#039;42</strong></td>
+                                            <td class="text-right evo-gain"><strong>-5&#039;58 (-4.8%)<span class="evo-signif" title="Évolution hors de son intervalle de confiance à 95 %">&#10033;</span></strong></td>
+                                        <td class="text-right"><strong>1h58&#039;01</strong></td>
+                                            <td class="text-right evo-gain" title="Médiane des variations individuelles des 89 coureur·ses présent·es aux deux éditions : insensible aux cas extrêmes, contrairement à l'évolution des moyennes"><strong>-5&#039;29 (-4.3%)</strong></td>
+                                        <td class="text-right"><strong>14&#039;24</strong></td>
+                            </tr>
             <tr class="avg-selected-row" id="avgSelectedRow">
                 <td><strong>Catégories sélectionnées <span class="effectif-faible-marque" data-selection-faible hidden title="Moins de 30 coureur·ses sélectionné·es : évolution non interprétable">effectif faible</span><br><small style="font-weight:normal;" class="text-muted">cochées dans la légende ci-dessus</small></strong></td>
                 <td class="text-right"><strong data-selected-nb></strong></td>
                                     <td class="text-right edition-sep"><strong data-selected-avg="46"></strong></td>
-                                        <td class="text-right text-muted" title="La médiane n'est pas calculable à partir des agrégats par catégorie">—</td>
+                                                            <td class="text-right text-muted" colspan="1" title="La médiane n'est pas calculable à partir des agrégats par catégorie">—</td>
                     <td class="text-right"><strong data-selected-std="46"></strong></td>
-                                                        <td class="text-right edition-sep"><strong data-selected-avg="45"></strong></td>
-                                        <td class="text-right text-muted" title="La médiane n'est pas calculable à partir des agrégats par catégorie">—</td>
-                    <td class="text-right"><strong data-selected-std="45"></strong></td>
+                                    <td class="text-right edition-sep"><strong data-selected-avg="45"></strong></td>
                                             <td class="text-right" data-selected-evo="45"><strong></strong></td>
-                                                </tr>
+                                                            <td class="text-right text-muted" colspan="2" title="La médiane n'est pas calculable à partir des agrégats par catégorie">—</td>
+                    <td class="text-right"><strong data-selected-std="45"></strong></td>
+                            </tr>
         </tbody>
     </table>
     </div>
     <p class="text-muted"><small><span class="effectif-faible-marque">effectif faible</span> — tranche comptant moins de 30 coureur·ses&nbsp;: sa moyenne et son écart type bougent de plusieurs minutes au gré de l'échantillon, l'évolution n'est pas interprétable (elle reste affichée, sans coloration).
     <br><strong class="evo-signif">&#10033;</strong> — évolution dont l'intervalle de confiance à 95&nbsp;% exclut 0, donc difficilement imputable au seul hasard d'échantillonnage. Le test est ici <strong>apparié</strong>&nbsp;: la cohorte étant composée des mêmes coureur·ses à chaque édition, l'intervalle se calcule sur les évolutions individuelles (loi de Student), ce qui le rend nettement plus fin que sur la page de comparaison, où les échantillons sont indépendants.
+    <br><strong>méd. des évol. indiv.</strong> — médiane des variations individuelles des coureur·ses présent·es aux deux éditions, insensible aux cas extrêmes contrairement à l'évolution des moyennes. Elle ne mesure pas la variation de la médiane affichée à côté&nbsp;: les deux peuvent aller en sens contraire, et c'est elle qui porte la couleur.
     <br><strong>Médiane</strong> — temps du coureur·se du milieu de la tranche. La tranche étant définie sur le temps moyen d'un coureur sur toutes les éditions, les fortes variations individuelles (blessure, meneur·se d'allure, accompagnement d'un proche) atterrissent dans les tranches centrales, où quelques cas suffisent à déplacer la moyenne. Un écart marqué entre moyenne et médiane signale une tranche tirée par quelques individus plutôt qu'un déplacement d'ensemble.
     <br><small>À lire avec prudence&nbsp;: la cohorte vieillit d'une édition à l'autre. Une dégradation significative peut n'être que l'effet de l'âge, et non un changement de forme ou de conditions de course.</small></small></p>
  
@@ -486,11 +484,18 @@ pointer-events: auto;
 }
 .histo-swatch-green { background-color: rgba(40,167,69,0.65); border: 1px solid #28a745; }
 .histo-swatch-red { background-color: rgba(220,53,69,0.65); border: 1px solid #dc3545; }
+/* Pastilles des deux zones du nuage : mêmes teintes que les fonds tracés par le plugin
+   zonesDiagonale, volontairement très pâles pour ne pas concurrencer les points. */
+.scatter-zone-swatch { display: inline-block; width: 12px; height: 12px; border-radius: 2px;
+  vertical-align: middle; margin: 0 2px 0 4px; }
+.scatter-zone-green { background-color: rgba(40,167,69,0.30); border: 1px solid rgba(40,167,69,0.55); }
+.scatter-zone-red { background-color: rgba(220,53,69,0.30); border: 1px solid rgba(220,53,69,0.55); }
 /* Lignes à effectif insuffisant (moins de EFFECTIF_MIN_LIGNE coureurs dans la tranche) :
    estompées en gris italique, pour qu'elles ne se lisent pas comme les autres. Les
    sélecteurs portent la classe sur la tr ET sur la td afin de passer devant le zébrage
    de .categorie-row:nth-of-type(odd). */
-.categorie-row.effectif-faible > td {
+.categorie-row.effectif-faible > td,
+.baseline-bracket-row.effectif-faible > td {
   background-color: #fafafa;
   color: #9b9b9b;
   font-style: italic;
@@ -511,13 +516,6 @@ pointer-events: auto;
   color: #1a237e;
   font-weight: bold;
 }
-/* Médiane des variations individuelles : second niveau de lecture sous l'évolution
-   de la moyenne, d'où le gris et la graisse normale même sur les lignes en gras. */
-.evo-mediane {
-  font-weight: normal;
-  opacity: 0.75;
-  white-space: nowrap;
-}
 .subtotal-row .evo-signif,
 .avg-all-row .evo-signif {
   color: inherit;
@@ -528,7 +526,8 @@ pointer-events: auto;
 }
 /* Sur une ligne estompée, la marque reste lisible — un écart peut battre sa propre
    marge d'erreur malgré un petit effectif — mais sans ramener la ligne au premier plan. */
-.categorie-row.effectif-faible .evo-signif {
+.categorie-row.effectif-faible .evo-signif,
+.baseline-bracket-row.effectif-faible .evo-signif {
   color: #7a7a7a;
 }
 /* Coloration des cellules d'évolution du tableau, cohérente avec les histogrammes :
@@ -1585,6 +1584,37 @@ window.addEventListener('resize', function() {
         }
     }
 
+    // Fond des deux demi-plans séparés par la diagonale y = x. Les deux axes partagent les
+    // mêmes bornes (axisMin/axisMax), donc la diagonale joint exactement le coin bas-gauche
+    // au coin haut-droit de la zone de tracé, quel que soit son rapport largeur/hauteur :
+    // le triangle bas-droite est celui des temps améliorés (y < x), le triangle haut-gauche
+    // celui des temps dégradés. Teintes très pâles, dessinées dans beforeDraw pour rester
+    // sous la grille et sous les points.
+    var zonesDiagonale = {
+        id: 'zonesDiagonale',
+        beforeDraw: function(chart) {
+            var a = chart.chartArea;
+            if (!a) return;
+            var ctx = chart.ctx;
+            ctx.save();
+            ctx.beginPath();
+            ctx.moveTo(a.left, a.bottom);
+            ctx.lineTo(a.right, a.bottom);
+            ctx.lineTo(a.right, a.top);
+            ctx.closePath();
+            ctx.fillStyle = 'rgba(40,167,69,0.10)';
+            ctx.fill();
+            ctx.beginPath();
+            ctx.moveTo(a.left, a.bottom);
+            ctx.lineTo(a.left, a.top);
+            ctx.lineTo(a.right, a.top);
+            ctx.closePath();
+            ctx.fillStyle = 'rgba(220,53,69,0.09)';
+            ctx.fill();
+            ctx.restore();
+        }
+    };
+
     var charts = [];
     function construireNuage(transition, i, points) {
         var canvas = document.getElementById('chartEvolutionScatter-' + i);
@@ -1696,7 +1726,8 @@ window.addEventListener('resize', function() {
         if (charts[i] && charts[i].chart) charts[i].chart.destroy();
         var chart = new Chart(canvas, {
             data: { datasets: datasets },
-            options: options
+            options: options,
+            plugins: [zonesDiagonale]
         });
         charts[i] = { chart: chart, inner: inner, transition: transition };
     }
