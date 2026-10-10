@@ -84,13 +84,36 @@ class CumulativeChart {
         
     }
     
+    /**
+     * Couleur de repli quand une catégorie n'a pas de couleur renseignée en base.
+     * Sans elle, invert() lève « Invalid color value » et interrompt draw(), ce qui
+     * emporte aussi l'infobulle au survol, posée plus loin dans le même appel.
+     */
+    static get COULEUR_DE_REPLI() { return '#9e9e9e'; }
+
+    /**
+     * Vrai si la valeur est une couleur hexadécimale exploitable par invert().
+     */
+    static estCouleurValide(couleur) {
+        return typeof couleur === 'string' && /^#([0-9a-f]{3}|[0-9a-f]{6})$/i.test(couleur.trim());
+    }
+
     setZ(coureurCategorieIdsToCategories){
         this.z = d3.scaleOrdinal();
         let colors = new Array();
         let keys = new Array();
-    	for(var oneSerie of this.calculatedData){
-    		colors.push(coureurCategorieIdsToCategories[oneSerie.name].exaDecimalColor);   
-                keys.push(oneSerie.name);
+        for(var oneSerie of this.calculatedData){
+            const categorie = coureurCategorieIdsToCategories[oneSerie.name];
+            let couleur = categorie ? categorie.exaDecimalColor : null;
+            if (!CumulativeChart.estCouleurValide(couleur)) {
+                console.warn('Catégorie ' + oneSerie.name
+                    + (categorie ? ' (' + categorie.nom + ' ' + categorie.sex + ')' : ' inconnue')
+                    + " sans couleur exploitable : repli sur " + CumulativeChart.COULEUR_DE_REPLI
+                    + ". À renseigner dans /admin/coureurcategorie/.");
+                couleur = CumulativeChart.COULEUR_DE_REPLI;
+            }
+            colors.push(couleur);
+            keys.push(oneSerie.name);
         }
         this.z.domain(keys);
         this.z.range(colors);
