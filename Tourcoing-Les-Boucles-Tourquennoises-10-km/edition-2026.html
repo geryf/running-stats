@@ -61,7 +61,7 @@ var nbByCategory =  {"10":12,"11":15,"12":110,"65":42,"66":35,"67":27,"68":32,"6
                 <h1>Les Boucles Tourquennoises - 10 km - 18 oct. 2026<br><span class="rs-villes">Tourcoing</span><br><small class="text-muted">Niveau FFA : Régional</small></h1>
                             <ul class="nav nav-tabs rs-tabs" role="tablist">
         <li role="presentation" class="active"><a href="#statistiques" data-tab="statistiques" id="onglet-statistiques" role="tab" aria-controls="statistiques" aria-selected="true"><span class="rs-tab-picto" aria-hidden="true">📊</span>Statistiques</a></li>
-                <li role="presentation"><a href="#parcours" data-tab="parcours" id="onglet-parcours" role="tab" aria-controls="parcours" aria-selected="false"><span class="rs-tab-picto" aria-hidden="true">🗺️</span>Parcours</a></li>            </ul>
+        <li role="presentation"><a href="#contexte" data-tab="contexte" id="onglet-contexte" role="tab" aria-controls="contexte" aria-selected="false"><span class="rs-tab-picto" aria-hidden="true">📝</span>Contexte</a></li>        <li role="presentation"><a href="#parcours" data-tab="parcours" id="onglet-parcours" role="tab" aria-controls="parcours" aria-selected="false"><span class="rs-tab-picto" aria-hidden="true">🗺️</span>Parcours</a></li>            </ul>
         <div class="tab-content rs-tab-content">
     <div role="tabpanel" class="tab-pane active" id="statistiques" aria-labelledby="onglet-statistiques">
             <h2>Statistiques sur 931  femmes et hommes classés <small class="text-muted">(temps réel)</small> </small></h2>
@@ -411,7 +411,46 @@ var nbByCategory =  {"10":12,"11":15,"12":110,"65":42,"66":35,"67":27,"68":32,"6
         <th class="text-right">58'44''</th>
     </tfooter>
     </table>
-        </div>            <div role="tabpanel" class="tab-pane" id="parcours" aria-labelledby="onglet-parcours">
+        </div>        <div role="tabpanel" class="tab-pane" id="contexte" aria-labelledby="onglet-contexte">
+        <style type="text/css">
+    /* Bootstrap 3 met le corps à 14px/1.43, trop maigre face aux titres de 30px. */
+    .course-contexte { margin: 24px 0; font-size: 16px; line-height: 1.65; }
+    /* Lignes limitées à ~70 caractères et colonne centrée dans la page : au-delà,
+       l'œil peine à retrouver le début de la ligne suivante. Titres compris, pour
+       que le bloc reste d'un seul tenant ; les images gardent la pleine largeur.
+       Le texte, lui, reste aligné à gauche. */
+    .course-contexte p,
+    .course-contexte h1, .course-contexte h2, .course-contexte h3, .course-contexte h4,
+    .course-contexte ul, .course-contexte ol, .course-contexte blockquote {
+        max-width: 70ch;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .course-contexte img { max-width: 100%; height: auto; display: block; margin: 16px auto; border-radius: 3px; }
+    .course-contexte figure { margin: 16px 0; }
+    .course-contexte figure img { margin-bottom: 6px; }
+    .course-contexte figcaption { text-align: center; font-size: 0.9em; font-style: italic; color: #777; }
+    .course-contexte blockquote { font-size: inherit; }
+    .course-contexte table { width: 100%; margin-bottom: 16px; }
+    .course-contexte table th, .course-contexte table td { padding: 6px 8px; border-top: 1px solid #ddd; }
+    /* Vidéo YouTube intégrée : boîte en ratio 16:9, plafonnée à 480px de large
+       (≤ 480×270), responsive en dessous. aspect-ratio respecte le plafond, là
+       où un padding-top % se calculerait sur la largeur du parent. */
+    .course-contexte-video { width: 100%; max-width: 480px; margin: 16px auto; aspect-ratio: 16 / 9; }
+    .course-contexte-video iframe { width: 100%; height: 100%; border: 0; border-radius: 3px; }
+</style>
+<section class="course-contexte">
+    <p><img src="uploads/contexte/edition_61_6ae3c5552620c.jpg" alt="" /></p>
+<h2>Une météo idéale</h2>
+<p>Avec 8° C mesurés à Lille Lesquin, un vent de moins de 10km/h, à peine sensible dans le centre ville de Tourcoing, et un peu de soleil, les conditions météos étaient idéales.</p>
+<h2>Pas de SAS de départ</h2>
+<p>Mais avec moins de 1000 coureurs, c'est compréhensible, seul les 200 premiers mètres pouvaient posés problème.</p>
+<h2>Pas de meneur d'allure</h2>
+<p>Pas une critique, juste un constat.</p>
+
+</section>
+    </div>
+            <div role="tabpanel" class="tab-pane" id="parcours" aria-labelledby="onglet-parcours">
                 <h2>
             D+ : 30&nbsp;m            D- : 30&nbsp;m             <small class="text-muted">source : GPX visualiser, et fichier GPX issus de la montre Coros Pace 2, analyse avec DEM elevation data  et seuil de 1 m</small>        </h2>
                         <div id="gpxMap" style="height:400px;margin:16px 0;border:1px solid #ccc;border-radius:4px;"></div>
@@ -1410,5 +1449,5 @@ drawCategoryPie('piechartcategory-F', 'F', pieSideForTotal(totalF));
 })();
 </script>
     
-<!-- START of Symfony Web Debug Toolbar --><link rel="stylesheet" nonce="9d43f47b0073beed6a65eab807bb0be8" href="http://localhost:8080/_wdt/styles" /><script nonce="4d114b0f4fb1dd82a0ea1b0fa73d5629"> </script><div class="sf-toolbar sf-toolbar-opened" role="region" aria-label="Symfony Web Debug Toolbar" data-frankenphp-hot-reload-preserve>    </body>
+<!-- START of Symfony Web Debug Toolbar --><link rel="stylesheet" nonce="4db42c36cd98a0aa800ce6003eca16c5" href="http://localhost:8080/_wdt/styles" /><script nonce="1ad8d841b4461859f52c81bbd528f196"> </script><div class="sf-toolbar sf-toolbar-opened" role="region" aria-label="Symfony Web Debug Toolbar" data-frankenphp-hot-reload-preserve>    </body>
 </html>
